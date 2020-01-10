@@ -236,7 +236,7 @@ class FC3_LogVol(KickstartCommand):
 
         # Check for duplicates in the data list.
         if lvd in self.dataList():
-            warnings.warn(_("A logical volume with the name %s has already been defined in volume group %s.") % (lvd.device, lvd.vgname))
+            warnings.warn(_("A logical volume with the name %s has already been defined in volume group %s.") % (lvd.name, lvd.vgname))
 
         return lvd
 
@@ -298,3 +298,13 @@ class RHEL6_LogVol(F12_LogVol):
                         default=False)
 
         return op
+
+    def parse(self, args):
+        # call the overriden method
+        retval = F12_LogVol.parse(self, args)
+        # the logvol command can't be used together with the autopart command
+        # due to the hard to debug behavior their combination introduces
+        if self.handler.autopart.currentCmd:
+            errorMsg = _("The logvol and autopart commands can't be used at the same time")
+            raise KickstartParseError, formatErrorMsg(self.lineno, msg=errorMsg)
+        return retval

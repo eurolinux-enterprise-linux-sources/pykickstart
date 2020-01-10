@@ -1,3 +1,85 @@
+commit 9c8e92a038f97ac4fd2f11af05ee2e1bcfb8fe7c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Aug 13 15:30:38 2013 -0400
+
+    New version.
+
+commit 1a451d418f185bc1a800ce3f8fa94826c09da7d9
+Author: Martin Kolman <mkolman@redhat.com>
+Date:   Mon Aug 12 17:58:09 2013 +0200
+
+    Add tests for incorrect command usage detection
+    
+    The tests check various "forbidden" combinations of autopart
+    with part/partition, raid, logvol and volgroup.
+    Both one-on-one and multiple commands at once are checked.
+
+commit 700f7876cd8ff25c99c5209080a7040780d13b90
+Author: Martin Kolman <mkolman@redhat.com>
+Date:   Mon Aug 12 17:49:43 2013 +0200
+
+    Add class for multi-line command sequence tests
+    
+    Because the CommandTest class only supports testing of single-line commands,
+    the new CommandSequenceTest class that supports testing of multi-line
+    kickstart command sequences has been added.
+
+commit d0afce1dd804342b7f70fb50efae40fee8f5ccf0
+Author: Martin Kolman <mkolman@redhat.com>
+Date:   Wed Aug 7 16:57:47 2013 +0200
+
+    Raise an error if autopart is combined with partitioning commands (#886010)
+    
+    Using autopart together with the part/partition, raid, logvol or
+    volgroup commands in a single kickstart file can lead to a very bad
+    and difficult to predict behaviour. It can cause hard to diagnose
+    installation errors or even make the installed system unbootable.
+    Therefore, better raise a parsing error and interrupt the installation
+    if autopart is combined with any of those commands.
+
+commit 3794ee4f3af01fa8b59dd1885f97e346aa8ffa70
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jul 12 14:16:20 2013 -0400
+
+    New version.
+
+commit c189e9c8780b0e474cc775bb737302fa39cc3985
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 9 11:54:37 2013 -0400
+
+    Also fix the version test for RHEL6.
+
+commit be21efa50578aeff1e4d51daf3b0761d8f528a68
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 9 10:03:36 2013 -0400
+
+    Fix a couple minor problems pychecker caught.
+
+commit 5ad3feab2ac4b148f926f3476150bd1e4582822c
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Tue Jun 25 14:34:23 2013 +0200
+
+    Add network --ipv6gateway option (#978252)
+    
+    Resolves: rhbz#978252
+
+commit c089f8e674eb715fbb85a079bc03dcd49cc05d4d
+Author: Will Woods <wwoods@redhat.com>
+Date:   Wed Feb 1 10:08:02 2012 -0500
+
+    fix TypeError in network.py with ipv6 static addresses (#966183).
+    
+    Format string for --ipv6 was missing '%s'.
+    
+    Interestingly this bug has been present for nearly 5 years, which tells
+    me that nobody actually uses static ipv6 addresses.
+
+commit 0b8773eb361de05aa8c3f76b6cfb93ed3e39dbff
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Mar 22 09:45:14 2013 -0400
+
+    Fix a bug in logvol duplicate reporting (#924579, mhuth).
+
 commit 317fbd113a41e3da34b9afe15af4b84de7321033
 Author: Chris Lumens <clumens@redhat.com>
 Date:   Mon Oct 15 13:09:31 2012 -0400
