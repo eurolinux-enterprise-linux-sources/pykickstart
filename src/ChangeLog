@@ -1,3 +1,66 @@
+commit f7868c8e826f354ec052cdff544e0210a08990d9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 12 09:48:07 2016 -0500
+
+    New version.
+
+commit cca51da44ba6e4611891e3d0b40508a803bb9abf
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Dec 9 10:21:17 2016 -0500
+
+    Fix handling # in passwords.
+    
+    See the previous commit for why this was still broken.  I've also added
+    a test case to make sure it's fixed this time and stays that way.
+    
+    Note that this commit introduces new behavior:  If your password
+    contains a #, the password must be surrounded by quotes or it'll be seen
+    as a comment and stripped out.  If you generate a password with a # in
+    it, pykickstart will quote it for you.  This seems like a reasonable
+    thing to do, as both handling and ignoring end-of-line comments in this
+    one case is pretty difficult.
+    
+    Related: rhbz#1301267
+
+commit 77fc80bfcae2932886ceef0c081422848ccc9157
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Dec 7 14:56:12 2016 -0500
+
+    Pass comments=True to shlex.split calls in the test functions.
+    
+    This mirrors how it's being called in the real parser.  Not doing this
+    was hiding a bug where parsing passwords with a # in them apparently
+    worked in testing, but failed in real use.  The testing only apparently
+    worked because the expectedStr also gets parsed, and drops comments, so
+    both sides were dropping comments in the same way.
+    
+    In other words, I was passing "comment#password" into both sides, it was
+    getting turned into "comment" in each, and those matched.  I need to
+    also be checking that rootpw.password is "comment#password".
+    
+    So with this commit, I get the expected failure.
+    
+    Related: rhbz#1301267
+
+commit d120977984ac6ef914aada466eae1053a090e7c2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 7 13:59:45 2016 -0400
+
+    New version.
+
+commit 9a0f3760aec5c1fd6bfc3e0d12c77be432aa1c8e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 6 13:44:01 2016 -0400
+
+    Fix line splitting when end-of-line comments are involved.
+    
+    With the previous behavior, a # in passwords would be treated as a
+    comment and it and all subsequent text would be stripped off.  This
+    would leave the user with a password different from what they were
+    expecting.
+    
+    Resolves: rhbz#1301267
+
 commit 20d44f60e309293f9d091c364eec8ab3dc471640
 Author: Chris Lumens <clumens@redhat.com>
 Date:   Wed Mar 4 08:21:03 2015 -0500
