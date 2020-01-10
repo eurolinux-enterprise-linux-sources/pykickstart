@@ -1,0 +1,199 @@
+# translation of pykickstart.po to catalan
+# Catalan translations for pykickstart package
+# Traduccions al català del paquet «pykickstart».
+# Copyright © 2006, 2007 The Free Software Foundation, Inc.
+# This file is distributed under the same license as the pykickstart package.
+#
+#
+# This file is translated according to the glossary and style guide of
+#   Softcatalà. If you plan to modify this file, please read first the page
+#   of the Catalan translation team for the Fedora project at:
+#   http://www.softcatala.org/projectes/fedora/
+#   and contact the previous translator
+#
+# Aquest fitxer s'ha de traduir d'acord amb el recull de termes i la guia
+#   d'estil de Softcatalà. Si voleu modificar aquest fitxer, llegiu si
+#   us plau la pàgina de catalanització del projecte Fedora a:
+#   http://www.softcatala.org/projectes/fedora/
+#   i contacteu l'anterior traductor/a.
+#
+# Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2006, 2007.
+# Cristina Gil Rodríguez <crisgil79@hotmail.com>, 2006.
+# Xavier Conde Rueda <xavi.conde@gmail.com>, 2006
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pykickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-10-04 13:22-0400\n"
+"PO-Revision-Date: 2008-09-27 04:18+0100\n"
+"Last-Translator: Xavier Conde Rueda <xavi.conde@gmail.com>\n"
+"Language-Team: Catalan <fedora@softcatala.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../pykickstart/base.py:147
+#, python-format
+msgid ""
+"Ignoring deprecated command on line %(lineno)s:  The %(cmd)s command has "
+"been deprecated and no longer has any effect.  It may be removed from future "
+"releases, which will result in a fatal error from kickstart.  Please modify "
+"your kickstart file to remove this command."
+msgstr ""
+"S'ha ignorat una ordre obsoleta a la línia %(lineno)s:  L'ordre %(cmd)s és "
+"obsoleta i no tindrà cap efecte. S'eliminarà de futures versions, i "
+"provocarà un error fatal del kickstart. Modifiqueu el vostre fitxer "
+"kickstart per eliminar aquesta opció."
+
+#: ../pykickstart/base.py:315
+#, python-format
+msgid "Unknown command: %s"
+msgstr "No es coneix l'ordre: %s"
+
+#: ../pykickstart/errors.py:48
+#, python-format
+msgid ""
+"The following problem occurred on line %(lineno)s of the kickstart file:\n"
+"\n"
+"%(msg)s\n"
+msgstr ""
+"S'ha produït el següent problema a la línia %(lineno)s del fitxer del "
+"kickstart:\n"
+"\n"
+"%(msg)s\n"
+
+#: ../pykickstart/errors.py:50
+#, python-format
+msgid "There was a problem reading from line %s of the kickstart file"
+msgstr ""
+"Hi ha hagut un problema en llegir el fitxer del kickstart a la línia %s"
+
+#: ../pykickstart/options.py:84
+#, python-format
+msgid "Option %s is required"
+msgstr "Es requereix l'opció %s"
+
+#: ../pykickstart/options.py:87
+#, python-format
+msgid ""
+"The option %(option)s was introduced in version %(intro)s, but you are using "
+"kickstart syntax version %(version)s"
+msgstr ""
+"L'opció %(option)s s'introduí en la versió %(intro)s, però esteu fent servir "
+"la versió %(version)s de la sintaxi del kickstart"
+
+#: ../pykickstart/options.py:90
+#, python-format
+msgid ""
+"Ignoring deprecated option on line %(lineno)s:  The %(option)s option has "
+"been deprecated and no longer has any effect.  It may be removed from future "
+"releases, which will result in a fatal error from kickstart.  Please modify "
+"your kickstart file to remove this option."
+msgstr ""
+"S'ha ignorat una opció obsoleta a la línia %(lineno)s:  L'opció %(option)s "
+"és obsoleta i no tindrà cap efecte. S'eliminarà de futures versions, i "
+"provocarà un error fatal del kickstart. Modifiqueu el vostre fitxer "
+"kickstart per eliminar aquesta opció."
+
+#: ../pykickstart/options.py:93
+#, python-format
+msgid ""
+"The option %(option)s was removed in version %(removed)s, but you are using "
+"kickstart syntax version %(version)s"
+msgstr ""
+"L'opció %(option)s s'eliminà en la versió %(removed)s, però esteu fent "
+"servir la versió %(version)s de la sintaxi del kickstart"
+
+#: ../pykickstart/options.py:147
+msgid "Required flag set for option that doesn't take a value"
+msgstr ""
+"S'ha establert el senyalador de requerit per a una opció que no pren cap "
+"valor"
+
+#: ../pykickstart/options.py:156
+#, python-format
+msgid "Option %(opt)s: invalid boolean value: %(value)r"
+msgstr "Opció %(opt)s: el valor booleà no és vàlid: %(value)r"
+
+#: ../pykickstart/options.py:161
+#, python-format
+msgid "Option %(opt)s: invalid string value: %(value)r"
+msgstr "Opció %(opt)s: el valor de la cadena no és vàlid: %(value)r"
+
+#: ../pykickstart/parser.py:90
+#, python-format
+msgid "Illegal url for %%ksappend: %s"
+msgstr "La url per a %%ksappend no és vàlida: %s"
+
+#: ../pykickstart/parser.py:95
+#, python-format
+msgid "Unable to open %%ksappend file: "
+msgstr "No es pot obrir el fitxer %%ksappend: "
+
+#: ../pykickstart/parser.py:101 ../pykickstart/parser.py:103
+#, python-format
+msgid "Unable to open %%ksappend file"
+msgstr "No es pot obrir el fitxer %%ksappend"
+
+# FIXME: Quin grup??? (josep)
+#: ../pykickstart/parser.py:286
+msgid "Group cannot specify both --nodefaults and --optional"
+msgstr "El grup no pot especificar --nodefaults i --optional alhora"
+
+#: ../pykickstart/parser.py:545 ../pykickstart/parser.py:604
+#, python-format
+msgid ""
+"%s does not end with %%end.  This syntax has been deprecated.  It may be "
+"removed from future releases, which will result in a fatal error from "
+"kickstart.  Please modify your kickstart file to use this updated syntax."
+msgstr ""
+"%s no acaba amb %%end. Aquesta sintaxi és obsoleta. Podria ser eliminada de les properes versions, i provocarà un error del kickstart. Modifiqueu el fitxer kickstart per usar la sintaxi actualitzada."
+
+#: ../pykickstart/parser.py:604
+msgid "Script"
+msgstr "Script"
+
+#. If nothing else worked, we're out of options.
+#: ../pykickstart/version.py:87 ../pykickstart/version.py:96
+#: ../pykickstart/version.py:99 ../pykickstart/version.py:110
+#: ../pykickstart/version.py:150
+#, python-format
+msgid "Unsupported version specified: %s"
+msgstr "La versió especificada no és compatible: %s"
+
+#: ../tools/ksvalidator:52
+msgid "halt after the first error or warning"
+msgstr "atura't al primer error o avís"
+
+#: ../tools/ksvalidator:55
+#, python-format
+msgid "parse include files when %include is seen"
+msgstr "analitza fitxers d'inclusió quan es trobi %include"
+
+#: ../tools/ksvalidator:57
+msgid "version of kickstart syntax to validate against"
+msgstr "la versió de la sintaxi del kickstart a validar"
+
+#: ../tools/ksvalidator:71
+#, python-format
+msgid "The version %s is not supported by pykickstart"
+msgstr "El pykickstart no és compatible amb la versió %s"
+
+#: ../tools/ksvalidator:87
+#, python-format
+msgid ""
+"File uses a deprecated option or command.\n"
+"%s"
+msgstr ""
+"El fitxer utilitza una opció o una ordre obsoletes.\n"
+"%s"
+
+#: ../tools/ksvalidator:93
+msgid "General kickstart error in input file"
+msgstr "S'ha produït un error general del kickstart en el fitxer d'entrada"
+
+#: ../tools/ksvalidator:96
+#, python-format
+msgid "General error in input file:  %s"
+msgstr "Hi ha un error general al fitxer d'entrada: %s"

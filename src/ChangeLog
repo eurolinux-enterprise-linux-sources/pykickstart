@@ -1,0 +1,6453 @@
+commit 317fbd113a41e3da34b9afe15af4b84de7321033
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 15 13:09:31 2012 -0400
+
+    New version.
+
+commit bcc14e2de79598681c3b2d9763bf69161945b9f3
+Author: David Lehman <dlehman@redhat.com>
+Date:   Fri Oct 12 11:29:31 2012 -0500
+
+    Add cipher option for encrypted autopart.
+    
+    Related: rhbz#843174
+
+commit a24f1706a52abb37f0f2877ba8327e3d49206803
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Fri Oct 12 16:31:43 2012 +0200
+
+    Add support for fcoe --autovlan option (#813998)
+    
+    Resolves: rhbz#813998
+
+commit 364ae89498ae88d6bc1ef41cdbd6da42fcc038ea
+Author: Brian C. Lane <bcl@redhat.com>
+Date:   Thu Sep 27 12:24:47 2012 -0700
+
+    add unsupported_hardware command (#824963)
+    
+    Used by RHEL6 to skip tainted hardware warning dialog during kickstart
+    installs.
+    
+    Related: rhbz#824963
+
+commit b89a0be92354ccb18fd6f16ae05773e6052bbef9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 18 14:55:05 2012 -0400
+
+    New version.
+
+commit 7a30a8333f41405ae589e272952ea7de52bc8ffb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 14 11:58:52 2012 -0400
+
+    Deprecated options that required a value should still accept one (jbastian).
+    
+    Resolves: rhbz#815573
+
+commit 0ee51dd0482049dd8303377446a80aa1440b0d52
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 14 11:43:50 2012 -0400
+
+    Don't error out if volgroup --useexisting is given with no members.
+    
+    Resolves: rhbz#823856
+    Resolves: rhbz#837440
+
+commit 4946bcf5d330338a160c12e77f3252fce60994d4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 14 11:24:04 2012 -0400
+
+    Add an argument for specifying the luks algorithm.
+    
+    Resolves: rhbz#843174
+
+commit 5f6de34361af4199bad7fd66102aa06ca4d9dedf
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Fri Aug 10 15:41:22 2012 +0200
+
+    bonding support: add network --bondslaves --bondopts options
+    
+    Resolves: rhbz#662007
+
+commit ee90c105d227dc77c5356940aac34ab11c747560
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Wed Aug 1 14:05:49 2012 +0200
+
+    vlan support: add network --vlanid option.
+    
+    Resolves: rhbz#668065
+
+commit 644da54ac194b0489440aa85c9985735361f7570
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   Fri Aug 17 12:59:28 2012 +0200
+
+    Add swap --hibernation to logvol command
+    
+    Commit 9111f0e491f97f6153bbaf4f2e69d192fbe6b768 adds this for the
+    part swap command, but expected behaviour is that this option works
+    also when using LVM for swap.
+    
+    Resolves: rhbz#848818
+
+commit 58ee7cfc3ef1cd62c3332871a17fe5ca0f38fd1f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon May 14 13:33:07 2012 -0400
+
+    New version.
+
+commit 3833c49e2389aade71ba37f95fc2d2bc3cfc8248
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Mar 22 10:06:23 2012 -0400
+
+    Make the "bumpver" target work with three digit version numbers.
+    
+    Finally.
+
+commit 9111f0e491f97f6153bbaf4f2e69d192fbe6b768
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   Tue May 8 12:05:28 2012 +0200
+
+    Change swap option --same-as-ram to --hibernation
+    
+    Resolves: rhbz#744129
+    Related: rhbz#815557
+
+commit 866fa338c0fd1ac99b2fa989d30dfe7ca66759a5
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 29 17:55:58 2012 -0500
+
+    New version.
+
+commit 59a4ad6c5af95f1406c0dec6456d90263cf7e605
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Tue Feb 28 11:55:48 2012 +0100
+
+    iscsi: add support for interface binding (#500273)
+    
+    iscsi --iface=eth0
+    
+    Resolves: rhbz#500273
+
+commit e87d5e3436a55dd2b4aa29e96548313b0c8a0115
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 28 15:05:24 2012 -0500
+
+    New version.
+
+commit ccd78ca0608a1789c11ab614dfbe0f8776114d99
+Author: David Lehman <dlehman@redhat.com>
+Date:   Thu Sep 8 11:45:22 2011 -0500
+
+    Add support for reserved space in volume group.
+    
+    reserved-space is an amount to reserve in MB
+    reserved-percent is a percentage of total vg space to reserve
+    
+    This is a combination of three commits from master:
+    
+        2bf694471fec6bbd9eaaae9ee2d1ad73b69f4881
+        30596fb8bddc1aa722b0fa30fb930a4b04ed6f75
+        d19f9b1a313c0c4241b7f52fadef210032fafcb5
+    
+    Resolves: rhbz#790457
+
+commit dbc26273105573b072aef1001908dfe4ab61d643
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   Thu Feb 23 13:22:48 2012 +0100
+
+    Add --same-as-ram option for swap size specification (#744129)
+
+commit e6d294a9c1c2c12a55ba3f60301d5f7f430a2a03
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Feb 10 10:48:31 2012 -0500
+
+    New version.
+
+commit 7df129c4254eab999c28f3cdcfdba7a7d205c7a5
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 5 10:48:30 2011 -0400
+
+    Don't error out if raid --useexisting is given with no members.
+    
+    This also adds extra error checking from anaconda and makes --level= a required
+    argument, like the wiki indicates it is.
+    
+    Resolves:  rhbz#758603
+
+commit f3438b844f7824c1b72805a5bf62146508cda718
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 5 10:49:04 2011 -0400
+
+    New version.
+
+commit d110e7c038aa90b0f3a54af79648293ffc65581a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 21 15:19:39 2011 -0400
+
+    Fix a UnicodeDecodeError when printing a deprecation warning (ofourdan).
+    
+    Resolves:  rhbz#656278
+
+commit 812192cd663516d796ea04e27c512ad2dac0f835
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 26 11:58:31 2011 -0500
+
+    New version.
+
+commit 585fdc1b2c90adc4cb5bcc43cfdfa44180d6c440
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 26 11:35:48 2011 -0500
+
+    Don't set new attrs on the RHEL6_Network object.
+    
+    For this command, the NetworkData object is the data store and therefore
+    is where attrs get set and kwargs gets inspected.  This differs from
+    commands that only appears once in a kickstart file.
+
+commit 89b4219032db620beec30e095dde628b2e187236
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Fri Dec 17 12:32:00 2010 +0100
+
+    Add kickstart network --nodefroute option (#668417)
+    
+    Sets DEFROUTE=no in ifcfg file.
+
+commit f3f4de4172baa8b1dfd4cbc3274229e71e8393ee
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Fri Dec 17 09:36:55 2010 +0100
+
+    Add support for network --bootproto ibft option (#668417)
+
+commit c1bcf839d8a0cd4353a2e0e4b982894dd4044202
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Wed Dec 1 13:52:27 2010 +0100
+
+    Add network --activate option (#668417)
+    
+    So that we can activate more than one network device in installer
+    environment using kickstart.
+    The activating happens in loader (stage 2 is too late for iscsi).
+
+commit 9f5f3e95869bacffdc0de12f411cbb790b3bda62
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 24 15:41:19 2011 -0500
+
+    New version.
+
+commit d27c282fcdb62ec62b8dbce9344f94578c9fbd0f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 19 12:59:04 2011 -0500
+
+    Remove preceededInclude= support (#668050).
+    
+    It never really worked right anyway, and it breaks ksflatten which is used
+    by Fedora rel-eng and therefore way more important.
+
+commit 5fe06056ca0da9d5098b7b58061215f077b38d5e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 13 13:46:21 2011 -0500
+
+    New version.
+
+commit 0ac44fb4b48553b7a4892d117d34417c1db1a19d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 13 13:43:41 2011 -0500
+
+    Set RHEL6 to be the default syntax version for rhel6-branch.
+    
+    Related: rhbz#660340
+
+commit 9b0c4303fc775ddcd358ca338f532dc8d68a5df8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 13 10:14:26 2010 -0500
+
+    New version.
+
+commit 2bac64ca5d05b4f36950f83fd30216bcf3e1fc8b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 6 11:38:18 2010 -0500
+
+    Add the documentation from the website to this package.
+    
+    Otherwise, we'll be getting updated Fedora copies (or 404 pages) instead
+    of real documentation.
+
+commit ae00f677b2cdf6c940921bdd5332eb76e9635aed
+Author: Ales Kozumplik <akozumpl@redhat.com>
+Date:   Mon Dec 6 16:33:19 2010 +0100
+
+    F14 TestCase classes won't work on rhel6-branch, use RHEL6.
+    
+    Related: rhbz#660340
+
+commit 56b9567cc0306daa80fb6f7b20a902463721a6e6
+Author: Ales Kozumplik <akozumpl@redhat.com>
+Date:   Mon Dec 6 16:27:00 2010 +0100
+
+    support noverifyssl on the rhel6-branch (method, repo) (#660340).
+
+commit 18188ad83857fb49ef1388cdaf3ae7df7beb2e20
+Author: Ales Kozumplik <akozumpl@redhat.com>
+Date:   Tue Jun 29 18:58:41 2010 +0200
+
+    method: new parameter '--noverifyssl' after --url.
+    
+    Related: rhbz#660340
+
+commit 17b5baf52e334870e8bd6c2d675d1aca50cd44bb
+Author: Ales Kozumplik <akozumpl@redhat.com>
+Date:   Thu Jun 24 10:50:24 2010 +0200
+
+    repo: new parameter '--noverifyssl'.
+    
+    Related: rhbz#660340
+
+commit 9a2fa4e07a720e29315d60aca2ab58e7e2a5fbcf
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Nov 3 15:25:11 2010 -0400
+
+    Add bootloader --iscrypted (#554870).
+    
+    grub now supports passwords encrypted with methods other than MD5
+    (such as SHA-*).  grub can automatically detect the scheme in use and
+    handle it correctly.  All that's left is to add anaconda support for
+    the same.
+
+commit 1c1a3ecab7e853ba1290e4c279590f33eab84519
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 6 16:34:03 2010 -0400
+
+    New version.
+
+commit f3faa55b7f462729cfff51baf58d740ec48e317a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 5 14:12:49 2010 -0400
+
+    It's --biospart, not --biosdisk (#620855).
+
+commit 4aa4f53ac0a473ae84c03540d1a10833ac6c81c7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jun 10 12:55:49 2010 -0400
+
+    New version.
+
+commit a0c4ab93abee6bfcba30b886319e5f2d7e8ab988
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jun 10 11:48:28 2010 -0400
+
+    If an option is deprecated, do not care if it takes a value (#602303).
+    
+    The problem here is that if an option that ever did have a type that requires
+    a value (string, for instance) then when that option is later deprecated, it
+    will still require a value.  Then you'll get a parse error instead of the
+    deprecation warning, which doesn't make a lot of sense.
+
+commit 86b2b4f0a5e5c5513e8a1e6b32cc42577d00d072
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jun 10 11:48:01 2010 -0400
+
+    Don't compare the dest ("telnet") with the option string ("--telnet").
+
+commit 57aba76a3da36d11b7c4ab4b1451570409ce2163
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jun 10 11:46:40 2010 -0400
+
+    The --connect= parameter wasn't really deprecated in FC6.
+    
+    If it was, we wouldn't still be processing it.
+
+commit 7e76b52606da5d0b61f9f003c5c8ab1ca66d92c1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 1 13:32:19 2010 -0400
+
+    New version.
+
+commit a1af4ffb6031ceb074b1bc02c7dd78c0ff25d1cc
+Author: Peter Jones <pjones@redhat.com>
+Date:   Thu May 27 11:29:30 2010 -0400
+
+    Allow "ignoredisk" to explicitly specify interactive usage (#596804)
+    
+    We want the user to be able to manually navigate advanced storage when
+    using a ks.cfg without partitioning sections.
+
+commit 6f4a997225ccb1aabb34a735a2c5750904c75158
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 23 13:37:48 2010 -0400
+
+    New version.
+
+commit 14098b034b21dfb1b4636048a16f1bfa0d86cc34
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 23 11:56:22 2010 -0400
+
+    Return non-zero on error from ksvalidator (#585284).
+
+commit 53aef14c7b42eb90a04b6fd0e1e7d547771454c6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 14 17:10:10 2010 -0400
+
+    New version.
+
+commit 0515e29ef2f728b51f612c2d2f4a0fbffb179464
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 14 11:16:07 2010 -0400
+
+    Don't overwrite the excluded group list after every %packages line (#577334).
+    
+    Without this patch, you can only have one excluded group and it must come as
+    the very last line of the %packages section.  This is because after every
+    line of the %packages section, we're resetting the excluded group list back to
+    either whatever group you specified to exclude on this line, or nothing for
+    every other line.
+
+commit be4bb18288aa8a0e9953236a5703acf24c9bb533
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 14 12:00:08 2010 -0400
+
+    Add a bunch of test cases for the packages section.
+    
+    This is meant to prevent things like #577334 from coming back.
+
+commit 2000711c128e5f4f24462b6ca6a7c25dc5dfca5f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 31 10:56:34 2010 -0400
+
+    New version.
+
+commit 45dd179a352919439fbba6c760438384a068acc7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 31 10:48:09 2010 -0400
+
+    Add support for RAID4 (#578514).
+
+commit f22f84e85bca6e5e86a74589b2426d988c926f9b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Mar 30 14:56:25 2010 -0400
+
+    Escape percent signs in the changelog.
+
+commit 7085b35e13a83b0908c8605dba44990e8c3ea533
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 10 10:35:53 2010 -0500
+
+    New version.
+
+commit 9dcdf86392d8f8745cd9a148a005bac6f7c9d702
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Mar 4 10:23:45 2010 -0500
+
+    Add driverdisk --biospart= (#570437).
+
+commit e2871ebf655ebcd7eb01e150d86253aebf2f5e9e
+Author: ppapadeas <ppapadeas@fedoraproject.org>
+Date:   Mon Mar 1 09:40:54 2010 +0000
+
+    Sending translation for Greek
+
+commit 5e9ba85169fc24b5aa0cca057f7c136281c51f87
+Author: thalia <thalia@fedoraproject.org>
+Date:   Sun Feb 21 13:57:05 2010 +0000
+
+    Sending translation for Greek
+
+commit 9dacd7f259bada02d7c283cf672a77d4178d68f1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 26 09:56:18 2010 -0500
+
+    Fix IOError catching in ksflatten (jgregusk, #558650).
+
+commit 59dfff9b206ce19ad7af4f2a57b5ce45caaa5b8e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 14 14:11:14 2010 -0500
+
+    New version.
+
+commit f3bb9ec85501fd6a3cd3d306f08c7b6716e54c08
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 14 13:38:24 2010 -0500
+
+    Support removing groups that were included by a glob (#554717).
+    
+    pykickstart doesn't know anything about packages, and therefore does not
+    expand globs.  Group exclusion currently only works by taking into account
+    groups previously mentioned in the kickstart file.  This implementation
+    was primarily motivated by the spin kickstart files that %include.  So, a
+    kickstart snippet like the following:
+    
+    %packages
+    *
+    -@foo
+    %end
+    
+    will not exclude the group foo, because it was not previously mentioned.
+    This patch adds a new list that users of pykickstart can inspect to make
+    sure to remove the groups.
+
+commit e500faebbf514d5466bba35d501261bed6495538
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 14 14:06:12 2010 -0500
+
+    Make sure that everything in version.versionMap has a handler.
+    
+    This catches what I tried to do, which is add support for a version everywhere
+    except for adding a file to pykickstart/handlers/.  That results in an error,
+    but there's no test case to check for that.
+
+commit 730a17d5101d17af34be9b447cae18b35bb49a0e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 13 09:52:18 2010 -0500
+
+    Add support for RHEL6 (#552230).
+
+commit 8776de020a84a444f8f8f82154b1e3fb68a46b4f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 13 09:49:14 2010 -0500
+
+    Don't consider RHEL versions as developmental even if they're latest.
+
+commit ac1a8ca497832231f5af9f067f6ee94a90bd64a1
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Thu Jan 14 11:50:55 2010 +0100
+
+    Add lineno to BaseData and derived classes (version 2)
+    
+    Add a lineno to BaseData derived classes, so that execute methods
+    in anaconda's kickstart.py can get the line no a data list entry comes from
+    for error reporting.
+
+commit a2b9df829897a14caf256ec8eb7fe924dcc81285
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Thu Jan 7 13:14:13 2010 +0100
+
+    Give the non mandatory iscsi --port argument a sane default
+
+commit 7e4b417ee448cc265d57a137f49d07efc45348c4
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Thu Jan 7 13:12:40 2010 +0100
+
+    Change python_sitelib macro to use %global for new rpm
+    
+    Change python_sitelib macro to use %global as the new rpm will break
+    using %define here, see:
+    https://www.redhat.com/archives/fedora-devel-list/2010-January/msg00093.html
+
+commit b9be276f1fd6759ecf31b7f7da22fa8fe812750b
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Mon Dec 14 18:49:10 2009 +0100
+
+    Fix typo in iscsi parsing error message
+
+commit ca83c3a72fcea3079b2ed42edbeb1f220c599387
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Dec 3 16:03:55 2009 -0500
+
+    New version.
+
+commit 91491ec5ae88f798036cc0fa7e42f4a8a01387cc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Dec 3 16:01:08 2009 -0500
+
+    Don't use action="append_const" in firewall.py.
+    
+    The reason for this is that python2.4 doesn't support it, and we're still
+    using python2.4 on RHEL5, and all the builders have RHEL5 installed.  So
+    if we want to continue using pykickstart for testing and building, we've got
+    to use this workaround.
+
+commit 2216c39a08c2bcc3523badf3dae99fa17730580a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Nov 25 11:14:23 2009 -0500
+
+    Make "make archive" depend on test and check passing again.
+
+commit a743d2bbb440171f746d0383e3140e7f249e67bd
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Nov 25 11:11:33 2009 -0500
+
+    versionToString now works in all cases we test for.
+
+commit 40a85df7217c1b02443cdadb158f9699ad99a43d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Nov 25 10:52:47 2009 -0500
+
+    Fix the few pychecker errors outstanding in options.py.
+
+commit d5b0f4359f7cd9f4e318999d73b94164999024c0
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Wed Nov 25 13:00:04 2009 +0100
+
+    Fix make docs to make docs dir before trying to download files there
+
+commit 45b923d0f01f54dd452c4a5b6c8c7f8e2602dfb7
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Wed Nov 25 12:56:29 2009 +0100
+
+    New version.
+
+commit 280823ed838a9b221d263f5fce7068fa01bbdba3
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Tue Nov 24 20:20:44 2009 +0100
+
+    Add --dcb option to fcoe command (#513011)
+
+commit 91276efcef4fd19420d62cf8188562d96ea466fd
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Fri Nov 20 13:45:20 2009 +0100
+
+    Remove rhpl from tests.
+
+commit 9a5da6cf9cb63fffe72552cf2597955a0fa7782e
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Fri Nov 20 11:51:36 2009 +0100
+
+    Port bootloader --hvargs option added in rhel5.
+    
+    Option was added in bug #501438.
+
+commit b6ffda50b744fe933cd867ff077dc4a53a4b2f09
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Nov 17 09:23:24 2009 -0500
+
+    Ignore comments when looking for %ksappend lines (#525676).
+
+commit 18165f9a73ef43decfe23b351276c506cce2fc21
+Author: Mike McLean <mikem@redhat.com>
+Date:   Thu Nov 12 22:48:01 2009 -0500
+
+    use python 2.x exception syntax
+    
+    Signed-off-by: Mike McLean <mikem@redhat.com>
+
+commit c5eb0782c49bbd43cab53a805912df681d511dd7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 12 15:49:32 2009 -0500
+
+    New version.
+
+commit 2e9230cd5259bdbc4dbf2f23df0ac8739d344f20
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Nov 10 13:21:19 2009 -0500
+
+    Add additional arguments to BaseHandler.__init__ for better map control.
+    
+    First, I've introduced dataMapping= which does the same as mapping but for
+    data objects.  Second, I've introduced commandUpdates= and dataUpdates= which
+    take effect after mappings have been generated and modifies them.  This allows
+    you to either specify an entirely new set of mappings or just updates a few
+    commands.
+
+commit 4cabcbec62192f2fcea74a828716b4a649b64903
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Nov 10 11:40:46 2009 -0500
+
+    Return the KickstartCommand/KickstartData object from dispatcher.
+    
+    When the dispatcher calls out to a KickstartCommand, it gets a return value
+    that is either the KickstartCommand populated with data, or a KickstartData
+    also populated with data.  It'd be nice to make that return value available
+    in handleCommand, and then again in whatever calls handleCommand.
+
+commit ca4719fce40daa01545051cb2bab3fbdf65a6b2b
+Author: Peter Jones <pjones@redhat.com>
+Date:   Tue Oct 20 14:13:44 2009 -0400
+
+    Add an "sshpw" command for changing the passwords in anaconda's env.
+    
+    This allows the user to change the passwords for anaconda's "ssh"
+    environment.
+
+commit c32e8b6c6efddef621ef8e589127302cfe86a6a5
+Author: astur <astur@fedoraproject.org>
+Date:   Fri Oct 30 12:29:16 2009 +0000
+
+    Sending translation for po/ast.po
+
+commit 6385b4d812614bca38008cd1bf0a0beb5f7a7b0a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 30 15:06:33 2009 -0400
+
+    Add --proxy support to the url and repo commands.
+
+commit f2a87aaeab11acb9f32ee6e04c7e65c526712f93
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 30 14:46:03 2009 -0400
+
+    Add support for F13.  Is it really that time already?
+
+commit b78d398de63a6e38418714671d886688bede600e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 30 11:18:06 2009 -0400
+
+    New version.
+
+commit b2ced37d4cd388afe3cca5b6cd777903b650c64c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 30 10:16:09 2009 -0400
+
+    Update the zfcp command for F12 (#526360).
+    
+    The --scsiid and --scsilun options are no longer required, and aren't even
+    used by anaconda anymore.  I believe they used to be before the storage
+    rewrite, but at that time we discovered they don't do anything and got rid
+    of them.
+
+commit 02f350629bf786b03e32bc3f88249851a9f1b03e
+Author: mvdz <mvdz@fedoraproject.org>
+Date:   Tue Sep 22 19:39:22 2009 +0000
+
+    Sending translation for Ukrainian
+
+commit 2c5597caa98500d617ac8ee48ad0319dcb8a13e2
+Author: raven <raven@fedoraproject.org>
+Date:   Tue Sep 22 19:29:06 2009 +0000
+
+    Sending translation for Polish
+
+commit 9f3992089bee053effac419d53533b0bb5ccda1f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 18 09:08:03 2009 -0400
+
+    Move "make" to %build (#524215).
+
+commit f32e7475d837cb0c98c7cc3ba8c682e32b0855c7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 16 15:45:29 2009 -0400
+
+    New version.
+
+commit e2cd70b372293041514ba19a18af5ff9187ce812
+Author: ypoyarko <ypoyarko@fedoraproject.org>
+Date:   Mon Sep 14 06:12:57 2009 +0000
+
+    Sending translation for Russian
+
+commit 3bcaf4d2462f499fb35a686ebf0ce18bc781dc11
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Sep 10 11:04:35 2009 -0400
+
+    Add encryption key escrow support (mitr, #508963).
+
+commit 7379a6a52c36ea399dbfdfff0029330a49f4643b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Sep 10 10:59:36 2009 -0400
+
+    Fix the repo test cases to expect quotes around the repo's name.
+
+commit 76bd102af870540adc71368dc3139514afe2205c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Sep 10 10:32:19 2009 -0400
+
+    New version.
+
+commit b3c29d10306c7650198716b6440f565c4a219d01
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 9 17:21:39 2009 -0400
+
+    Support translated help text in optparse (#479519).
+
+commit d5cb1d7cf87faa4270de34b5959b96327662b822
+Author: willwill <willwill@fedoraproject.org>
+Date:   Wed Sep 9 02:22:29 2009 +0000
+
+    Sending translation for Thai
+
+commit 1ab2d9d798734e9e552d2bfa80f56166bc83d334
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 2 11:38:32 2009 -0400
+
+    If the input kickstart file cannot be read, raise IOError (#519477).
+
+commit ec7f60157ae6c0530de62f77efc46a620878ba4f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 27 15:45:18 2009 -0400
+
+    New version.
+
+commit 4a15868f70ef4413a50d53a5341744aa2749dbba
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 20 10:01:03 2009 -0400
+
+    Include the error messages from URLGrabError in the exception (#518443).
+
+commit 15efd0ae9b32d59cc064ea1ae624c64fa3a313a6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Aug 11 14:25:12 2009 -0400
+
+    New version.
+
+commit 5589d1e4ac9442cc1ea88b719d9153dfcf5c2eac
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Aug 11 10:46:45 2009 -0400
+
+    Put quotes around the repo's name (Marc.Herbert@gmail.com).
+
+commit 6f4f4fcddb71191ad2b1a9f7dbd8086a6104ce9f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Aug 10 17:35:40 2009 -0400
+
+    Make duplicate entries warnings, not errors (#516338).
+
+commit 468f813476fc7e79fda1218f028380f6e5673087
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 28 23:06:40 2009 -0400
+
+    New version.
+
+commit 4e1f0ff30bf1cb1d261d4920d82fc77a33761ff8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 28 08:50:07 2009 -0400
+
+    Handle a few more places where a urlgrabber error could happen (#512951).
+
+commit 7bea68b8cbd81ce66b18cbec71b85762e0dbb70a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Sat Jul 25 18:48:44 2009 -0400
+
+    Error out if the same partition/repo/network is defined twice (#512956).
+
+commit eab42c962277a9003b9f1b70f503bc0550c3a7e1
+Author: James Laska <jlaska@redhat.com>
+Date:   Fri Jul 17 09:25:44 2009 -0400
+
+    Call parent class tests first.
+
+commit e85d4539ddec09787aa44f4191668dcb6c5cd341
+Author: James Laska <jlaska@redhat.com>
+Date:   Fri Jul 17 09:25:43 2009 -0400
+
+    Add KSOptionParser to FC3 upgrade command. Correct failing upgrade unittests.
+
+commit 24aeaf02cbecf226224c8d8262f08c6451fa0d83
+Author: James Laska <jlaska@redhat.com>
+Date:   Fri Jul 17 09:25:42 2009 -0400
+
+    Correct missing return stmt in _getArgsAsStr()
+
+commit d2ebf3f927f751761610a2c9546be645cc75e484
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jul 17 00:10:51 2009 -0400
+
+    New version.
+
+commit 4c299e8821588e8774fac2a883ade8cedc6aaa58
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 16 10:32:28 2009 -0400
+
+    Adjust writePriority to fix lvm-on-raid0 test cases (jlaska).
+
+commit abb70f78fbb32b3033ffbc565ec013ccfa49db3e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jul 13 10:41:29 2009 -0400
+
+    Add F12 to the version number tests.
+
+commit 6c730a4d547c70eeb84d53b38de524f22a12c562
+Author: David Cantrell <dcantrell@redhat.com>
+Date:   Fri Jul 10 14:20:52 2009 -1000
+
+    F12_User test case.
+    
+    Test the new --gecos parameter for the user command.
+
+commit b1f8ac0c097c010ebfc0e6b8b947f4ac5baa6518
+Author: David Cantrell <dcantrell@redhat.com>
+Date:   Fri Jul 10 14:20:51 2009 -1000
+
+    Add --gecos argument to the 'user' command
+    
+    Add support for setting the GECOS field with the user command.
+
+commit b75a39660815459ac3983e2361dca6ea9f5a24b8
+Author: David Cantrell <dcantrell@redhat.com>
+Date:   Fri Jul 10 14:20:50 2009 -1000
+
+    Convert user.py to use _getArgsAsStr()
+
+commit e2ac4b96211df295276bee7e818a1a35bf8e1f6f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jul 10 17:46:10 2009 -0400
+
+    Another new version.
+
+commit d96f8927560cf2bd349c0d691f2e8f5cf97b0d88
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jul 10 10:57:01 2009 -0400
+
+    Another patch to make the bootloader test work (jlaska).
+
+commit 13f401695be76aa423f7e40c6bae2d6e77935976
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 9 20:54:48 2009 -0400
+
+    New version.
+
+commit 7df0c3c376ab436768cc62027169930968da6237
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 9 20:51:24 2009 -0400
+
+    Make sure to import the gettext stuff in fcoe.
+
+commit e81a87f92a76aac0d25e264aea266960df4986be
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 9 15:42:03 2009 -0400
+
+    Correctly deprecate bootloader --lba32 (jlaska).
+
+commit 571c3c23660b53b303801b01b2ff7d29e3623338
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Wed Jul 8 09:20:31 2009 +0200
+
+    pykickstart: fix zfcp command writepriority
+    
+    zfcp commands should be written before any partitioning commands, and
+    thus should have a priority of 71
+
+commit 7ffa9a7c163251d4e9456bcb698ae004f1e2fe5b
+Author: Hans de Goede <hdegoede@redhat.com>
+Date:   Wed Jul 8 09:17:58 2009 +0200
+
+    pykickstart: Add fcoe command (take 2)
+    
+    Add an command to activate FCoE attached SAN's from kickstart
+
+commit 3fa478da4caad89d1fffe1f28b77c19fc89e99f9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 7 15:37:29 2009 -0400
+
+    Add a test case for RAID (jlaska).
+
+commit f38dbdb902eef54e6128cb2cd481d548a30099f3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 2 10:40:54 2009 -0400
+
+    New version.
+
+commit c9bceccf52814e3b00484b9ab840d4b37855c232
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 2 10:56:53 2009 -0400
+
+    Actually include the programmers-guide in the tarball.
+
+commit e828de22a8b527ea6ffea4150999c3f0a08c277a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 2 09:55:11 2009 -0400
+
+    Add support for the group command to F12.
+
+commit 6ec852499c39a2ac6786c4a14932398a1286aad4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 30 11:35:33 2009 -0400
+
+    RHEL5 now supports RAID 10.
+
+commit 3720bf1e203ce4d626bc2b47b0e006895d085a18
+Author: Joel Granados Moreno <jgranado@redhat.com>
+Date:   Tue Jun 16 16:50:15 2009 +0200
+
+    The f12 hander class should be called F12Handler.
+
+commit faa81a6754284da0c741464ae8266c8c0a5bdb8f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jun 4 11:04:27 2009 -0400
+
+    Remove bootloader --lba32.
+
+commit cf61c64f8360d682c515269f8d90317284b91f5b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 2 11:57:09 2009 -0400
+
+    Add a new version of the driverdisk command without --type=.
+
+commit 5eddb302264f074d4c63a0c6a166c40c6dd0f30d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 2 11:45:15 2009 -0400
+
+    Add initial support for F12.
+
+commit 2b1ebd11465d6f0a8b931df18717db7b9d7b850c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri May 29 13:28:05 2009 -0400
+
+    Fetch the programmers-guide from the wiki now.
+
+commit 54f92e4bd1e21a242cd16a5fd92aca8bb9b81ebb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon May 18 17:33:57 2009 -0400
+
+    New version.
+
+commit b914164b0f29652b31369c740bdfcd4a402213fd
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon May 18 17:31:02 2009 -0400
+
+    Make sure the F11 handler gets used for "partition" and "part" (#501020).
+
+commit 82829c8b8d12147d2fefb5227dbb1ed943930561
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 29 15:02:12 2009 -0400
+
+    New version.
+
+commit 3e498d49ee94206b0e4e4d9439a1859a093d0a43
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 29 15:01:45 2009 -0400
+
+    git-whatever -> git whatever
+
+commit af0ae73e64a745cab1078906a30b0ae566239f91
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 22 11:49:00 2009 -0400
+
+    Move lineno= from KSOptionParser.__init__ to parse_args (#497149).
+    
+    Setting it in __init__ causes all line numbers in error messages to be
+    reported as 0, since the option parsers are all instantiated when the
+    command handlers are created early-on.  Instead, we want line numbers to
+    reflect where we really are in processing, and that can only be done when
+    parse methods are called.
+
+commit a4c39e6f072e2c9ab461b62480cdf554b976c363
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 22 11:30:34 2009 -0400
+
+    Use the F11 version of the partition command.
+
+commit 3e655d4c5d1c407d6705a5d15d2de709532dfbbd
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 22 11:30:06 2009 -0400
+
+    Remove the --start and --end options since anaconda no longer uses them.
+
+commit b1e0449d866624398b595b566fe9c03c7281d065
+Author: sadid <sadid@fedoraproject.org>
+Date:   Sun Apr 19 21:07:19 2009 +0000
+
+    Sending translation for Persian
+
+commit a95c69f5247e22402021686fe1c16a705e7e777f
+Author: fab <fab@fedoraproject.org>
+Date:   Fri Apr 17 21:53:23 2009 +0000
+
+    Sending translation for po/de_CH.po
+
+commit e5cf32b184eaee8ac880f894b02c59baa9468339
+Author: fab <fab@fedoraproject.org>
+Date:   Fri Apr 17 21:46:50 2009 +0000
+
+    Sending translation for German
+
+commit daab8b3a60fec5f0798646174ebee95f63529fc5
+Author: willwill <willwill@fedoraproject.org>
+Date:   Fri Apr 17 17:09:14 2009 +0000
+
+    Sending translation for Thai
+
+commit 419c979ddbc21937873a12ebca76bfe6d0639687
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 8 14:21:55 2009 -0400
+
+    Remove a broken test case.
+
+commit 538009ab7df1dc60a67678d0e5841265a26e1efa
+Author: fab <fab@fedoraproject.org>
+Date:   Mon Mar 30 21:17:52 2009 +0000
+
+    Sending translation for German
+
+commit 567c49161effa5d9fbec73a2f87c732b66fe236a
+Author: kristho <kristho@fedoraproject.org>
+Date:   Mon Mar 23 08:49:06 2009 +0000
+
+    Sending translation for Danish
+
+commit b0ce74cb7cdb186f393805e18e300a4fba5218e9
+Author: sveinki <sveinki@fedoraproject.org>
+Date:   Fri Mar 20 12:50:38 2009 +0000
+
+    Sending translation for Icelandic
+
+commit b7ebd0970bf68377b716da23714831a97ddc832d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 18 13:29:21 2009 -0500
+
+    New version.
+
+commit e17acb2b07de9525a8453dffe17aee53fb7effde
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 18 13:25:23 2009 -0500
+
+    Add a skip attribute on key to shut up pychecker.
+
+commit 634734b683eb99f8b2f24406463ef3f8cc154d9e
+Author: James Laska <jlaska@redhat.com>
+Date:   Wed Feb 18 08:31:29 2009 -0500
+
+    Only show autostep command when requested
+
+commit d9aaed40361f0512d74e86c39c7bb42e1c9c2cc2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 12 14:22:39 2009 -0500
+
+    Strip spaces from service names, and require an option to be provided.
+
+commit db9f778d690cae3cd4c8926c53e858f21f0b0012
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 12 14:22:24 2009 -0500
+
+    Add a services test case (alindebe).
+
+commit b3bdf7a8cb8d2651f17242923b5efb3afaff0b48
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 12 13:52:06 2009 -0500
+
+    Surround services lists in double quotes.
+
+commit 387adc71945f641bc9462e1d59e66a245d39e988
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 12 13:24:34 2009 -0500
+
+    Remove the extra space from the services __str__ method.
+
+commit 9b09d4811390f3f7b8374e9bcb7663010e4b0171
+Author: Martin Gracik <mgracik@redhat.com>
+Date:   Tue Feb 10 16:39:38 2009 +0100
+
+    Added firewall, partition, repo tests.
+
+commit 1e2faa123f17c53e16f2abce7baba08ca010242f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 11 13:11:29 2009 -0500
+
+    Fix output formatting bugs in firewall, partition, and repo (mgracik).
+
+commit 68d25a5cbabfd52ac50b2f385d92b76e517b0c78
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 9 14:46:39 2009 -0500
+
+    Specifying both or neither of --drives and --only-use should be an error.
+
+commit 3f05f4be74332856424dcc846e5eaab85a9d9b5c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 9 14:30:48 2009 -0500
+
+    We need to import the translation stuff for error messages here.
+
+commit 62fb0e6df5f2cb1c620fe3ed5c47e46783ab0a50
+Author: Martin Gracik <mgracik@redhat.com>
+Date:   Mon Feb 9 11:41:24 2009 -0500
+
+    Added method test case; Corrected newline char in return value of FC6_Method.
+
+commit 6db004e9d400bbef6ff6298839c9f754fdf481e9
+Author: Martin Gracik <mgracik@redhat.com>
+Date:   Mon Feb 9 11:41:36 2009 -0500
+
+    Added reboot, upgrade, user, zerombr test cases.
+
+commit 872e5970db67e07e53903a048fffae84f9eda1e5
+Author: Martin Gracik <mgracik@redhat.com>
+Date:   Mon Feb 9 11:41:29 2009 -0500
+
+    Added mouse test case.
+
+commit 7f2c8683eac112c077a22011f4e5711132d1b66d
+Author: Martin Gracik <mgracik@redhat.com>
+Date:   Mon Feb 9 11:41:18 2009 -0500
+
+    A couple changes.
+    
+    - Corrected return value of FC6_Iscsi parse method.
+    - Added iscsi, ignoredisk, langsupport test cases.
+
+commit 5a98cfd858a02a0f8c6499e483a08cae0724de87
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 9 13:34:58 2009 -0500
+
+    Make --drives a required option for FC3, and catch no args on F8.
+
+commit 9019b9764598e21db79ed61f973c95565e2b7a5a
+Author: Martin Gracik <mgracik@redhat.com>
+Date:   Mon Feb 9 11:41:11 2009 -0500
+
+    Added lilocheck.py test case.
+
+commit 425bbcd2fa352a28b6be821286ba5429384f9250
+Author: Martin Gracik <mgracik@redhat.com>
+Date:   Mon Feb 9 11:41:04 2009 -0500
+
+    Added iscsiname.py test case
+
+commit bdbe9aa73c913f93f37c7027e89bb3aa3baa3a05
+Author: Martin Gracik <mgracik@redhat.com>
+Date:   Mon Feb 9 11:40:56 2009 -0500
+
+    Fwd: [PATCH] Added rescue.py test case
+    
+    ----- Forwarded Message -----
+    From: "Martin Gracik" <mgracik@redhat.com>
+    To: kickstart-list@redhat.com
+    Cc: "Martin Gracik" <mgracik@redhat.com>
+    Sent: Friday, February 6, 2009 4:47:23 PM GMT +01:00 Amsterdam / Berlin / Bern / Rome / Stockholm / Vienna
+    Subject: [PATCH] Added rescue.py test case
+
+commit f9ad6ec14a8efbeae0ee9545658963f6891df340
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Feb 6 10:19:37 2009 -0500
+
+    Fix final printing of the rescue command (mgracik).
+
+commit 03e7190c4c6f45bd5f7c38c0895d45a72ad4356d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 16:13:46 2009 -0500
+
+    Add a dmraid test case (alindebe).
+
+commit ba955c2ce7feadd8b0b62e89d4f4e4d717074772
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 15:34:02 2009 -0500
+
+    Surround output strings in double quotes.
+
+commit e282b7fa04580d696a47fcb410865f745178c04e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 15:33:49 2009 -0500
+
+    Add a test case for the bootloader command.
+
+commit bb5f0fb56c8bbd22f7e0103b2893c750b784ae7d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 11:49:27 2009 -0500
+
+    Fix a typo in the deviceprobe command.
+
+commit 85f280cde54f8ffd118b1edfb08f1c6d62b208b0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 11:46:49 2009 -0500
+
+    Add a displaymode test (alindebe).
+
+commit bb52eca544d1a32e974370395236c9df4dc3dc50
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 11:44:52 2009 -0500
+
+    Add a devicemode test case (alindebe).
+
+commit 601457cb531793205db564c8e3eae1b0bf625e3f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 11:43:24 2009 -0500
+
+    Revert the more strict option processing on displaymode.
+    
+    The displaymode command works just like the authconfig command in that it
+    passes whatever extra arguments it gets along.  So, we don't want to do
+    any processing or checking of them in pykickstart.
+
+commit 371b45592e919da10ae6f141f6a3fa864a3b3b10
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 11:42:56 2009 -0500
+
+    Properly handle erroring on extra args, not just extra options.
+
+commit d155063f9c1e6522a04f23bb522709aea78baf07
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 11:21:58 2009 -0500
+
+    Added a logging test (alindebe).
+
+commit db80383b23d099dfc024516292fb0b9ab9de2eca
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 11:21:19 2009 -0500
+
+    Don't use the logging class since it interferes with the logging test.
+
+commit 1e768be098a5818b9c81ad339455498c307b1202
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 5 11:20:22 2009 -0500
+
+    port without host should raise KickstartParseError, not kickstartValueError.
+
+commit abcebce3c5e9d190a1c2e30e6d708cc3e9b4d7ad
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 3 14:14:14 2009 -0500
+
+    Add the --key option to option processing, since it's a valid argument.
+
+commit 4e6c6968ece1f627749c262e2ac63ca683668d23
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 3 14:13:45 2009 -0500
+
+    Fix test cases that were failing due to the new use of KSOptionParser.
+
+commit e36dd912502b1afce0ac8716d6c770a9d361223b
+Author: Paul W. Frields <stickster@gmail.com>
+Date:   Sun Feb 1 19:51:54 2009 -0500
+
+    Create new unittest for key.py
+
+commit 66bea6bab514324deea8f29c952a8b3a1cf1aea5
+Author: Paul W. Frields <stickster@gmail.com>
+Date:   Sun Feb 1 20:49:56 2009 -0500
+
+    Teach driverdisk.py command to reject extra partitions
+
+commit f4a8a4d481cd592988db771ffc82ddc8d65b1263
+Author: Paul W. Frields <stickster@gmail.com>
+Date:   Sun Feb 1 20:50:08 2009 -0500
+
+    Create new unittest for driverdisk.py
+
+commit 4b2ed10963244a7fe7c74bc2524215b4a216b7c0
+Author: James Laska <jlaska@redhat.com>
+Date:   Mon Feb 2 10:43:42 2009 -0500
+
+    Add KSOptionParser to all commands ... enables more strick option checking
+
+commit 3fb9fcbb89facd0e21640a101aafc38f498b1c51
+Author: James Laska <jlaska@redhat.com>
+Date:   Wed Jan 28 19:20:50 2009 -0500
+
+    Use KSOptionParser so we can catch bad command options
+
+commit 6b0037c479aac9768bbffa928f9b15acbad9122d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 29 17:41:26 2009 -0500
+
+    New version.
+
+commit 216123b9c7de7739e54de4bc484851a8194539fb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 29 15:33:48 2009 -0500
+
+    Make a couple changes to how the logging command is handled:
+    
+    - If no level is given, use "info" as the default.  Always write out a level
+      on the output side of things.
+    - --port without --host raises a KickstartValueError now.
+
+commit 4e757a16cbcd56b7c9bbb520f5c0ed7fb1d8f04b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 29 15:01:51 2009 -0500
+
+    Add a test case for interactive (alindebe).
+
+commit c21bc61e25ccf7a70b973be89fe018df72e8a351
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 29 14:50:15 2009 -0500
+
+    Add a test for the media check command (alindebe).
+
+commit 2b5f4c956075012fdfed8cab160d3f948b804f9e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 29 14:47:33 2009 -0500
+
+    Add a test case for rootpw (alindebe).
+
+commit 035b94712e4da4f1b7e70b33740c6941933430d0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 29 14:47:20 2009 -0500
+
+    Fix output formatting for the rootpw command.
+
+commit a8b1723516aa57a1596e41130fddcd18b00043a4
+Author: Fran莽ois Cami <fcami@fedoraproject.org>
+Date:   Wed Jan 28 23:00:47 2009 +0100
+
+    Create firstboot command
+
+commit abf9b78f192cb7a4065395755b56d800a18d71ec
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 17:08:26 2009 -0500
+
+    Even though it looks dumb, keyboard --foo is valid.
+
+commit 3c8f7ba657ffbf10b8adffd9ba92f9589c4e3f01
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 17:05:15 2009 -0500
+
+    Append a newline to the reboot command output.
+
+commit 5c0094f417d2c62e8307e221a551433bb53ff2d0
+Author: James Laska <jlaska@redhat.com>
+Date:   Wed Jan 28 16:58:32 2009 -0500
+
+    Create a monitor unit test
+
+commit 3377453c26a9955808bcafdae130575cefb6c64c
+Author: Adam Williamson <adamwill@shaw.ca>
+Date:   Wed Jan 28 12:39:03 2009 -0800
+
+    Create clearpart command
+
+commit b1af91c5704237d6c5569fa55999ab198a3200df
+Author: Adam Williamson <adamwill@shaw.ca>
+Date:   Wed Jan 28 13:19:08 2009 -0800
+
+    Create lang command test
+
+commit 5bd189ef69eef1dac3eeb46f5996067f51594cab
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 16:47:20 2009 -0500
+
+    Add a keyboard test case (pfrields).
+
+commit c683721c70781c7cece12b2408941018cfa99845
+Author: James Laska <jlaska@redhat.com>
+Date:   Wed Jan 28 16:15:00 2009 -0500
+
+    Create a skipx unit test
+
+commit ca79fa01281ea29c9e0026dc39de81cc0dc35e72
+Author: James Laska <jlaska@redhat.com>
+Date:   Wed Jan 28 16:01:16 2009 -0500
+
+    Add a device unit test
+
+commit 3e2f506c0153ff6dc38eacc43a377a8fcc238e23
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 16:20:10 2009 -0500
+
+    For commands that take exactly one argument, check and error correctly.
+
+commit ee38704e0daeb25ce1ecb05db089526bf89739e3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 16:00:25 2009 -0500
+
+    Do the same for options on newer versions of the device command (jlaska).
+
+commit c7f13ed05aa4bfa1b5eea844efdd5862c56f01ba
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 15:38:36 2009 -0500
+
+    Surround module options in quotes on the output side (jlaska).
+
+commit 34f4c8f290b74ec601a163d2601073979650e6dd
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 15:31:18 2009 -0500
+
+    Set module opts in the FC3 handler correctly.
+
+commit 4a5d0ceced1b265f2c0da94f7d7656f1e03ad309
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 14:46:27 2009 -0500
+
+    Fix newlines on the device command output (jlaska).
+
+commit f29fc5914ac25c5d44a050521d7d463dff6d4135
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 14:42:52 2009 -0500
+
+    Add a test for the timezone command.
+
+commit e2dedcd6ab15591b2953d0ac4820280dc8b721a3
+Author: James Laska <jlaska@redhat.com>
+Date:   Wed Jan 28 13:39:43 2009 -0500
+
+    Added new autostep test
+
+commit 83dde6aa7222550f53d360e135f4b5c9a6ca8af0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 13:34:21 2009 -0500
+
+    Add a test case for the autopart command.
+
+commit 208c8803d52a233a66a96ddbce158a44d045f458
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 28 13:25:18 2009 -0500
+
+    If --autoscreenshot is not specified, still output "autostep".
+
+commit e40b8721eb53f47788f878224ff0bf866a03c9ac
+Author: James Laska <jlaska@redhat.com>
+Date:   Fri Jan 23 16:46:45 2009 -0500
+
+    Move the currentCmd and currentLine into getParser().
+    
+    Renamed and tweaked loadTests() to be more generic.
+
+commit 6a00a0476d6f1f409c7befb2fb6665ba2fc87530
+Author: James Laska <jlaska@redhat.com>
+Date:   Fri Jan 23 16:46:46 2009 -0500
+
+    Created a set of tests to validate version functionality
+
+commit 7d949f20cdfedd026c0b9e31cdc19df0dd2d0462
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 22 16:58:19 2009 -0500
+
+    Add test cases for authconfig, selinux, and updates commands (alindebe).
+
+commit 34efc793aa303af7294d90fead3259b20436bec3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 22 16:13:27 2009 -0500
+
+    currentLine and currentCmd need to be set in the test cases.
+    
+    Several commands (like authconfig and method) require these values to be set
+    in order to parse correctly.  Since the test cases do their own tokenizing
+    instead of going through the dispatcher method, they'll need to set the same
+    values that dispatcher would.
+
+commit 4cb256b43b4fd6f9a89814a6b73f87e5b2cc21ab
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 22 15:57:57 2009 -0500
+
+    Write out an selinux line if set to disabled, but not if None.
+
+commit 633b9455b0560116032486e0ffd234060d9d4156
+Author: James Laska <jlaska@redhat.com>
+Date:   Thu Jan 22 15:32:19 2009 -0500
+
+    Various test case framework fixes.
+    
+    * Prefix tests/ sub-directory to sys.path instead of appending to avoid
+      namespace collision.
+    * Implment assertNotRaises inside assert_parse().
+    * Strip out comment lines when validating parsed results.
+
+commit 2c419ec913c7e517afce50b8adb8ae7b8bdfb908
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 20 17:03:51 2009 -0500
+
+    Support -@group-name syntax for removing previously included groups (#428835).
+
+commit 6e7503a0d69ea4687a4343b3aceab236bc41b139
+Author: James Laska <jlaska@redhat.com>
+Date:   Tue Jan 20 16:40:56 2009 -0500
+
+    Don't use helper methods with names that begin with 'test_'
+
+commit c58dadafb6e4cdca8b50774442968c1fa5e64460
+Author: James Laska <jlaska@redhat.com>
+Date:   Tue Jan 20 16:40:55 2009 -0500
+
+    Complete logvol parse tests for F9, RHEL5 and FC4
+
+commit c0772dc350156359cb962089a22a3b872c7547f1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 20 14:35:18 2009 -0500
+
+    F9_LogVolData should inherit from FC4_LogVolData, not FC3_LogVolData (jlaska).
+
+commit ecf64323f8d16750dc83205066562a2566bcb6b4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 20 10:42:40 2009 -0500
+
+    Setting self.required before calling the superclass satisfies pychecker.
+    
+    It also satisfies the test cases.
+
+commit 28376ad55c045336d76a10225e7ac4f1e0b325dc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 20 10:31:58 2009 -0500
+
+    Clean up the compiled python files after "make test" has been run.
+
+commit f4b5cf11aab1bf7acbc4113865a51cc718ba0935
+Author: James Laska <jlaska@redhat.com>
+Date:   Tue Jan 20 10:26:26 2009 -0500
+
+    Add unittest framework along with logvol and vnc unittests.
+
+commit a57790aa64fefb35ef76a1984f4c80f278c04baf
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 19 16:51:44 2009 -0500
+
+    Don't set the KSOption.required attribute in the constructor (jlaska).
+    
+    OptionParser handles setting all attributes to a default value of None and
+    then setting them properly when supplied.  However by setting it to False
+    in KSOption.__init__, the required attribute was always ending up getting
+    unset.  The end result was that no required attributes were raising an
+    exception when they weren't provided.
+
+commit ca9a1dfc1dfe083319a228e4c18fd0b062e5fa22
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Sat Jan 10 17:01:50 2009 -0500
+
+    New version.
+
+commit 986829684b65742f106936e1fb95ee9389e3e65d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Sat Jan 10 16:56:56 2009 -0500
+
+    Add a script to diff two versions of kickstart syntax.
+
+commit 782d3cf3fd151c6e8fd18319f27d9cdbe339f7ca
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Sat Jan 10 12:04:03 2009 -0500
+
+    Add an option to list all available syntax versions.
+
+commit d483c640e003a7f02bf33b687a1cecc85895e0ba
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Sat Jan 10 10:59:11 2009 -0500
+
+    Remove a couple extra newlines in output formatting.
+
+commit 4d331cedc47c4d7845aaa98c6040beebdee2db29
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Sat Jan 10 09:44:34 2009 -0500
+
+    Add documentation for the new %include representation.
+
+commit d26fd768d9cf9fdedf407e5ca678e34449172ced
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 9 17:05:06 2009 -0500
+
+    Add support %include to the pykickstart data objects.
+    
+    Previously, there was no way to represent the presence of a %include in
+    a kickstart file via the data objects.  pykickstart could process files
+    containing includes, but it couldn't do anything with them via the API.
+    This adds support for putting a %include before any command, script, or
+    packages section.  Includes cannot be added into the middle of a section
+    or at the very end of a file.
+
+commit 293c60264881c3ba2508c81b92b7ca1cee16b4e7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 8 17:01:27 2009 -0500
+
+    New version.
+
+commit 9b2b4fcbe4b04201109fb9bd44576a24be4341fa
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 7 09:44:01 2009 -0500
+
+    Add upgrade --root-device (atodorov, #471232).
+    
+    One outstanding problem with preupgrade initiated upgrades is that on machines
+    with multiple root partitions (because there are multiple operating systems
+    installed), anaconda will get confused about which contains the packages to
+    upgrade and which contains the filesystem to apply those packages to.  This
+    patch allows preupgrade to pass that information to anaconda.
+
+commit abecaedbcc6315f3781daaf5922f2fa045ca0b6c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 5 15:38:40 2009 -0500
+
+    Use python's builtin set rather than the Sets module (#477836, dcantrell).
+
+commit 3f23a1bc0198301fd25f031ec55782b827419342
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Dec 23 10:00:49 2008 -0500
+
+    New version.
+
+commit cbf3f6779c0190ecc57781641443fafeacd33104
+Author: Bill Nottingham <notting@redhat.com>
+Date:   Tue Dec 23 00:47:34 2008 -0500
+
+    Allow ignoring group metadata from repos, using a '--ignoregroups' boolean.
+
+commit be0d979661f7df4f387623694817a4fe05c99f45
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Dec 11 13:56:34 2008 -0500
+
+    Add initial support for F11.
+
+commit 93b01aec96fd1c654b9d2a974d9fc1b5ec3d0a8d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Dec 5 14:14:15 2008 -0500
+
+    Specify the command versions in the handlers instead of making copies.
+
+commit 3d171c7913761a6512a9c8c52aae0c3894b3ec97
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Dec 5 14:13:51 2008 -0500
+
+    Remove empty and pointless __init__ methods.
+
+commit e1fc1503609c5100b9b81d16fa3dfd48f56d62b6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Dec 5 14:13:01 2008 -0500
+
+    Pass arguments to superclasses via *args and **kwargs, all the way up.
+    
+    I've been meaning to do this for a very long time now.  Having explicit lists
+    of arguments on every single __init__ method in every subclass is hard to read
+    and hard to maintain.  Instead, pass everything via **kwargs and pull out what
+    we need at each step in the class chain.  It might be nice to have some
+    checking to make sure arguments that aren't recognized raise errors, but we
+    ignore this case everywhere else so why not here too?
+
+commit d5679dfd6d9f55f3fe1449dd9ebeef1a3b99a126
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Dec 4 14:49:13 2008 -0500
+
+    Add removedKeywords and removedAttrs lists on Commands and Data.
+    
+    These new lists are for when a subclass removes support for a flag that was
+    supported in the superclass.  We can remove any trace of the older support
+    by ignoring the contents of removedKeywords in __call__ and __init__,
+    and by deleting everything in removedAttrs from the object itself.
+    
+    Handling the __call__ and __init__ cases happens automatically at the
+    ultimate superclass, though the subclass must make sure to set up the two
+    lists before calling the superclass's __init__.  Removing the attributes
+    themselves requires an explicit call to deleteRemovedAttrs() after calling
+    the __init__ method.
+
+commit 06407fff31318a0f60fbb97008388ecaa9651336
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Nov 26 11:28:39 2008 -0500
+
+    Fix version regexes to handle double digits and minor releases (jlaska).
+
+commit 279dc68fa78dcbb5de40cb0e424db7dfab35fc96
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 30 17:03:53 2008 -0400
+
+    New version.
+
+commit 49b78db2a5452afb750bda3351a9f0e6c115a3cb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 30 11:14:49 2008 -0400
+
+    Fix enabling services we specify by specific options.
+
+commit 74dd52542b88b41f8fe9ea68f3b318838f1c5b28
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 27 13:11:35 2008 -0400
+
+    New version.
+
+commit 227cd2117e501622db44cc066c2e85f69a05c9b2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 16 11:18:41 2008 -0400
+
+    Add support for firewall --service (#467005).
+
+commit 8b9654a434d8cf710df6b485ab7cb52471ace41e
+Author: Ondrej Sulek <feonsu@gmail.com>
+Date:   Sun Oct 19 18:26:08 2008 +0000
+
+    updated slovak translation
+    
+    Transmitted-via: Transifex (translate.fedoraproject.org)
+
+commit ec7707200fad714cd5ecfda3ae59aa32ba6c82a8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 14 16:50:39 2008 -0400
+
+    New version.
+
+commit 7659d27adcd116a28f38e438224a36cf5300895c
+Author: G枚ran Uddeborg <goeran@uddeborg.se>
+Date:   Mon Oct 13 20:49:21 2008 +0000
+
+    Updated Swedish translations.
+    
+    Transmitted-via: Transifex (translate.fedoraproject.org)
+
+commit 6f6937fc1a4c2a8a9806cd0e77c7916dd08df15d
+Author: Teguh DC <dheche@songolimo.net>
+Date:   Thu Oct 2 07:30:13 2008 +0000
+
+    Updated Indonesian translation
+    
+    Transmitted-via: Transifex (translate.fedoraproject.org)
+
+commit 57207803a2b89a0e3249224e363c1d129fa5312b
+Author: Xavier Conde <xavi.conde@gmail.com>
+Date:   Sat Sep 27 17:28:49 2008 +0000
+
+    Updated catalan po
+    
+    Transmitted-via: Transifex (translate.fedoraproject.org)
+
+commit 6f6471270e9dad085a4e6a89af47390b2f3a763f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 26 10:54:58 2008 -0400
+
+    Remove use of string.partition for python2.4 (atodorov).
+
+commit e41e001196346816d880b73d9c2fd79beff59c60
+Author: Terry Chuang <tchuang@redhat.com>
+Date:   Wed Sep 24 05:41:38 2008 +0000
+
+    Translation updated.
+    
+    Transmitted-via: Transifex (translate.fedoraproject.org)
+
+commit 9156e5c917304eeee89165538376b7f05e2bf05c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Sep 22 15:44:53 2008 -0400
+
+    New version.
+
+commit 42ecd4a15c9e98cd45182255919bad554164e65c
+Author: Hans de Goede <hans@localhost.localdomain>
+Date:   Mon Sep 22 13:56:22 2008 +0200
+
+    Add support for reverse CHAP to the kickstart iscsi command
+    
+    The "iscsi" command in RHEL-5.3 has 2 new parameters: --reverse-user and
+    --reverse-password. This patch adds the same 2 parameters to pykickstart's
+    iscsi command handler for F-10
+
+commit ab57a98fcebab651d1e3bf96a4e66068c256ac50
+Author: Terry Chuang <tchuang@redhat.com>
+Date:   Fri Sep 12 06:08:34 2008 +0000
+
+    Transmitted-via: Transifex (translate.fedoraproject.org)
+
+commit 9df00249ba7aab5b678c9bb11b9e12a0397a90d5
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Sun Sep 7 20:42:27 2008 -0400
+
+    Fix typo
+
+commit a3199b8a802b72b59cbf50d5c18975540e8b66aa
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 3 16:33:25 2008 -0400
+
+    New version.
+
+commit 6aeec28cead1402862cddba61169c8e76a05e754
+Author: David Lehman <dlehman@redhat.com>
+Date:   Wed Sep 3 14:46:41 2008 -0500
+
+    Revert "Do not include passphrases for encrypted block devices in anaconda-ks.cfg."
+    
+    This reverts commit 636fd0f0304e6a418c7fb0deabd210d05cc2c023. It was
+    breaking the automated testing stuff. Since we don't actually use this to
+    write out anaconda-ks.cfg it won't hurt to revert it for the time being.
+
+commit 49ae1b94b351c9b400ca8ea739271855f0c212e8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 29 15:48:23 2008 -0400
+
+    yum doesn't like when mirrorlist is "".
+
+commit 1b42d626a1ec6b1e5d7ca9e28b96c8e187c54cdc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Aug 11 13:41:09 2008 -0400
+
+    New version.
+
+commit 5d454fa3e0e6b73ba508c8999f54abe0139f8447
+Author: Alexander Todorov <atodorov@redhat.com>
+Date:   Tue Jul 29 15:53:09 2008 +0300
+
+    add rescue command to pykickstart
+    
+    All needed changes to enable rescue command in kickstart.
+
+commit 657ac131e7dd888581812c46751e543ab65f1032
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Thu Aug 7 09:51:41 2008 -0400
+
+    Sort %packages output
+    
+    Sort %packages when being output so that you can diff two files more easily
+
+commit 248758fa448f582a5e94e8193cbc1b9f56107485
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Aug 4 10:20:08 2008 -0400
+
+    Fix a typo (atodorov).
+
+commit 8a7617e7581c6a873902b064b30aecba89979d4c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 1 15:32:03 2008 -0400
+
+    New version.
+
+commit 01bac43ea8f2555d7dc7feae3661eab8bb07a7cf
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 22 14:14:40 2008 -0400
+
+    RHEL5 supports ignoredisk --only-use now too.
+
+commit 636fd0f0304e6a418c7fb0deabd210d05cc2c023
+Author: David Lehman <dlehman@redhat.com>
+Date:   Fri Jul 18 13:05:44 2008 -0500
+
+    Do not include passphrases for encrypted block devices in anaconda-ks.cfg.
+
+commit 03d0c2115b62db910d5653ad611f656898ec388f
+Author: David Lehman <dlehman@redhat.com>
+Date:   Fri Jul 18 13:01:07 2008 -0500
+
+    Fix F9,F10,RHEL5 "part" commands to use the same class as "partition".
+
+commit 0401e7e77ac2434844bc2a91ade678c0a7433fca
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Wed Jul 16 21:36:56 2008 -0400
+
+    Add an apply method() for commands and implement for lang
+    
+    Commands can now have an apply() method to write out their configuration
+    under a given install root.  Add an initial implementation for the language
+    command
+
+commit a09db5696f65b26c5b3f066a1b0ac94b689d5096
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 15 13:28:21 2008 -0400
+
+    New version.
+
+commit 55fe405da525e1cae596f3786da114f362c2694e
+Author: David Lehman <dlehman@redhat.com>
+Date:   Fri Jul 11 22:19:38 2008 -0500
+
+    RHEL5_LogVolData should inherit from FC4, not FC3. Also fix FC9->F9 typo.
+
+commit 7f2feed083ab232ca2898e20c870fc9736da5301
+Author: David Lehman <dlehman@redhat.com>
+Date:   Wed Jul 9 12:38:01 2008 -0500
+
+    Support creation of encrypted block devices in RHEL5. (#449830)
+
+commit 7de33478aab9bb1adeb15fd5c4673e851e98462e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jun 26 15:40:30 2008 -0400
+
+    Use the right LogVolData objects for RHEL3 and 4 (jlaska).
+
+commit bff55535e5d49a59189b57d81a8acf6f0332a567
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jun 18 15:22:57 2008 -0400
+
+    We no longer use rhpl for translations.
+
+commit b2a24e2f50e60593a95dfb71e2292a79e7e98e95
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jun 18 14:21:02 2008 -0400
+
+    All the base classes should derive from object.
+
+commit c8c0893e0035081ce191adf124b6d97d817a529f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jun 13 11:13:18 2008 -0400
+
+    New version.
+
+commit 1006ed77ec7fe6365c82a3e38872002dbf4b90ae
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jun 12 11:51:56 2008 -0400
+
+    It's helpful to return the parser object.
+
+commit 2aafe9fb294c558b568a17c26a9905d0e1f3b281
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 10 15:43:07 2008 -0400
+
+    New version.
+
+commit 9f2c36c3c6710d807c0c3ee6b01740fbe450bd27
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 10 15:25:53 2008 -0400
+
+    Fix loading the Handler object by looking for a more specific name (#450740).
+
+commit ab8aeb09a2bcb01f8cf37334c15c4cae97198dd6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 10 15:25:53 2008 -0400
+
+    Fix loading the Handler object by looking for a more specific name (#450740).
+
+commit 6829eff0cad765b7617909dd0fc64431b029bb0f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Sun Jun 8 19:08:39 2008 -0400
+
+    New version.
+
+commit 82c7f4309b5174409e2d743393e5a6d5f4256c86
+Merge: d0a04ee 4ce5a64
+Author: Manoj Kumar Giri <mgiri@redhat.com>
+Date:   Wed Jun 4 10:43:59 2008 +0000
+
+    Merge branch 'master' of ssh://git.fedorahosted.org/git/pykickstart
+
+commit d0a04ee0ee77f6ea1593b5884ee0c160eb2cf58d
+Author: Manoj Kumar Giri <mgiri@redhat.com>
+Date:   Wed Jun 4 10:43:54 2008 +0000
+
+    2008-06-04  Manoj Kumar Giri <mgiri@redhat.com> (via mgiri@fedoraproject.org)
+    
+      * po/or.po: updated Translation for Oriya
+
+commit 4ce5a646b4d5c5f1d571c73c3b2c5632fe2b0d23
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 3 11:09:03 2008 -0400
+
+    XConfig is still used by other projects, so just deprecate some options.
+
+commit 813a76d54c07105ec96dfa64225d9531b1aef555
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 3 11:09:03 2008 -0400
+
+    XConfig is still used by other projects, so just deprecate some options.
+
+commit f02a2e203e1a4f9e9da769fddf8eab4f36ea8d35
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu May 29 17:24:20 2008 -0400
+
+    New version.
+
+commit 2bb9bdd9691ecbbb4ed33c31c741a9b146887486
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 28 17:12:29 2008 -0400
+
+    It should be repo --cost, not repo --priority.
+
+commit e3f9c5cd4d688576531ea0f1fec4935231b4cace
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri May 23 09:57:24 2008 -0400
+
+    New version.
+
+commit 895047b346c5a2807193383049d7328bdfd22586
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 21 11:52:56 2008 -0400
+
+    Bring driverdisk command in line with how the docs say it behaves.
+
+commit b84a5f1561c1168384c528f6de8528c60ec3b946
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 21 09:59:17 2008 -0400
+
+    Change RAID command print priorities (jlaska).
+    
+    We can change the priorities a bit more, but the issue is that
+    raid partitions must come before lvm stuff.  The failure encountered
+    here is when creating a kickstart to describe a "LVM on raid0" install.
+    Anaconda wasn't happy since the pv.01 (raid) partition was below the
+    volgroup that used it.
+
+commit 073d139dd9a14ba84498cc17130e0f4469071da5
+Author: James Laska <jlaska@redhat.com>
+Date:   Wed May 21 09:08:36 2008 -0400
+
+    According to docs, physvols are space delimited.  Comma delimited confuses
+    anaconda
+
+commit 1402c51273232c3d244c649f63c0f47bb79eef52
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue May 20 15:37:27 2008 -0400
+
+    Don't write the label out twice (jlaska).
+
+commit a604d18463ff5ad845f64a2caf7a1e11009e0868
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 14 10:10:28 2008 -0400
+
+    Deprecate monitor and xconfig commands, which anaconda no longer uses.
+
+commit dce4033fd8be6ca0ad871a131b30fc7ef0a6fa19
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 7 13:43:23 2008 -0400
+
+    New version.
+
+commit 1edb76039a3e09657221aa5b8a860030806c9ff2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 7 12:00:06 2008 -0400
+
+    Load the handler module automatically.
+    
+    This removes one more place where something has to be done manually to add
+    support for a new version.  There are still many more though.
+
+commit 9b54f031d4b086ee424c8ee3ddb1dd0b6fb3916a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 7 11:08:39 2008 -0400
+
+    Add support for F10.
+
+commit b952c16b07ee4d8b4237dfb60b790b70419a6d88
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 7 11:08:39 2008 -0400
+
+    Add support for F10.
+
+commit 27a2ad76b2755647e0006ebde8110e26de7bf683
+Merge: 8f8503e 7643414
+Author: Peter Sulyok <peti@sulyok.hu>
+Date:   Wed Apr 23 19:07:33 2008 +0000
+
+    Merge branch 'master' of ssh://git.fedorahosted.org/git/pykickstart
+
+commit 8f8503edb2392fb0fee248c1dafa543358d6f749
+Author: Peter Sulyok <peti@sulyok.hu>
+Date:   Wed Apr 23 19:07:28 2008 +0000
+
+    2008-04-23  Peter Sulyok <peti@sulyok.hu> (via peti@fedoraproject.org)
+    
+      * po/hu.po: Updated Hungarian translation
+
+commit 7643414f9a1d90bde093da336820962d30a498cb
+Author: Mark McLoughlin <markmc@redhat.com>
+Date:   Mon Apr 21 08:57:59 2008 +0100
+
+    Initialize cmd.handler earlier; fixes repo.methodToRepo()
+    
+    FC8_Repo.methodToRepo() references self.handler.method
+    which, since a commands "handler" attribute is only
+    initialized by BaseHandler.dispatcher(), means that a "repo"
+    command must have been parsed before methodToRepo() is
+    called.
+    
+    Clearly this is an invalid assumption - a kickstart may not
+    contain any "repo" commands if e.g. it only has a "url"
+    command.
+    
+    Fix this by making a commands "handler" attribute be
+    initialized as soon as the command is registered during the
+    BaseHandler constructor.
+    
+    Signed-off-by: Mark McLoughlin <markmc@redhat.com>
+
+commit ea71ae30bea8bf368ce45d6a70916566fb22b54f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 18 04:20:43 2008 -0400
+
+    Don't shadow builtin function names.
+
+commit 111cad047760fc80b9a20da52333b9f47661a337
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 18 04:20:08 2008 -0400
+
+    Running check is now required before pykickstart can be packaged.
+
+commit be42dbc45261d531c2706bc95845099ee50af5c4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 18 04:19:01 2008 -0400
+
+    Ignore files I really don't care about.
+
+commit f307ad5ecf53810a519250aa6a1c1f5cd0fee4d9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 18 04:09:24 2008 -0400
+
+    Reorganize code a little bit to pass pychecker.
+
+commit a758a59fce05cae649db76c3f875a2f8961e345b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Apr 8 11:55:11 2008 -0400
+
+    New version.
+
+commit acab120da07bf5ed151fdd6acfa5be20d7c1906a
+Merge: 94f6468 ba6b771
+Author: Oron Peled <oron@actcom.co.il>
+Date:   Mon Apr 7 20:56:52 2008 +0000
+
+    Merge branch 'master' of ssh://git.fedorahosted.org/git/pykickstart
+
+commit 94f6468eff20e534082bf5642d54ac91dc4a32a3
+Author: Oron Peled <oron@actcom.co.il>
+Date:   Mon Apr 7 20:56:45 2008 +0000
+
+    2008-04-07  Oron Peled <oron@actcom.co.il> (via oron@fedoraproject.org)
+    
+      * po/he.po: Hebrew translation
+
+commit ba6b7715047822caa5c29e8131aecbfb31b6ca2b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 4 14:45:01 2008 -0400
+
+    Fix whitespace when printing out the bootloader command (pmeyers).
+
+commit 11a71c39539f8988858bcb41900c0ac6e7380761
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 4 11:12:32 2008 -0400
+
+    Fix the type on bootloader --timeout processing.
+
+commit bddd428910849f64b8713538cfe9acdf1b8e36de
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 2 14:07:05 2008 -0400
+
+    New version.
+
+commit 0535dd5fcd310c4f5127fcb0afc4995e52b363b9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Apr 1 14:38:57 2008 -0400
+
+    Make the string reader act like the file reader upon EOF.
+
+commit bdd56748cde616d4628b14bd79c659601aacc5f6
+Author: ShankarPrasad <prasad.mvs@gmail.com>
+Date:   Mon Mar 31 10:54:34 2008 +0000
+
+    2008-03-31  ShankarPrasad <prasad.mvs@gmail.com> (via sprasad@fedoraproject.org)
+    
+      * po/kn.po: Kannada translation updates
+
+commit f4cd141d5e3ffcd8e31c8a196a001280245ae1a0
+Author: Amitakhya Phukan <aphukan.fedora@gmail.com>
+Date:   Mon Mar 31 10:44:25 2008 +0000
+
+    2008-03-31  Amitakhya Phukan <aphukan.fedora@gmail.com> (via
+    aphukan@fedoraproject.org)
+    
+      * po/as.po: Updated assamese translations.
+
+commit 2c848c2c9ca2586ee560b786e8fd928b72a8a6bb
+Author: ShankarPrasad <prasad.mvs@gmail.com>
+Date:   Mon Mar 31 05:53:00 2008 +0000
+
+    2008-03-31  ShankarPrasad <prasad.mvs@gmail.com> (via sprasad@fedoraproject.org)
+    
+      * po/kn.po: Kannada translation updates
+
+commit e54e4dde157b939c3b18a4af181eea6d9921355a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 26 15:45:06 2008 -0400
+
+    Add syntax for encrypted logical volumes.
+
+commit 4413e2070a2ee162eb8eb012d6b06702443cda64
+Author: KrishnaBabu K <k.meetme@gmail.com>
+Date:   Wed Mar 26 14:36:17 2008 +0000
+
+    2008-03-26  KrishnaBabu K <k.meetme@gmail.com> (via kkrothap@fedoraproject.org)
+    
+      * po/te.po: Updated Telugu Translation.
+
+commit b684a46aa6c7b8feb47d1e2ff9a0c3fe8f1b227f
+Author: Eun-Ju KIm <eukim@redhat.com>
+Date:   Wed Mar 26 06:39:38 2008 +0000
+
+    2008-03-26  Eun-Ju KIm <eukim@redhat.com> (via eukim@fedoraproject.org)
+    
+      * po/ko.po: Updated Korean translation.
+
+commit 0dd7189ebcaeecf0d435943c3741b42c7579bcee
+Author: Wei Liu <lliu@redhat.com>
+Date:   Wed Mar 26 01:29:49 2008 +0000
+
+    2008-03-26  Wei Liu <lliu@redhat.com> (via leahliu@fedoraproject.org)
+    
+      * po/zh_CN.po: update zh_CN translation
+
+commit 9f73d9cbc419f14813224f91b57c235508f95611
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Mar 25 16:20:31 2008 -0400
+
+    New version.
+
+commit 08191e37de393715bb95bc7edfa625afb8c93938
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Mar 25 10:59:40 2008 -0400
+
+    Support end-of-line comments.
+
+commit 978da15efe1f398d33cbed7e59d10cf6b044aae5
+Author: Rajesh Ranjan <rajesh672@gmail.com>
+Date:   Mon Mar 24 07:16:20 2008 +0000
+
+    2008-03-24  Rajesh Ranjan <rajesh672@gmail.com> (via rajesh@fedoraproject.org)
+    
+      * po/hi.po: hindi update
+
+commit ff2edadcb218495105c691edbde3c2a7bfbcd612
+Author: Jaswinder Singh Phulewala <j.phulewala@gmail.com>
+Date:   Mon Mar 24 06:39:41 2008 +0000
+
+    2008-03-24  Jaswinder Singh Phulewala <j.phulewala@gmail.com> (via
+    jassy@fedoraproject.org)
+    
+      * po/pa.po: Completed.
+
+commit 6b9606bd5a7e5e7908674fb60a4462221d8eb923
+Author: I. Felix <ifelix@redhat.com>
+Date:   Mon Mar 17 05:30:39 2008 +0000
+
+    2008-03-17  I. Felix <ifelix@redhat.com> (via ifelix@fedoraproject.org)
+    
+      * po/ta.po: Tamil Translation resubmitting
+
+commit 71f4d6acc4cb6f0f924bc6db651dbfa33950a1f4
+Author: Kjartan Maraas <kmaraas@broadpark.no>
+Date:   Thu Mar 13 12:56:10 2008 +0000
+
+    2008-03-13  Kjartan Maraas <kmaraas@broadpark.no> (via
+    kmaraas@fedoraproject.org)
+    
+      * po/nb.po: Updated translation.
+
+commit 9afb7ae4925054dbc94c67591f7d031b96d557dc
+Author: Ani Peter <apeter@redhat.com>
+Date:   Thu Mar 13 05:44:22 2008 +0000
+
+    2008-03-13  Ani Peter <apeter@redhat.com> (via anipeter@fedoraproject.org)
+    
+      * po/ml.po: Updated Malayalam Translation
+
+commit 4f3be2f74b0b8c7869ea8070f4c626d4cc66ed40
+Author: Sandeep Sheshrao Shedmake <sshedmak@redhat.com>
+Date:   Thu Mar 13 04:01:13 2008 +0000
+
+    2008-03-13  Sandeep Sheshrao Shedmake <sshedmak@redhat.com> (via
+    sandeeps@fedoraproject.org)
+    
+      * po/mr.po: Updated Marathi Translations
+
+commit b56cf71b6f7141865b319d6e30dff15fba3fa675
+Author: Runa Bhattacharjee <runab@redhat.com>
+Date:   Tue Mar 11 07:30:28 2008 +0000
+
+    2008-03-11  Runa Bhattacharjee <runab@redhat.com> (via runab@fedoraproject.org)
+    
+      * po/bn_IN.po: Updated Bengali India Translations
+
+commit 5adbc1dcfbd1bf5e6d2cefb84f2f9bd774b84d3e
+Author: Francesco Tombolini <tombo@adamantio.net>
+Date:   Sun Mar 9 05:43:31 2008 +0000
+
+    2008-03-09  Francesco Tombolini <tombo@adamantio.net> (via
+    tombo@fedoraproject.org)
+    
+      * po/it.po: Italian lang. - Updated 2 fuzzy and 1 untr.
+
+commit 28d8967873ed86a5b6a696550e9a14af782321da
+Author: Alexander Todorov <atodorov@redhat.com>
+Date:   Sat Mar 8 12:09:46 2008 +0000
+
+    2008-03-08  Alexander Todorov <atodorov@redhat.com> (via
+    atodorov@fedoraproject.org)
+    
+      * po/bg.po: Updated Bulgarian translation
+
+commit 34ca484cb24242427623b936954f7a145e6fc9e3
+Merge: 6d53400 f07772c
+Author: Rajesh Ranjan <rajesh672@gmail.com>
+Date:   Fri Feb 29 07:40:31 2008 +0000
+
+    Merge branch 'master' of ssh://git.fedorahosted.org/git/pykickstart
+
+commit 6d53400f8f7ffb98b4881e019e758086be54ab53
+Author: Rajesh Ranjan <rajesh672@gmail.com>
+Date:   Fri Feb 29 07:40:28 2008 +0000
+
+    2008-02-29  Rajesh Ranjan <rajesh672@gmail.com> (via rajesh@fedoraproject.org)
+    
+      * po/mai.po: adding for maithili
+
+commit f07772c86ebcb9cb275deedcc6e5ae07e3bc3962
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 26 12:47:55 2008 -0500
+
+    New version.
+
+commit d901112b364555aa1b4dd29c318fce2bc19fd7b3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 26 11:29:47 2008 -0500
+
+    Reverse writePriorities of iscsi and iscsname (#434965, jlaska).
+
+commit c6950a0f66c5dc2c906991aef8820c1d9a8f749e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 26 09:59:11 2008 -0500
+
+    Fix printing of iscsiname command (#434945, jlaska).
+
+commit f896c86aff0f767f53ac944bedcb25a088bec7d8
+Author: Paul Nasrat <pauln@truemesh.com>
+Date:   Wed Feb 6 22:28:44 2008 +0000
+
+    Don't traceback on ENOENT
+
+commit 7dce3cedff454b507c47ce549b0ec6d884c63f3b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 4 11:42:34 2008 -0500
+
+    Store the mouse name as a string, not a list.
+
+commit 80fcc71399e1173cf7f6d64547b5168d646d747a
+Merge: 6688bcc 7c13edb
+Author: Miloslav Trmac <mitr@redhat.com>
+Date:   Sun Feb 3 18:48:10 2008 -0700
+
+    Merge branch 'master' of ssh://git.fedorahosted.org/git/pykickstart
+
+commit 6688bcc9e325cf8338887bb7ffdce49fae5e9451
+Author: Miloslav Trmac <mitr@redhat.com>
+Date:   Sun Feb 3 18:48:05 2008 -0700
+
+    2008-02-03  Miloslav Trmac <mitr@redhat.com> (via mitr@fedoraproject.org)
+    
+      * po/cs.po: Update Czech translation.
+
+commit 7c13edba40f88a46e0c13ededd67c970459981d3
+Merge: 97b4fcb 0591272
+Author: Amitakhya Phukan <aphukan.fedora@gmail.com>
+Date:   Thu Jan 31 02:40:56 2008 -0700
+
+    Merge branch 'master' of ssh://git.fedorahosted.org/git/pykickstart
+
+commit 97b4fcb8565fb0bb8910fcc6d43ba5ce3b72c53d
+Author: Amitakhya Phukan <aphukan.fedora@gmail.com>
+Date:   Thu Jan 31 02:40:52 2008 -0700
+
+    2008-01-31  Amitakhya Phukan <aphukan.fedora@gmail.com> (via
+    aphukan@fedoraproject.org)
+    
+      * po/as.po: Updated assamese translations.
+
+commit 05912724eb6d79527325a1802661b0c0ccf29b19
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 30 14:09:13 2008 -0500
+
+    New version.
+
+commit 631a813449bfe184233ffa8388d5f63e33bd6784
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 30 14:03:11 2008 -0500
+
+    Renamed bootproto=ask to bootproto=query, add to RHEL5 as well.
+
+commit 2ac811ed4f34a164cff4602469f60a88a309f912
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 23 00:03:09 2008 -0500
+
+    New version.
+
+commit a5ad82f3c906ceb2b67efeb4d394646137604c51
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 23 00:02:49 2008 -0500
+
+    Fix traceback on volgroup command.
+
+commit b05c6fe2c9c3812608731a026d3ce2d9e89cc871
+Author: Peter van Egdom <p.van.egdom@gmail.com>
+Date:   Mon Jan 28 12:52:17 2008 -0700
+
+    2008-01-28  Peter van Egdom <p.van.egdom@gmail.com> (via
+    peterve@fedoraproject.org)
+    
+      * po/nl.po: Updated Dutch translation.
+
+commit 7cfbccd03f80260d1373fff85304a840b5feff2d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 17 10:47:23 2008 -0500
+
+    New version.
+
+commit a20b8d1b518a92ddf3a09194d81edeb936cabe99
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 17 10:46:59 2008 -0500
+
+    The bootprotoList needs to be defined before it's used.
+
+commit 93ea10ff991c1fb822d396bb6bc434fc58a49004
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 17 01:09:47 2008 -0500
+
+    New version.
+
+commit 87e5aaa47887d15c261ce16ca747bef2078df1e9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 16 14:29:58 2008 -0500
+
+    Add support for network --bootproto=ask.
+
+commit bb9ff08038f6447a72bc52e87fc5a8bfc7106a78
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 15 10:31:13 2008 -0500
+
+    New version.
+
+commit a764c7faefac5836568d74fa9034eea2795b5838
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 14 15:30:21 2008 -0500
+
+    Add the version to the output ks file and a function for reading it it.
+
+commit 6224691333af5c52c9fce81e327b13850a9544d3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 14 11:59:34 2008 -0500
+
+    Add syntax for encrypted partitions and raid devices.
+
+commit b46f0ccea093774ab342b1e874b1763cb0fe4de2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 10 09:31:41 2008 -0500
+
+    New version.
+
+commit 6617d28a549dcc6755d16f9a663587f68cb7a695
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 7 15:17:52 2008 -0500
+
+    Make inheritance and overriding of %packages work (#427768).
+
+commit 917a370841c9a76a540e33928003b02f7c0fdb95
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 2 15:03:16 2008 -0500
+
+    Add an option for which languages should be installed (katzj).
+
+commit 8473198d770e2b13a1370dddcc6bd6ab5bc38c02
+Author: Andrew Martynov <andrewm@inventa.ru>
+Date:   Sun Dec 30 16:07:12 2007 -0700
+
+    2007-12-30  Andrew Martynov <andrewm@inventa.ru> (via
+    andrmart@fedoraproject.org)
+    
+      * po/ru.po: Updates Russian translation
+
+commit 6840976ba41cf5122bf748d01ab338441eddf0ca
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 10 16:09:18 2007 -0500
+
+    Use the right name for the iscsi --target variable (#418781).
+
+commit de38326b7e03ad1156e6364cca1aa9d8c0ecc710
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 10 10:38:06 2007 -0500
+
+    Bump version.
+
+commit fab2b94be4ba7665e16f4b87bbb57427b8496740
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 10 10:33:34 2007 -0500
+
+    Take Makefile improvements from anaconda.
+    
+    - Remove the ChangeLog since that can be generated from git.
+    - Add a target to bump the version number and write the .spec file changelog.
+
+commit 14de082d3c5a4ddefc554ecb0fa8b8a98107ec02
+Author: Chris Lumens <clumens@localhost.localdomain>
+Date:   Fri Nov 23 17:41:44 2007 -0500
+
+    Fix a traceback on F9 zerombr command (#395431).
+
+commit 51057d0df7f2f71ca036e9b9e9209f45e748305d
+Author: Chris Lumens <clumens@localhost.localdomain>
+Date:   Tue Nov 20 17:04:40 2007 -0500
+
+    New version.
+
+commit 0fc4b3fc76ef8e566ffa57127b5ff1fa42f857a7
+Author: Chris Lumens <clumens@localhost.localdomain>
+Date:   Tue Nov 20 16:59:00 2007 -0500
+
+    Don't process or write out vnc --enabled (jlaska@redhat.com).
+
+commit d0af1a8f152331ab9e7243beb7314307005e9fc3
+Author: Chris Lumens <clumens@exeter.boston.redhat.com>
+Date:   Wed Nov 14 16:16:20 2007 -0500
+
+    Fix a typo causing a traceback in clearpart.
+
+commit fba35e564f3613e42f0be507436e623a6a2216e9
+Author: Chris Lumens <clumens@exeter.boston.redhat.com>
+Date:   Tue Nov 6 15:14:15 2007 -0500
+
+    Fix the Makefile to work with git.  Make a new release.
+
+commit 4daf15e448d805e91beadabd7382a5b67b8fadb9
+Author: Chris Lumens <clumens@exeter.boston.redhat.com>
+Date:   Tue Nov 6 15:08:25 2007 -0500
+
+    Remove .cvsignore files.
+
+commit eda22251023801ff7b969c48d001e28202e6544c
+Author: Chris Lumens <clumens@exeter.boston.redhat.com>
+Date:   Mon Nov 5 10:24:16 2007 -0500
+
+    Save the line number the script starts on as a debugging aid in anaconda.
+
+commit 29b94676e008a93253f96af91f496a2dd5e0e05b
+Author: Chris Lumens <clumens@exeter.boston.redhat.com>
+Date:   Wed Oct 31 16:40:42 2007 -0400
+
+    Lots of minor fixes.
+
+commit 1dd5783bc810dbfc8c20366573024feb1fc69acf
+Author: Chris Lumens <clumens@exeter.boston.redhat.com>
+Date:   Wed Oct 31 16:19:32 2007 -0400
+
+    Remove unused methods.
+
+commit 51cec429662854fa1beca6aaf30d800492d0ec7f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 31 14:37:01 2007 +0000
+
+    Fix typo.
+
+commit ebb03707bce11bdddbe569aae726d70ec9b54c50
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 31 14:35:05 2007 +0000
+
+    New version.
+
+commit a6d13272736d2fd438ca4943f5fcdd2dd6e5255f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 31 14:26:49 2007 +0000
+
+    zerombr no longer takes any arguments.
+
+commit 799bfd47de27c81628ee3545a53d40d147a68b1e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 31 14:12:29 2007 +0000
+
+    Get rid of a special function to set the data object since we can already get
+    at that in the parser from the handler reference.
+
+commit 1fa3d7c09813665a63f7a53c208d89ff98a3cbbb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 30 20:42:24 2007 +0000
+
+            * pykickstart/commands/*:  Make the OptionParser instance an attribute
+            of each class so we can extract more information out of the commands
+            dict.
+    
+            * pykickstart/commands/monitor.py, pykickstart/commands/network.py,
+            pykickstart/commands/rootpw.py, pykickstart/commands/timezone.py,
+            pykickstart/commands/vnc.py, pykickstart/commands/xconfig.py:
+            Remove redundant parse methods.
+    
+            * pykickstart/commands/network.py, pykickstart/commands/repo.py,
+            pykickstart/commands/user.py, pykickstart/commands/volgroup.py,
+            pykickstart/commands/zfcp.py:  Use the the setClassData method in more
+            places as it simplifies the code.
+
+commit b930c3836a060193c17233011678fca3edb2c604
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 30 19:04:47 2007 +0000
+
+    Mark the --bytes-per-inode option as deprecated, rather than removing it
+    completely.
+
+commit 634a26b89b2ec9ada2264366d91abc9573d46838
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 30 18:50:59 2007 +0000
+
+    Remove lots of options that have been marked as deprecated for a long time.
+
+commit b829ce7d8a45c3217ec8cbc9fca94a425b862569
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 30 18:37:05 2007 +0000
+
+    Move the test for deprecated options to the end so removed options will
+    cause an error.  Also fix the error messages to make a bit more sense.
+
+commit fbbff35729f9c2eb4b4248beb8b68e3abc8c9f0e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 30 16:46:07 2007 +0000
+
+    Docs location has changed.
+
+commit 78472486d562c4a2aa7bee2a33696458412b0235
+Author: mrtom <mrtom>
+Date:   Mon Oct 29 21:37:59 2007 +0000
+
+    translation updated
+
+commit f6fb3f6097fc84452349f0885834fdbbec7ba0d0
+Author: zepires <zepires>
+Date:   Sat Oct 27 17:22:05 2007 +0000
+
+    Synced Devel Release Notes with F-8 one. Fixed spelling errors and inconsistencies
+
+commit be9128b9a29330121f5b3c59b7d53337b46b8806
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 26 20:27:55 2007 +0000
+
+    Fix a few typos.
+
+commit 893f88ae990cf4ededd6fbb919ba2188c698f230
+Author: Peter Jones <pjones@redhat.com>
+Date:   Fri Oct 26 19:58:34 2007 +0000
+
+    - use new F9 handlers.
+
+commit e0eb4e37bb0c02dfbad398266ad84c3d03590594
+Author: Peter Jones <pjones@redhat.com>
+Date:   Fri Oct 26 19:56:27 2007 +0000
+
+    - Add F9 options ("--fsprofile")
+
+commit 7b7847748ed4484a75b6ba506f968222cba7dd30
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 25 19:20:09 2007 +0000
+
+            * pykickstart/commands/logvol.py (FC4_LogVol._setClassData):  Fix
+            typos in method name and in name of data object.
+    
+            * pykickstart/version.py:  Add constants and loading support for F9.
+
+commit 400be2e49c862af7b9fa5c17d4fbae3f72918afc
+Author: Peter Jones <pjones@redhat.com>
+Date:   Wed Oct 24 15:43:42 2007 +0000
+
+    - remove a lot of duplicated parsing code.
+
+commit c519cdb07c5345856092f33f79ee5ea2ca5d7a50
+Author: Peter Jones <pjones@redhat.com>
+Date:   Wed Oct 24 15:25:36 2007 +0000
+
+    Add f9 stuff.
+
+commit 03b7b32195ff798f606122be97c5e9c58264626f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 23 14:30:29 2007 +0000
+
+    New version.
+
+commit a20e9ebfb234236e51003774d364af39c0cb67ee
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 22 13:23:50 2007 +0000
+
+    Return the OptionParser instance on cdrom installs.
+
+commit 2f762abca3041189c05d6b62f65f4dde57f45018
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 18 18:42:41 2007 +0000
+
+    New version.
+
+commit 7e0ff8ff9e36bb64bf78b65a7629fa21ab5793c1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 17 20:54:09 2007 +0000
+
+    Don't write out %end to packages and scripts if the syntax version is before it
+    was introduced.
+
+commit 28c8aa88d1af01c9ef78aff690c0f730947be204
+Author: kmaraas <kmaraas>
+Date:   Wed Oct 17 05:59:07 2007 +0000
+
+    Update some
+
+commit 60080fff8eaba10a7b92d71cbe3f379c9153c075
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 15 13:37:20 2007 +0000
+
+    Remove obsolete translation (#332221).
+
+commit 93da12963e26c7f9bfa0ecb127f55dccf317e941
+Author: zepires <zepires>
+Date:   Wed Oct 10 01:32:10 2007 +0000
+
+    Some updates on specspo
+
+commit dfa36fc5671ce04569aa6e07e38f163769b6c24b
+Author: kmilos <kmilos>
+Date:   Tue Oct 9 08:32:48 2007 +0000
+
+    updated sr@latin translation
+
+commit 6eccd24d6c9560e00a8c56eb471d74bfe6003223
+Author: fab <fab>
+Date:   Sat Oct 6 11:51:27 2007 +0000
+
+    updated
+
+commit fab0ba8dc1add9fbf46bad80e2acdc89a304862a
+Author: hyuuga <hyuuga>
+Date:   Sat Oct 6 07:10:11 2007 +0000
+
+    translation completed. 25
+
+commit c3b57663167ecf46b5c7af60df9beabf63018589
+Author: renato <renato>
+Date:   Sat Oct 6 00:51:37 2007 +0000
+
+    *** empty log message ***
+
+commit adc60068acfabd21b9d565851c2abfabdba6e272
+Author: kmilos <kmilos>
+Date:   Fri Oct 5 19:34:09 2007 +0000
+
+    updated sr translation
+
+commit 7ce522b33608211d8e1b592f8468931e54d269a6
+Author: vpv <vpv>
+Date:   Fri Oct 5 17:04:04 2007 +0000
+
+    Updated Finnish translation
+
+commit 536686ab4e700d28f50c749e80be637c0ac25b4f
+Author: igor <igor>
+Date:   Fri Oct 5 14:34:41 2007 +0000
+
+    Translation update
+
+commit ea95f1d1fb0f86ae4e07dd7a8aa91f4647784cb7
+Author: beckerde <beckerde>
+Date:   Fri Oct 5 13:12:00 2007 +0000
+
+    *** empty log message ***
+
+commit 2ee323fe54e89e76bae895bccb7933fa151dc8c9
+Author: ankitp <ankitp>
+Date:   Fri Oct 5 06:07:40 2007 +0000
+
+    Updated Gujarati Translations
+
+commit 4e0cd16f8b97d030d107ca06b9fd167b87943c1e
+Author: trinks <trinks>
+Date:   Fri Oct 5 03:22:50 2007 +0000
+
+    total:25 fuzzy:0 untranslated:0
+
+commit cf8d6f75ea66e0064f89b6fa0ee03339d40e07a4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 4 18:39:08 2007 +0000
+
+    Remove a redundant __str__ method.
+
+commit 5b3e7cef6a9bfb1137128cfc6d24f5ede0742260
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 4 18:35:56 2007 +0000
+
+    New version.
+
+commit e5f15d44b2440d1596ad7a31384ff7900a65b9d7
+Author: raven <raven>
+Date:   Thu Oct 4 18:02:10 2007 +0000
+
+    Updated Polish translation
+
+commit 9571b2a5560e082419848760206fe44a8a530223
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 4 17:15:36 2007 +0000
+
+    Updates for ksvalidator source location change.
+
+commit 8d00199bb152c40ea5d9687b804fdc9f9ffcb8d9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 4 17:13:03 2007 +0000
+
+    Move validator/ksvalidator to tools/ksvalidator.
+
+commit 36da9e9e1646d334d0ac55e235e86195ec625260
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 4 16:16:03 2007 +0000
+
+    Simplify __str__ methods in some of the more complex commands.
+
+commit db23b5709c250976de74041e7105e3c84f95b286
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 4 14:17:02 2007 +0000
+
+    Split argument setup into more methods to make overriding in subclasses easier.
+
+commit 3e87e0226f1228f2c4062ddade1bfcd38244a384
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Wed Oct 3 20:52:02 2007 +0000
+
+    support bootloader ---default= also
+
+commit dbc56472474a8b666531b0656b722dd959a77f8e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 3 20:03:03 2007 +0000
+
+    New version.
+
+commit 9f5ef2a41d5836f17f2c30f00ce0bb1d6fe12720
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 3 19:33:32 2007 +0000
+
+    Finish converting the bootloader command to the easier way of setting up
+    argument processing.
+
+commit 77d3dacd647b111b5f9cffa4921d2201043e75f6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 3 19:24:23 2007 +0000
+
+    Split argument setup into more methods to make overriding in subclasses easier
+    (katzj).  Add bootloader --timeout=.
+
+commit 89296120403363d874f9ec302736aab1efa8e6e9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 3 18:19:16 2007 +0000
+
+    If an option parser object has the same option added twice, allow the later one
+    to override the former one.
+
+commit ae66d19e1aca8408d8fbe0efe73d40040702d08d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 3 15:35:49 2007 +0000
+
+    Minor fixes.
+
+commit 45f959bf5b883154ce55f29ebb8e4f4d8d2ca700
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 2 20:10:05 2007 +0000
+
+    New version.
+
+commit 450b70f1492df6c5070f6a30f17ef280b072dbdd
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 1 19:25:36 2007 +0000
+
+    Multiple device commands can be specified in a kickstart file.
+
+commit ddb4a94386496c9fafda8787c59f0420523df892
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 1 18:56:52 2007 +0000
+
+    Add a new version of the device command that does not take a type argument.
+
+commit ccaa2ae9210d9d25d9a4c0b394f95fa80b5ed523
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 1 13:50:52 2007 +0000
+
+    Renamed from sr@Latn.po (#259121).
+
+commit 2bef1cad18a6e9dcd768273039367c1f4ca03e3a
+Author: renato <renato>
+Date:   Mon Oct 1 07:58:42 2007 +0000
+
+    *** empty log message ***
+
+commit 4fcdcf35fbb5d6368548587dff08a778888240bc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 28 14:57:08 2007 +0000
+
+    New version.
+
+commit 24876e7363970cce4449021b59c1bc5c420ee00f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 28 14:54:53 2007 +0000
+
+    Add a script to flatten out a kickstart file containing %includes into one
+    kickstart file (katzj AT redhat DOT com).
+
+commit 8ea0f3cbba2c9c8c0f30137e30f51ee8f9913bc8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 28 14:07:43 2007 +0000
+
+    Fix output formatting for package section header (#310211).
+
+commit f7a002db4f2311930bd38789c82aed7628a5e357
+Author: kkrothap <kkrothap>
+Date:   Tue Sep 25 19:29:35 2007 +0000
+
+    Updating changes to file te.po
+
+commit 9f6a3ea6cb53bd1fe4288dd65c8559a49f7070cc
+Author: amit <amit>
+Date:   Tue Sep 25 10:30:54 2007 +0000
+
+    Updated assamese translations
+
+commit 68476178fba08e6f0049b71415ec5775e7385627
+Author: sandeep <sandeep>
+Date:   Mon Sep 24 04:40:26 2007 +0000
+
+    Updating translations
+
+commit a345992ab59d6dd2e4de0ab679ff01cfff835511
+Author: raada <raada>
+Date:   Sun Sep 23 02:59:02 2007 +0000
+
+    *** empty log message ***
+
+commit 8164f76eee90685ba7b1220839b1ef18203d1d78
+Author: rranjan <rranjan>
+Date:   Thu Sep 20 10:37:30 2007 +0000
+
+    hindi pykickstart
+
+commit 0873b534c301617a4153469cc58491e3f8bda251
+Author: vpv <vpv>
+Date:   Fri Sep 14 21:52:29 2007 +0000
+
+    Updated Finnish translation
+
+commit 160b5f30dde6a491a9da7091e3e0af525263a4ff
+Author: svenkate <svenkate>
+Date:   Thu Sep 13 11:49:38 2007 +0000
+
+    kannada translation updation
+
+commit 491a2004ba6380a4706dd0bb3c090d266891afa1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 12 21:54:19 2007 +0000
+
+    Fix build.
+
+commit aa24611068f011c421afed782817a151fc7b28d9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 12 21:41:11 2007 +0000
+
+    One little fix for copying the docs over.
+
+commit ce9a35b83214e400a961891410378c9f0e0d5c0b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 12 21:38:43 2007 +0000
+
+    New version.
+
+commit 59d739fca49bafdc0f1438846d06bbdb0eb3375c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 12 21:36:54 2007 +0000
+
+    Add a function to convert a URL method string into a repo object (jkeating AT
+    redhat DOT com).
+
+commit 96c7f3073379866c89202656d4de930c76f2ebb1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 12 18:24:46 2007 +0000
+
+    Fix it for real this time.
+
+commit 8a2c9cc49f534a1e00b5ce5ba90593da58c4f2f2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Sep 12 17:20:59 2007 +0000
+
+    Kickstart writer formatting fixes.
+
+commit b54d852be2933f64e7793097403f13f1cb50c1c4
+Author: ltenn <ltenn>
+Date:   Mon Sep 10 22:09:05 2007 +0000
+
+    Routine merge by l10n
+
+commit c96fa5a0e69d2ab24eae10ec0d6af5fa7a387210
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Sep 10 14:35:41 2007 +0000
+
+    Add the kickstart documentation from the Fedora wiki.
+
+commit 68166b8aff44526f10eb0e5a5dbae8a4e7ef6420
+Author: dheche <dheche>
+Date:   Sun Sep 9 04:56:53 2007 +0000
+
+    updated
+
+commit a234f8548ae4cecb2521258e062cff5ff094d5f0
+Author: zepires <zepires>
+Date:   Fri Sep 7 15:54:56 2007 +0000
+
+    Finished changes on RH translations and docs
+
+commit 3c5b2ea789c1e9299929f9343289eb8e6baf24ba
+Author: covex <covex>
+Date:   Tue Sep 4 20:00:30 2007 +0000
+
+    few new translations
+
+commit 0f2541af71da127c1097744b7a493bdff5347e18
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 16:09:36 2007 +0000
+
+    New version.
+
+commit 99f3baa46e2664290570b7aad99dc1bcff22da8e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 16:06:51 2007 +0000
+
+    Add a target to run pychecker so I can attempt to cut down on all the stupid
+    errors that I just fixed up.
+
+commit 0a1c7217914305e4dca8d6849b3f90042a55c43e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 16:04:48 2007 +0000
+
+    string -> s.
+
+commit 20a1b466ad9f8dd29a0c82aa71274a4f86fcaaec
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 16:00:21 2007 +0000
+
+    Call superclass's __init__method.
+
+commit b034a654936c928867e493236bd9571fe496ec59
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 15:45:11 2007 +0000
+
+    Fix some import problems.
+
+commit 0580f23aa6f6cf96130edb22fbf21e83ccb347fd
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 15:40:29 2007 +0000
+
+    self.deviceOpts -> self.moduleOpts.
+
+commit 88b1c4161b37023e634b26937f24c2d647a17b77
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 15:37:51 2007 +0000
+
+    Call superclass's __init__ method.
+
+commit 2bdc6b51979f30bbb06861066b4ba1b97bd3439a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 15:36:01 2007 +0000
+
+    More network fixes.
+
+commit 77f7a4f4da03b911a156f96e1efaf3f6f7009405
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Sep 4 15:16:57 2007 +0000
+
+    Add %end token to the end of packages and scripts that get written out.
+
+commit 8155230868feada1abc7af97937ef9252833c148
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Mon Sep 3 23:45:20 2007 +0000
+
+    2007-09-03  Jeremy Katz  <katzj@redhat.com>
+    
+    	* pykickstart.spec, setup.py: New version.
+    
+    	* pykickstart/parser.py (KickstartParser.__init__): Define currentdir
+    
+    	* pykickstart/commands/network.py (F8_Network._populateParser):
+    	Fix syntax error
+
+commit 096cc1e697ed6f81fea113458c1d261387a805b1
+Author: ifelix <ifelix>
+Date:   Mon Sep 3 08:59:13 2007 +0000
+
+    ta translation updated
+
+commit a05e02575a9c73ca13eb3b3172944379963b0fa8
+Author: kmaraas <kmaraas>
+Date:   Mon Sep 3 08:24:50 2007 +0000
+
+    Update translation
+
+commit c9f5f493b355d0b1b72aa095bceecacf0b9df499
+Author: zepires <zepires>
+Date:   Sun Sep 2 13:08:03 2007 +0000
+
+    Finished changes on RH translations and some docs
+
+commit a0a4c20dcb7cfce4bee91e11b8bbf2a46ebfdda8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 31 14:30:32 2007 +0000
+
+    New version.
+
+commit 4785df42c93c17f762bb0fb8aa55070d7347014e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Aug 29 18:14:24 2007 +0000
+
+    Reorganize how the parser's options are set up so there's much less
+    duplication.
+
+commit 6767a3f27757a109b2038e03e626b662d7b57e4e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Aug 29 18:00:42 2007 +0000
+
+    Add the --ipv6= option to the network command.
+
+commit e13f48b712013f9f9784bb866640a1619483e8b5
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Aug 29 17:49:03 2007 +0000
+
+    ipv4= -> noipv4=, ipv6 -> noipv6= on NetworkData objects.
+
+commit 6df7cf07fa7a2208f1561f00238042c068582c90
+Author: xconde <xconde>
+Date:   Sun Aug 26 11:17:30 2007 +0000
+
+    Updated by XC
+
+commit 0149e76f5c3b27f5918f44367d924776f44e992d
+Author: hyuuga <hyuuga>
+Date:   Sat Aug 25 13:26:01 2007 +0000
+
+    translation completed. 22
+
+commit 9e46996105a467296dd3ad73ed75de44b403e49b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 24 17:49:27 2007 +0000
+
+    New version.
+
+commit fb14df0ec082a7650641a31aac0a220c143bc532
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 24 15:44:28 2007 +0000
+
+    We only need one script state.
+
+commit 5fb4af761cdc87b4025681e5306015a5f6adb560
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 24 15:41:44 2007 +0000
+
+    Add support for the %end directive, and issue DeprecationWarnings if it's not
+    used.
+
+commit b9beeac4625f0031d6d37deb956d0d57c05e3536
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Aug 24 15:37:57 2007 +0000
+
+    Don't leave downloaded ks files on the system if pykickstart hits a traceback.
+
+commit 62f63c0d37851a8656cd7bc7d31a43357a8100a7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 23 19:45:51 2007 +0000
+
+    Add support for the --priority, --includepkgs, and --excludepkgs options.
+
+commit 5d4c6765208c01de6a31651cb98d7d0b8652417d
+Author: doncho <doncho>
+Date:   Wed Aug 22 16:50:50 2007 +0000
+
+    Update
+
+commit e61332b43268595112e2881a70b2e74bf49cdc75
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Aug 22 14:18:07 2007 +0000
+
+    Fix newline at end of output (#253562).
+
+commit e1473327d8c567aca65c4179d32098a45f8aa29f
+Author: tombo <tombo>
+Date:   Wed Aug 22 11:51:14 2007 +0000
+
+    updated
+
+commit e2ecf1bd2a09608c54c79d4dd8ef9306defe8b4a
+Author: maxik <maxik>
+Date:   Wed Aug 22 06:27:35 2007 +0000
+
+    Maxim Dziumanenko <dziumanenko@gmail.com>
+    
+    	* Update Ukrainian translation
+
+commit 40196c4d829aae9692bc9222bc94cf711359ab54
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Aug 13 14:35:50 2007 +0000
+
+    Fix type checking of string types.
+
+commit 941bfada4806344b7804e8a1135305fd9989006a
+Author: pve-nl <pve-nl>
+Date:   Sat Aug 11 11:11:59 2007 +0000
+
+    Some fixes for pykickstart nl.po
+
+commit 9a929ddb2a4dcc909a4886f5d545c88057c16ed8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 9 18:52:06 2007 +0000
+
+    New version.
+
+commit 8243b128b943b2d755a6676193e3f7f852ae258d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 9 18:51:38 2007 +0000
+
+    Add license boilerplate information to all source files.
+
+commit 760d335f496b316d3dd2401cf047848bbc45e37a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 9 17:15:05 2007 +0000
+
+    Add a method to check string values, since optparse will consume the next
+    argument if an argument that requires a value does not specify one (#251318).
+
+commit 6644ab84bd7ae903edecf3059b60ae7eefceaccb
+Author: runab <runab>
+Date:   Wed Aug 8 10:06:34 2007 +0000
+
+    Updated Bengali India Translation
+
+commit 061fcac29be4ef08c9d42214068070019cc90a2f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Aug 7 18:11:00 2007 +0000
+
+    Update comment to reflect reality.
+
+commit ea1e410039d35a532e9979d99d28320740fdb253
+Author: jsingh <jsingh>
+Date:   Tue Aug 7 05:25:56 2007 +0000
+
+    Completed
+
+commit 7bb4dd26a52f181b12cb2965b85aef6efae98617
+Author: mrtom <mrtom>
+Date:   Mon Aug 6 11:32:40 2007 +0000
+
+    translation updated
+
+commit bb3f4ca1723c1d9c2417531a1348754f5164b312
+Author: sbehera <sbehera>
+Date:   Mon Aug 6 11:12:58 2007 +0000
+
+    Updated Oriya Translation
+
+commit 1df476b90b2a7c35526ddeb4a103b6c26d30abd2
+Author: ankitp <ankitp>
+Date:   Mon Aug 6 09:21:34 2007 +0000
+
+    updated gujarati translations
+
+commit df7dab3c04de3cdd595fc596811618ff92049a8e
+Author: eukim <eukim>
+Date:   Mon Aug 6 07:00:43 2007 +0000
+
+    Updated
+
+commit 0135352c2caf4aa8b555148c51750dd450c5050d
+Author: apeter <apeter>
+Date:   Mon Aug 6 06:20:13 2007 +0000
+
+    Updated Malayalam Translation
+
+commit c13a63444dfd7c8228682ecd5a5d29195a33bf80
+Author: beckerde <beckerde>
+Date:   Sun Aug 5 02:23:15 2007 +0000
+
+    *** empty log message ***
+
+commit 166035083ce3fb0f4c01aecddc854371f74264b4
+Author: raven <raven>
+Date:   Fri Aug 3 12:51:24 2007 +0000
+
+    Updated Polish translation
+
+commit f62bd6213c66925a456af24709a9c465c08620a6
+Author: znflint <znflint>
+Date:   Fri Aug 3 01:51:12 2007 +0000
+
+    *** empty log message ***
+
+commit 434ee5286c64c897e536b102132431c54ba0edf3
+Author: trinks <trinks>
+Date:   Thu Aug 2 23:37:41 2007 +0000
+
+    total:22 fuzzy:0 untranslated:0
+
+commit fe424c63021d2a23e009f1fc9bcfc4900e4d4e7b
+Author: igor <igor>
+Date:   Thu Aug 2 21:54:50 2007 +0000
+
+    Translation update
+
+commit ebc645e12ec29d45c11e0682cf868617f083bfef
+Author: kmilos <kmilos>
+Date:   Thu Aug 2 20:24:11 2007 +0000
+
+    updated sr@Latn translation
+
+commit 0a6d8fbd114c55941a7c9cd0378a49d08dbe7c34
+Author: kmilos <kmilos>
+Date:   Thu Aug 2 20:23:39 2007 +0000
+
+    updated sr translation
+
+commit cea46ce165d22ae8ff143274bca7fd32286fe7bf
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 2 20:07:08 2007 +0000
+
+    New version.
+
+commit 14ae0a29cd3f8d84764787e73795a318e84f02e0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Aug 2 20:00:59 2007 +0000
+
+    Update translation files.
+
+commit 2c6b8b9406d152270340fa73fa83882b6f631920
+Author: jsingh <jsingh>
+Date:   Thu Aug 2 09:07:46 2007 +0000
+
+    Completed
+
+commit bff78d7a546dbfe0912e3ed1be3a49acc240720a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 31 17:20:55 2007 +0000
+
+    Fix ksvalidator tracebacks.
+
+commit e2b8897137d9f51aa5a2603bf4f9329d94a0ac65
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jul 20 20:09:52 2007 +0000
+
+    Change --class to --dhcpclass in all parse methods (#248912).
+
+commit 2b25b608cfc714723c039ea2053d06077609c3e7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 19 20:16:50 2007 +0000
+
+    Require rhpl (#248953).
+
+commit 4a0d361765229432a78b11908e6db13c860dd67c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 17 21:10:40 2007 +0000
+
+    New version.
+
+commit 13174bb8227e507c614fab1829eb0acbf3718e26
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 17 17:14:15 2007 +0000
+
+    Don't take a "self" parameter since these methods don't live in a class
+    anymore.
+
+commit 1cbf9622c7668abcd5ab54268fe9eb4ff4b5b159
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 17 14:58:23 2007 +0000
+
+    New version.
+
+commit 8f2290e1227b02ae02fdea4f1f3b0b4f12204a94
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jul 16 20:39:51 2007 +0000
+
+    Move %ksappend handling from anaconda into pykickstart.  It's still not
+    very well integrated, but this is a good start.
+
+commit 29a0fae74ee2beded5104562ef158625a14d23af
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jul 16 19:25:15 2007 +0000
+
+    Change destination of --disks parameter to match what is expected.
+
+commit 855f49271e63210955cb1b0a221449e1635f4414
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jul 16 15:36:03 2007 +0000
+
+    Add support for --only-use to RHEL4 as well.  Then make a new version.
+
+commit 767ae993b754d504f9dc5ec3345c8abda26cf1d5
+Author: arangel <arangel>
+Date:   Fri Jul 13 07:46:06 2007 +0000
+
+    Updated Macedonian Translation, <arangel@linux.net.mk>
+
+commit 9201560a2357cd22990e70521b394da56025acac
+Author: znflint <znflint>
+Date:   Fri Jul 13 01:27:17 2007 +0000
+
+    为什么老是有人把基本的变量翻错，又找了半天
+
+commit b16d18c4240512ab39f49cddf24027f6ca00ab54
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jul 11 19:06:26 2007 +0000
+
+    Add support for the --only-use argument.
+
+commit 73239b3309edeaf5be93289483f0120aca922715
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jul 10 14:32:49 2007 +0000
+
+    Need to pass "self" as the first argument to superclass methods (#246709).
+
+commit c73b48ffa50703579b362d6ef38172e16be6ed8d
+Author: tombo <tombo>
+Date:   Sun Jun 17 14:51:30 2007 +0000
+
+    updated some entry with better translation
+
+commit 9c859ddb2a66fc95a853ba12f79f8341cc2c3b09
+Author: alan <alan>
+Date:   Mon Jun 11 13:30:05 2007 +0000
+
+    Autotranslate/check
+
+commit 2e723c744d38ad7f244e1fbef05781295bff3f3a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jun 8 20:58:45 2007 +0000
+
+    New release.
+
+commit fa66420b15995b64bde3904db7386d3231ae6ce8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jun 7 15:22:31 2007 +0000
+
+    Add support for the --lock and --plaintext options for rootpw and user
+    (#240059).
+
+commit a7ef5e0bccaa35da1dfd7bfc54f435137d495069
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 5 14:10:24 2007 +0000
+
+    Add support for F8.  Move DEVEL version along to the latest.
+
+commit 8974665aa5944d11543dac69f80a92a11de4357f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jun 4 18:29:19 2007 +0000
+
+    New version.
+
+commit 6f52fa05560b9df338622c20ea693259dd2d3fba
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jun 4 17:18:48 2007 +0000
+
+    Use currentLine instead of reassembling the list of arguments, since otherwise
+    we might miss quoting (#241657).
+
+commit 4a2e6ddea5057c28ee7672a71acb098106530a35
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jun 4 15:38:52 2007 +0000
+
+    Fix harddrive install method error checking (#242492, patch from Andrew Edmunds
+    <andrew DOT edmunds AT yahoo.com.au>).
+
+commit f849711478c737d449e46729d3d8265495ce9d27
+Author: apeter <apeter>
+Date:   Wed May 30 11:46:55 2007 +0000
+
+    Updated Malayalam file
+
+commit d7349e6753ff6c18751e4c7f22f1fa36d29e22d2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri May 18 14:34:26 2007 +0000
+
+    Fix typo in outputting --iscrypted option.
+
+commit f7c82c3cd6a7d68837890d8d72796d897b9c5688
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon May 14 13:59:03 2007 +0000
+
+    Update the setup file too.
+
+commit 1b1c4e3bafd4714b56895021e9efae010425e5af
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon May 14 13:58:16 2007 +0000
+
+    New version.
+
+commit f07d3b66b928f544a1a1741b6cafda6802c771cf
+Author: hyuuga <hyuuga>
+Date:   Fri May 4 08:21:46 2007 +0000
+
+    translation completed
+
+commit 57bfa9206fccc24e5f513919c3e47014604a25dc
+Author: svenkate <svenkate>
+Date:   Wed May 2 05:10:07 2007 +0000
+
+    kannada translatiion updation
+
+commit b054ffd1258e4a340fcb8db31431d3886e43e509
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Apr 24 21:10:37 2007 +0000
+
+    Initial support for RHEL3 (jlaska AT redhat.com).
+
+commit ad86802c634a4088afb63d4c6309968ebf94b826
+Author: ra <ra>
+Date:   Tue Apr 24 19:04:34 2007 +0000
+
+    *** empty log message ***
+
+commit 9574b4234c94b0f9681e177ed121a2ebba22e857
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Apr 24 17:26:10 2007 +0000
+
+    Better regexes for splitting strings into family and version.
+
+commit 9e7755ab8420c65e7b75923c88464a9e04b53786
+Author: erwsy <erwsy>
+Date:   Fri Apr 20 08:32:42 2007 +0000
+
+    Fuzzy update
+
+commit 4ff59384bdeb3849edc0ddb14ac8cd8f9776fcdf
+Author: rranjan <rranjan>
+Date:   Mon Apr 16 07:46:02 2007 +0000
+
+    hindi udapte
+
+commit a8ca236d9bf74def609db8510e3e07ea58c37bb4
+Author: keldsim <keldsim>
+Date:   Sun Apr 15 08:11:37 2007 +0000
+
+    updates
+    libuser/da.po redhat-menus/da.po system-config-cluster/da.po
+    system-config-kickstart/da.po system-config-language/da.po
+    system-config-rootpassword/da.po
+    system-config-securitylevel/da.po system-config-users/da.po
+    system-config-xfree/da.po usermode/da.po
+    policycoreutils/po/da.po pykickstart/po/da.po
+
+commit 1ce94d1accabbfff88dd5cc0d2cc186bc7e45748
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Apr 13 16:08:15 2007 +0000
+
+    This is pykickstart version 1.0.
+
+commit a0aa89ac3cc60e682f4a45bf9ce5f1bb1ff41718
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 12 21:11:13 2007 +0000
+
+    More documentation changes.  It's coming along, even if it's looking a
+    little rambling.
+
+commit 13b3c024e8c5ad4606d687261f551adec353afa8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 12 17:43:03 2007 +0000
+
+    Finish describing all the base classes.
+
+commit d0472b07bbe9cbf42b22bf32440a52156f8a4bfa
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 12 16:23:30 2007 +0000
+
+    Further documentation updates.
+
+commit 2d9586a442d3581077120f23b4ace19bb10849f3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 12 15:51:40 2007 +0000
+
+    This should be an abstract class.
+
+commit ce5e6547c81b88985b72825f4a9a188f64721f2e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 12 15:36:28 2007 +0000
+
+    Update documentation.
+
+commit 5d4f96a49015a8f4173ea697251ae9e4a691b6f7
+Author: ifelix <ifelix>
+Date:   Thu Apr 12 12:16:05 2007 +0000
+
+    Fedora tamil translation updated
+
+commit 4736f82bc6242b0f71424728932147b272318c83
+Author: rokaaa <rokaaa>
+Date:   Wed Apr 11 20:13:10 2007 +0000
+
+    100% translated
+
+commit 6526354d52fb21031d3d6742f684ab05117ba0e9
+Author: satyr <satyr>
+Date:   Tue Apr 10 08:45:52 2007 +0000
+
+    mail change
+
+commit 557b79bdeef2c6947baaa703afa6c5e5989e4b1b
+Author: trinks <trinks>
+Date:   Mon Apr 9 22:02:32 2007 +0000
+
+    *** empty log message ***
+
+commit bf5e6453e52b6048b4400de15e69dcc892148a69
+Author: arclynx <arclynx>
+Date:   Sun Apr 8 15:34:52 2007 +0000
+
+    Updated Malay translation
+
+commit 32b92026599c32129ebcd1bf4a3489e73f35dec3
+Author: runab <runab>
+Date:   Wed Apr 4 12:30:57 2007 +0000
+
+    Updated Bengali India Translation
+
+commit 375620633e105f3971b9231c58acf67ce0d6b473
+Author: ondrejj <ondrejj>
+Date:   Tue Apr 3 11:12:27 2007 +0000
+
+    Slovak translations
+
+commit 88709e460f44ddf47b6d5c2a3000898ee9312ca2
+Author: arclynx <arclynx>
+Date:   Sun Apr 1 10:33:40 2007 +0000
+
+    Updated Malay translation
+
+commit 991509a6ff086c485b9b94d0afb4a03e03dd855f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Mar 30 19:54:49 2007 +0000
+
+    Use urlgrabber so %include files can be URLs (#234351).
+
+commit 73f17fb0f7e7dd3d61b9b43daa1e3eae48476c4c
+Author: satyr <satyr>
+Date:   Thu Mar 29 06:34:22 2007 +0000
+
+    Update
+
+commit dd68cb2e3fcb26ca006a2722382a3c0311fc3dc7
+Author: satyr <satyr>
+Date:   Wed Mar 28 15:16:26 2007 +0000
+
+    Initial commit
+
+commit 5c0b8f49b8138aba45b14ca09d75b377a6b6c71e
+Author: maxik <maxik>
+Date:   Wed Mar 28 08:21:13 2007 +0000
+
+    2007-03-28 Maxim Dziumanenko <dziumanenko@gmail.com>
+    
+    	* Update Ukrainian translation.
+
+commit 9501f3e8c5dda9fc5b88d012deca3531d9c8366d
+Author: tszanto <tszanto>
+Date:   Tue Mar 27 17:38:23 2007 +0000
+
+    *** empty log message ***
+
+commit 2084a4a452cd461aa69f64a26a33f1d2f6916518
+Author: tszanto <tszanto>
+Date:   Mon Mar 26 22:54:15 2007 +0000
+
+    *** empty log message ***
+
+commit c9ca0e0b4e9187a0deab0d1202c03e4afe0e0fe8
+Author: trinks <trinks>
+Date:   Mon Mar 26 05:38:38 2007 +0000
+
+    *** empty log message ***
+
+commit 12074a9da577e70859b2173b2838b40d82a9cd21
+Author: igor <igor>
+Date:   Mon Mar 26 01:07:58 2007 +0000
+
+    Revision for F7
+
+commit 8b9c3aa506d5db87cd8be76b7bf687d7df0d922c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Mar 19 21:21:41 2007 +0000
+
+    New version.
+
+commit 1db845615ae33f3c18f205a45b202cdd442060d6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Mar 16 17:59:00 2007 +0000
+
+    Increase writePriority number so this comes after upgrade/install.
+
+commit 02eaedf075584e3f71586338f45c8891c069f1f8
+Author: libbe <libbe>
+Date:   Fri Mar 16 14:01:24 2007 +0000
+
+    Updated Norwegian Bokmaal translation
+
+commit 7693f2ef6960b798fbf76f68609111bef96beb2b
+Author: sbehera <sbehera>
+Date:   Thu Mar 15 09:10:06 2007 +0000
+
+    Updated Oriya Translation
+
+commit e3c82747f3b0add70b4981099089d5e876aec977
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Mar 12 15:32:50 2007 +0000
+
+    Treat class names as unicode strings so lower() works in all locales (#231053).
+
+commit 41ef5c57de1575faa1a89c9c73ba2a60d53d54bd
+Author: mrtom <mrtom>
+Date:   Mon Mar 12 11:43:27 2007 +0000
+
+    translation updated
+
+commit 65fd11eaffa28ecadf3519b0d9cf67f236296280
+Author: kmilos <kmilos>
+Date:   Sun Mar 11 20:10:42 2007 +0000
+
+    updated sr@Latn translation
+
+commit a92d40ba7263f9158f3a2756b6c03213113f5d8b
+Author: kmilos <kmilos>
+Date:   Sun Mar 11 20:10:11 2007 +0000
+
+    updated sr translation
+
+commit 7b8fe7619740b26ad71bc3132db310ad67b0ebc0
+Author: pve-nl <pve-nl>
+Date:   Sun Mar 11 19:19:51 2007 +0000
+
+    Some fixes for pykickstart nl.po
+
+commit 10c068ece23c46b1f00adba31387f96019945665
+Author: joseppc <joseppc>
+Date:   Sun Mar 11 03:15:23 2007 +0000
+
+    Updated Catalan translation.
+
+commit 9f4d1832a5549e9877b8b8fae4ff8bac82a2c0b7
+Author: tombo <tombo>
+Date:   Sat Mar 10 20:48:13 2007 +0000
+
+    completed
+
+commit 502f23c41c278079191f712e45e70076abbededc
+Author: raada <raada>
+Date:   Sat Mar 10 00:45:51 2007 +0000
+
+    *** empty log message ***
+
+commit 8f8824d1839c86bccb9f79bab529ff8d5b791a21
+Author: zepires <zepires>
+Date:   Fri Mar 9 14:28:39 2007 +0000
+
+    Fixed spelling errors. Finished RH for today
+
+commit 5e863ecbce433ac369c6686768b341d1c804aef1
+Author: vpv <vpv>
+Date:   Thu Mar 8 17:21:30 2007 +0000
+
+    Updated Finnish translation
+
+commit 0fbfab34b0fd2b744543ba862c53c3011e93cf11
+Author: beckerde <beckerde>
+Date:   Thu Mar 8 13:04:17 2007 +0000
+
+    *** empty log message ***
+
+commit 2190f9ab596773a7f07c36884bed70e973ffdd4f
+Author: kerslage <kerslage>
+Date:   Thu Mar 8 12:36:03 2007 +0000
+
+    Small fix
+
+commit fa63b4f5f4f971b5d682dda6a1ed4a5ec1296ea6
+Author: kerslage <kerslage>
+Date:   Thu Mar 8 12:32:30 2007 +0000
+
+    Latest changes synced
+
+commit 07ad544b366e745be327e185157b5c2ab8191a42
+Author: ankitp <ankitp>
+Date:   Thu Mar 8 06:59:32 2007 +0000
+
+    Updated Gujarati Translations
+
+commit d7afe5934518d3b648ffc9065362cff0a2d56d80
+Author: trinks <trinks>
+Date:   Thu Mar 8 04:30:29 2007 +0000
+
+    total:19 fuzzy:0 untranslated:0
+
+commit 5f5d0f824947b71b76e3be00344dc368f1b7d7f3
+Author: raven <raven>
+Date:   Thu Mar 8 00:21:07 2007 +0000
+
+    Updated Polish translation
+
+commit 0090d76317614a50077497ecf0ac0870bede1d71
+Author: vferreir <vferreir>
+Date:   Thu Mar 8 00:09:33 2007 +0000
+
+    *** empty log message ***
+
+commit 58b36f0955a80ff87ae1056a4827eb9296ba886c
+Author: renato <renato>
+Date:   Wed Mar 7 22:12:45 2007 +0000
+
+    new lines
+
+commit 4e23bc33aaaf0bc05fe6923f9b1464d8bad71eb3
+Author: mrlarch <mrlarch>
+Date:   Wed Mar 7 20:37:20 2007 +0000
+
+    po update
+
+commit 4e47e942e351afe96ca954181f56d6754b6baef2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 7 20:11:16 2007 +0000
+
+    New version.
+
+commit d58ab327e372f7116c143ee9b344931efe7dd2d1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 7 20:08:31 2007 +0000
+
+    Update translation files.
+
+commit d877cff2d963759c309daab26e6971e28c60df87
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 7 17:44:15 2007 +0000
+
+    Recognize %ksappend so ksvalidator works.
+
+commit 7f777a36e73f96d2cdb7904e374847c6259b92e7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 7 15:05:05 2007 +0000
+
+    The timezone command didn't understand --isUtc before FC6 (#231189).
+
+commit 60cf8aca081cb1ee1306370320f12fc637b8c40d
+Author: mrtom <mrtom>
+Date:   Wed Mar 7 08:20:53 2007 +0000
+
+    translation updated
+
+commit d7d16e9a09d4490741c278fe7d33d24cdf2295e2
+Author: sbehera <sbehera>
+Date:   Tue Mar 6 08:59:48 2007 +0000
+
+    Updated Oriya Translation
+
+commit f1c8d7b3692f9bbaabb142488bbd3861c0521ba4
+Author: runab <runab>
+Date:   Mon Mar 5 09:29:31 2007 +0000
+
+    Updated Bengali India Translation
+
+commit eb6656f4866e47e3fc321d176d9a56d01e30e05b
+Author: giomac <giomac>
+Date:   Sun Mar 4 20:50:36 2007 +0000
+
+    *** empty log message ***
+
+commit 4d8d74a02e2b2200a9fbe53133163860a5a38fac
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Mar 1 18:59:02 2007 +0000
+
+    Don't set any default values on these commands.
+
+commit 14c8610836fda26b8144ba85c2f084cc128717e7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 28 17:35:08 2007 +0000
+
+    Fix another typo.
+
+commit 10a129a8615169348288cf774322c0847376d6b9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 28 17:30:56 2007 +0000
+
+    Fix typo.
+
+commit 3f05ec73b78f546247dafcf05410d79650980fe9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 28 16:09:47 2007 +0000
+
+    Add support for RAID10.
+
+commit 58136c10712caa566381fec830dd0e5f518f75be
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 28 15:46:02 2007 +0000
+
+    Added a new updates command for grabbing updates.img files.
+
+commit 020a1a97906495212f64889f15536a3984cfd307
+Author: khashida <khashida>
+Date:   Wed Feb 28 01:23:25 2007 +0000
+
+    updated
+
+commit eae86301de0b5ce4ba14fca0d724afdce47f7388
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 26 22:15:22 2007 +0000
+
+    New version.
+
+commit 920ac5452a491472c6daa68c7eaad7c7be298346
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 26 21:38:52 2007 +0000
+
+    Add all the attributes that the Method commands can set so __call__ works.
+
+commit 3e72fb48607695454c83415566fb95946e2f2e3e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 26 20:53:32 2007 +0000
+
+    Fix device command syntax to match anaconda's documentation.
+
+commit c1c997fba00f40490e6acbfd26bca63c4ef8b9cf
+Author: dheche <dheche>
+Date:   Thu Feb 22 19:15:51 2007 +0000
+
+    3 fuzzy, 5 new string finished
+
+commit e19078288639e29b910e3f320e0f4539fe48ba47
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 21 22:09:03 2007 +0000
+
+    New version.
+
+commit b24f0e768b094c88e80cc953f120e5e2171c5617
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 21 17:10:07 2007 +0000
+
+    Fix reference to cMap and dMap in non-default case (#229505).
+
+commit 4049d664b96105385794c9d48a364674cb2f98a6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 20 21:17:42 2007 +0000
+
+    New version.
+
+commit 1f2de1cda6d8b4e30687c781a13b24b496b1254f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 20 21:13:13 2007 +0000
+
+    Support new extended group selection syntax.
+
+commit 00fda2b4bae62d05249726bf2b225573868c9d9f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 20 17:04:02 2007 +0000
+
+    Add a mapping for data objects as well, and make sure to add attributes for
+    those objects on the handler.
+
+commit 39079928b71b1ad25d73b798f8d6e6cd3e65e908
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 19 22:22:38 2007 +0000
+
+    Allow passing a command mapping to BaseHandler.__init__ for overriding
+    the command object with your own.  This is needed for anaconda mainly.
+
+commit 6537f5211061792cc38fc40fc2488a85b1ec87fb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 19 19:47:45 2007 +0000
+
+    Add a newline.
+
+commit ed3709b38901f57368b44c81ff5be0e09413f6db
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 19 19:45:09 2007 +0000
+
+    Provide a default return value in the __str__ methods to fix a traceback.
+
+commit eb4fc89438e37ecb4103bf0053c9316cf963c0f0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 19 19:36:51 2007 +0000
+
+    Don't want to see .pyc files in this directory either.
+
+commit 8477484ef43a66f164f9320714cdc93d8098063a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 19 18:54:57 2007 +0000
+
+    Rename command objects by inserting an underscore between the version part
+    and the name part.
+
+commit ea947691c2741a0e62e0bd2dd3a1f7033560bbc7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 19 18:35:03 2007 +0000
+
+    Added versionToString, and reorganized the version stuff a bit to make use
+    of one single mapping instead of several.
+
+commit 8ac0f6619a3e6fafe6c92e5cf6aee48922be0012
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 19 16:57:28 2007 +0000
+
+    And commit the ChangeLog too.
+
+commit ac7a60b68e0794fabe80a90864c981c756dde2c9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 19 16:56:45 2007 +0000
+
+    New source layout - version handlers are just stubs now and are in
+    pykickstart/handlers.  Command objects are each in their own file in
+    pykickstart/commands, with all versions of the same command being in the same
+    file.  Some new support files were added for this layout.  Overall, I don't
+    think the API really changes though.  That's the next thing to look at.
+
+commit d1ae9a54d1c433b1657839f453d033accfe0dc40
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 14 22:35:59 2007 +0000
+
+    New version.
+
+commit d2d660792bba99ab30bea48ca748c8136c1bed9d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 14 22:33:50 2007 +0000
+
+    KickstartParser no longer takes a version argument.
+
+commit a18f0d33642981a5ab8222d9f53a0f87617aba93
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 14 18:13:16 2007 +0000
+
+    Don't need to take a version argument since the Parser can get that from the
+    Handler.
+
+commit 1d6dfba51ec009984d5b5ef6fce0f5958ef592db
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 14 16:30:39 2007 +0000
+
+    Be more lenient in what strings we accept to take into account RHEL variants.
+
+commit 6b590edb4a7d7e3cca67ae631eb3a1a189b3690c
+Author: vpv <vpv>
+Date:   Mon Feb 12 15:14:14 2007 +0000
+
+    Finnish translation
+
+commit 110aec0181a4cfa791db6a8b4087986f6fd65a71
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 8 15:01:46 2007 +0000
+
+    Allow processing multiple kickstart files with the same handler object for
+    inheritance/overriding of files.
+
+commit 038bddb1f710c0d00d34c42b84c411ca7f5b2d30
+Author: andrmart <andrmart>
+Date:   Wed Feb 7 22:06:03 2007 +0000
+
+    corrected 1 typo
+
+commit 1cf5d6cc69c536c0e90452af490a7b95d4ba2299
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 7 17:43:19 2007 +0000
+
+    Update these other files too.  Why do I keep forgetting this?
+
+commit fa223aa09373ac1be4b129106fa65ff2f1e66ef0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 7 17:42:16 2007 +0000
+
+    New version.
+
+commit 5f87997d677db59a952649d81c2128bdf2a00326
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 6 20:44:16 2007 +0000
+
+    Add bug number.
+
+commit 5dd8f292835d3a468c8acf3e3ece7678a7888bed
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 6 20:42:45 2007 +0000
+
+    Use new constants for networking bootprotos.
+
+commit 4203fab86b0ea33aee3328819012f1bf68858117
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 6 20:15:05 2007 +0000
+
+    Add a newline to the key __str__ method's output.
+
+commit de03da8a84734ae8a2ddeedda9fe62a63e6a179a
+Author: arclynx <arclynx>
+Date:   Sat Feb 3 16:29:22 2007 +0000
+
+    Updated Malay translation
+
+commit 2c9e5a443e9d85724437a7ff804d772765f01362
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 1 14:53:25 2007 +0000
+
+    Fix tracebacks in subclass __str__ methods (#226734).
+
+commit 0ad0b442a040b5eaf40456318ad24c92f348479e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 31 23:10:29 2007 +0000
+
+    Fix up the spec file a bit to make the reviewer's job easier.
+
+commit ad77a42b0a3e882fd295e684689e1dc6a2b2f51c
+Author: libbe <libbe>
+Date:   Mon Jan 29 17:55:29 2007 +0000
+
+    Updated Norwegian Bokmaal translation
+
+commit 22490c1bf36607907f20e6af870d48255e2e5b82
+Author: kerslage <kerslage>
+Date:   Fri Jan 26 14:50:45 2007 +0000
+
+    Finished
+
+commit c610557f5f4258c79cc846371a73b24aac02574a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 25 21:54:35 2007 +0000
+
+    Need to update these files too.
+
+commit 7a4e694be918d1cc4d4f612e151902dbaf23a7e8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 25 21:53:39 2007 +0000
+
+    New version.
+
+commit 4862d81e76435988cc60efa28d3922a936c21d5e
+Author: zoliq <zoliq>
+Date:   Thu Jan 25 01:46:35 2007 +0000
+
+    Updated translation
+
+commit 29ab4a0d22510307ff06e7628d20a22aac192deb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 24 18:48:47 2007 +0000
+
+    Add support for RHEL4.
+
+commit 39f266b434c1b5e8d4caab08a985fab8d083dfd5
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 24 18:48:33 2007 +0000
+
+    Use overrideCommand instead of registerCommand.
+
+commit 3bc00c5a3abc01dbafcb2cd173e77dd52ee49b37
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 24 18:20:43 2007 +0000
+
+    Add support for FC3.
+
+commit 5cecc088b239609e3206a8b6ab71e9831f9b55b9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 24 15:21:21 2007 +0000
+
+    Add support for RHEL5.  Move the key command out of FC6 and into F7/RHEL5
+    where it was really introduced.
+
+commit 09ac7b442cabdee1812a81cfe995432fbd849165
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 24 15:14:24 2007 +0000
+
+    The key command was added for RHEL5, which was shortly after FC6 came out.
+
+commit 11d7ba8d0865a2849b564eef7ec31cd3aaa383f8
+Author: maxik <maxik>
+Date:   Tue Jan 23 16:37:48 2007 +0000
+
+    Maxim Dziumanenko <dziumanenko@gmail.com>
+    
+    	* Updated Ukrainian translation.
+
+commit 88e4374f5d66d30973c4122f1f3b7ce6676e9252
+Author: absinthe <absinthe>
+Date:   Tue Jan 23 15:56:37 2007 +0000
+
+    translated pykickstart to bosnian
+
+commit c2690ee1e1c90b33836038383bf6434ced06cbc0
+Author: joseppc <joseppc>
+Date:   Mon Jan 22 20:48:30 2007 +0000
+
+    Updated Catalan translation.
+
+commit 8326c3238c94f52e2264bb9a49775b3d164b513c
+Author: arclynx <arclynx>
+Date:   Sun Jan 21 18:15:11 2007 +0000
+
+    Updated Malay translation
+
+commit 9f9a0065ba863ee090410684790fb55b10a9d263
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 19 21:20:17 2007 +0000
+
+    New version.
+
+commit 28be592566549f9ae88da65720a9156b42270792
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 19 20:10:00 2007 +0000
+
+    Fix test for matching version numbers now that handlers know what version
+    they are.
+
+commit b4ab49ba6639cbc1d6107dbff0fb8edecb4e49db
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 19 20:09:35 2007 +0000
+
+    Add a version attribute so we no longer have to compare class names.
+
+commit c9d40638167eb053e284f79b044b822408b79aa8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 19 18:18:26 2007 +0000
+
+    Pass a message to KickstartVersionError.
+
+commit 528e71e938b758842d35e01103aef5e0b32f609e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 19 18:17:07 2007 +0000
+
+    This should just take a message instead of a version like all the other
+    exception classes.
+
+commit 021cc861feecde385989fad52dd5a0d9deb7b004
+Author: raada <raada>
+Date:   Thu Jan 18 21:41:58 2007 +0000
+
+    *** empty log message ***
+
+commit 2d7fa789181f0412ad47d28be869b2a13218fcee
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 18 20:18:53 2007 +0000
+
+    KSOptionParser's lineno argument needs a name.
+
+commit a9a01353a43a8b8707b1c505c3b6b45e76b211b8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 18 20:03:28 2007 +0000
+
+    Deprecated should be a flag, not a version number.
+
+commit 7afc2b74394902516c66dc94ee4d690555c9664c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 18 19:51:51 2007 +0000
+
+    KickstartParser needs to accept a version argument as well.
+    Accept a --default argument to %packages to specify that only the default
+    package set should be installed (#221305).
+
+commit a1d38b2ebe248ef7158eea454a4d5225fddfaa19
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 18 19:35:50 2007 +0000
+
+    Move call to superclass __init__ to where it belongs.
+
+commit 051993277cb6b470438d13a8d753ecb049ac166c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 18 18:47:32 2007 +0000
+
+    Add support for the F7 version.
+
+commit 45110f53b63f9e86f8dc0992e7b04b2828175c68
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 18 18:46:48 2007 +0000
+
+    Add a devel version that removes the deprecated langsupport and mouse
+    commands.
+
+commit 885b9a7e9710dd3d4f0aa095055459e228459b3e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 18 18:42:25 2007 +0000
+
+    Add a method to remove support for a command from a Handler instance.
+
+commit c65d42aa80cf04516a06cdcde921ff11461b0002
+Author: arclynx <arclynx>
+Date:   Thu Jan 18 15:16:45 2007 +0000
+
+    Updated Malay translation
+
+commit c36a4e1a247b2d65dda5b4fb9576c5e5e841f2bb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 17 21:42:42 2007 +0000
+
+    New version.
+
+commit 14f397630d5c025b261c85804153d1237051fd12
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 17 21:41:56 2007 +0000
+
+    Started updating the programmer's documentation.
+
+commit d18c978908fb0055b1e6402971eac7b1cdc23df3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 17 16:13:10 2007 +0000
+
+    Add a method to read a kickstart file from a string, in addition to the one
+    that's already there for reading from a file.
+
+commit 4a0ea548eba9cffc034d5342514d682303a6292d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 16 19:18:24 2007 +0000
+
+    New version.
+
+commit f2dd8fe47a9dfa9e9a5f824143a2221e6656f675
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 16 19:18:15 2007 +0000
+
+    Update translation files.
+
+commit fd6fbcf9ac4d913f4891f9fbcee780752f685e3c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 16 18:41:58 2007 +0000
+
+    Fix exception error messages.
+
+commit 62c8cab2778aad3f8fdb536983eb210553240188
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 16 18:35:33 2007 +0000
+
+    Write out --interpreter since that's what the parser expects (#222877).
+
+commit 30adb5993617c2414a83b00813cc705c05fd181f
+Author: liutao <liutao>
+Date:   Tue Jan 16 05:17:10 2007 +0000
+
+    -_-
+
+commit 9b354a6518c661d3048190e283e6fab21d8197d4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 20:17:53 2007 +0000
+
+    rootpw -> password
+
+commit 73a4e2e9cd11424fc527b207dbb50d9baed82d36
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 19:50:23 2007 +0000
+
+    Only set upgrade if that's what the current command is.
+
+commit a8d14212505afae7d4b6b48cdf3113c2c6aa81fe
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 19:09:47 2007 +0000
+
+    More changes.
+
+commit 9c58c7267e1d73a8b4b9be6b111ef71a8978445d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 19:09:29 2007 +0000
+
+    Add a method to empty out the contents of the commands dict.
+
+commit e604808a2200374ec965d42c45e1417e38c16055
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 18:34:52 2007 +0000
+
+    Rename Version to Handler.
+
+commit eb5e2a1b2f5820c33d6da8f552b3a8769ffa2802
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 18:05:27 2007 +0000
+
+    Various changes.
+
+commit e12db739f4b5cb73d46c7f10742d7f89c9a20d8c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 18:05:20 2007 +0000
+
+    Rename BaseVersion to BaseHandler, registerHandler to registerCommand, and
+    self.dispatcher to self.handler.
+
+commit 509bce42af45d6c322017d1097eb9c8b9215493b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 18:04:07 2007 +0000
+
+    Rename kshandlers to handler.
+
+commit 1ed8b04aebc682f39e03c05a61231623d2caab3a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 18:03:32 2007 +0000
+
+    BaseVersion -> BaseHandler.
+
+commit b196384adca6328ca4bae81cfff4e1e7499b40cf
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 15 17:26:58 2007 +0000
+
+    returnClassForVersion should take a default version argument.
+
+commit 4775d706d385bdb02a48d8ffc7d1a8cfa884b724
+Author: tombo <tombo>
+Date:   Sat Jan 13 16:26:35 2007 +0000
+
+    resolved 5 untranslated strings
+
+commit a2906994c0e8e7b2bae3caf0cf9b94011f0aba43
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 12 19:04:40 2007 +0000
+
+    Add the dispatcher setting back in.
+
+commit 8b475310151d1d5afeadd5db7182b452ae5bde7a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 12 18:49:46 2007 +0000
+
+    Put a newline after the platform is written.
+
+commit e23030d5e1f833a3fefee5452a2ecf239c24572f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 12 18:35:57 2007 +0000
+
+    Provide a way to create a new instance of the handler and have it used.  This
+    allows a shortcut for wiping out all the attributes on an instance.
+
+commit 9cc19d6239952f0343907357128dd5a69005bd26
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 12 17:21:27 2007 +0000
+
+    Put writePriority defaults in the default arguments to command objects instead
+    of in the calls to creating them, as that didn't work for subclasses.  Also
+    change how we handle default arguments that are lists.
+
+commit 950c51793c4d540b8e65295a23edf8a86b7814c1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 12 16:18:38 2007 +0000
+
+    Don't forget the ChangeLog entry.
+
+commit f222f1f25c55c2933549941a1f5154f6b44b57e9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 12 16:18:17 2007 +0000
+
+    When a subclass of BaseVersion registers a handler that already exists from a
+    class higher up the chain, remove the existing handler in favor of the new one.
+
+commit 772d15834f0b1d50d77f0c3235eb5a26ca437d14
+Author: eukim <eukim>
+Date:   Fri Jan 12 02:50:49 2007 +0000
+
+    Updated
+
+commit dd09593c537513356f14439b8b58ae51f3b0a54d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 11 16:33:56 2007 +0000
+
+    Don't need to set this anymore.
+
+commit 0816b1c6e8b4af937c5b30cfdcad7f2493d95383
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 11 16:01:15 2007 +0000
+
+    Have objects in one version subclass objects in a previous version.  Not
+    much can be eliminated this way due to the current object layout, but that's
+    work for another time.
+
+commit 6f609fa40de30744e0f87f850931acbbb70a0ddc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 11 14:54:00 2007 +0000
+
+    Fix Script printing.
+
+commit 65ebae6fba052a31e0ee048adb00b8e9cbfabddf
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 11 14:39:52 2007 +0000
+
+    Fix test for opts attribute in NFS install method.
+
+commit 3422640eba18cf3d141c43ae9d8cdaacc418a8c1
+Author: ifelix <ifelix>
+Date:   Thu Jan 11 07:09:36 2007 +0000
+
+    fedora translation updated
+
+commit df434cc3b36b19843ceb765335df42d4b9d9e298
+Author: ankitp <ankitp>
+Date:   Thu Jan 11 05:38:59 2007 +0000
+
+    Updated Gujarati Translations
+
+commit 9b3f710561e5391f0ed7c3c67fe5f054dfd6d658
+Author: apeter <apeter>
+Date:   Thu Jan 11 04:44:36 2007 +0000
+
+    Updated Malayalam file
+
+commit 6230a96c5162e07acb9b482d7f18eb66e53003bc
+Author: apeter <apeter>
+Date:   Thu Jan 11 03:58:37 2007 +0000
+
+    Updated Malayalam files
+
+commit fdbc416f482c590846fd92881f1aa89683da4c88
+Author: renato <renato>
+Date:   Thu Jan 11 03:55:23 2007 +0000
+
+    new lines
+
+commit 7f7b7878401a22bf2045e9a2cf640ac2971a1cf8
+Author: pve-nl <pve-nl>
+Date:   Wed Jan 10 22:41:27 2007 +0000
+
+    Some fixes for pykickstart nl.po
+
+commit d7e8cc1380cc37214ff10331ec893107255b7771
+Author: imiletic <imiletic>
+Date:   Wed Jan 10 22:26:28 2007 +0000
+
+    *** empty log message ***
+
+commit 966cb8c11846ff9048e0821d2cbe702762f41fec
+Author: raven <raven>
+Date:   Wed Jan 10 19:16:38 2007 +0000
+
+    Updated Polish translation
+
+commit 00fcbbcba66cf7b079eba7660dd380adb7c727d5
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 10 18:57:38 2007 +0000
+
+    Data and command classes are now nested inside the various version classes.
+    Various other changes to make this work.
+
+commit d11bd88247f132b259bbaa98668f10c7d529d6f2
+Author: mrlarch <mrlarch>
+Date:   Wed Jan 10 17:22:41 2007 +0000
+
+    po update..
+
+commit 48f9d476a71eb13b84fbf3dff552224805162b18
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 10 15:54:50 2007 +0000
+
+    Command -> KS for brevity.
+
+commit 521330918fdffa4684a113fde1c5ad899b91137e
+Author: zepires <zepires>
+Date:   Wed Jan 10 15:41:48 2007 +0000
+
+    Finished translate/pykickstart/pt.po
+
+commit 233466b737ee1db0ebeaf41afb25076aae1b81c6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 10 14:35:15 2007 +0000
+
+    Default to DEVEL.
+
+commit 4f728d3ca990ad300afb378ce7cb56165f77299b
+Author: igor <igor>
+Date:   Wed Jan 10 01:22:13 2007 +0000
+
+    New entries translated
+
+commit bbb0b9d4f36be738904ddd041e81d9fe03810dcd
+Author: trinks <trinks>
+Date:   Wed Jan 10 00:37:19 2007 +0000
+
+    total:16 fuzzy:0 untranslated:0
+
+commit 8968b6487ea3c75c0b31c373f076c3fe9a47a91d
+Author: beckerde <beckerde>
+Date:   Tue Jan 9 22:26:53 2007 +0000
+
+    listo
+
+commit 59733175d194d6f52aa460f0968fd0b965916544
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 9 20:46:05 2007 +0000
+
+    Updated translation files.
+
+commit a353aa02132c404299683693d7a906283ed2d59b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 9 20:45:01 2007 +0000
+
+    Update strings a little bit.
+
+commit 14546fad1c28aef2d76acc3dbd9e74e6397af998
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 9 16:59:08 2007 +0000
+
+    Rename everything from Handler to Version.
+
+commit 2f27fe80edc2c9141541b9f72e392bb8dacfe1fe
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 9 16:45:38 2007 +0000
+
+    Merge in multiversion-branch (#189348).
+
+commit 2346ea39450ceb3098544e11f8d271c2767942ae
+Author: arclynx <arclynx>
+Date:   Fri Dec 22 13:19:28 2006 +0000
+
+    Updated Malay translation
+
+commit e697ac1d65c7041a0e56d37cffcc7d2441668554
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Dec 20 18:23:34 2006 +0000
+
+    Update from rhel5-branch.
+
+commit 1fc4584b635447af2b8a115c66bb591b83724fa7
+Author: libbe <libbe>
+Date:   Sun Dec 17 02:42:28 2006 +0000
+
+    Updated Norwegian bokmaal translation
+
+commit fdff9694154844c3c050d33be9cd6b647543ce36
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Dec 15 15:21:33 2006 +0000
+
+    Sync spec file with package CVS.
+
+commit 150ccbaeed5e43819afc8c20769ea91090ec72f0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Dec 15 15:13:26 2006 +0000
+
+    New version for new translations.
+
+commit ee1926c8027c517d8f487fce61fe1a73ffba0e0d
+Author: sganesh <sganesh>
+Date:   Fri Dec 15 13:50:10 2006 +0000
+
+    Telugu tranaslation commited
+
+commit a833d22147e4bc3449586ff7186829b603d8265d
+Author: khashida <khashida>
+Date:   Thu Dec 14 23:30:40 2006 +0000
+
+    one correction
+
+commit 05e4704f130511700e5ad8501135f95e1318c3b5
+Author: fdecroux <fdecroux>
+Date:   Thu Dec 14 07:07:21 2006 +0000
+
+    Updated
+
+commit c117e19b7780f62616e060319ad58dbd9f9cbfae
+Author: sganesh <sganesh>
+Date:   Wed Dec 13 14:18:52 2006 +0000
+
+    Telugu translation commited
+
+commit b4ef18911535a545a49330793e0b6e7cda9ca2aa
+Author: svenkate <svenkate>
+Date:   Mon Dec 11 08:29:02 2006 +0000
+
+    Kannada translation updation
+
+commit 1f792240510b1294a2cedc402da12bcfc9783639
+Author: ra <ra>
+Date:   Sat Dec 9 01:50:52 2006 +0000
+
+    *** empty log message ***
+
+commit d19298fc1c3695050a02161727ca48580431b876
+Author: sganesh <sganesh>
+Date:   Fri Dec 8 09:55:50 2006 +0000
+
+    Telugu translation commited
+
+commit 2baf00e98758af2ecf9f9b81d72eafd909ed3401
+Author: ltenn <ltenn>
+Date:   Thu Dec 7 02:08:02 2006 +0000
+
+    Routine merge by l10n
+
+commit 0e884b6c8a98731b0fd6b9360f01a044588b752f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Dec 5 16:40:43 2006 +0000
+
+    New version.
+
+commit ad17bddb46a11122e3d9ad1976828d0d92d71d29
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 4 16:05:11 2006 +0000
+
+    Fix traceback (#218274).
+
+commit ed9f426b781b3df3ae3f0bf997844090b8864445
+Author: pve-nl <pve-nl>
+Date:   Sun Dec 3 20:37:13 2006 +0000
+
+    Some fixes for pykickstart nl.po
+
+commit 7dd1cb45fda9a1bf111e14d1b822b6eca47f01e7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Dec 1 17:13:19 2006 +0000
+
+    New version.
+
+commit 6825feb0afcdde12a1fb0e0ec423c8757387d8ff
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Dec 1 15:52:18 2006 +0000
+
+    Fix traceback (#218047).
+
+commit 0e94e3da0020c40da464b36fce8f93754de26fbd
+Author: xhuang <xhuang>
+Date:   Thu Nov 30 23:49:34 2006 +0000
+
+    update
+
+commit 235724d21bec01a89ea9b75925e9e183f8e1bed9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 30 19:14:44 2006 +0000
+
+    Fix spec file.
+
+commit 9fce582da941c4d28ccb69ef31c4c0a665ecdc78
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 30 19:07:34 2006 +0000
+
+    New version.
+
+commit dec4a238ba5cdd0e4dd76296ce41692db4206e18
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 30 19:04:22 2006 +0000
+
+    New version.
+
+commit 6f0a494bee252e3273c403f384fe6fbdc39a88b7
+Author: sganesh <sganesh>
+Date:   Thu Nov 30 10:21:35 2006 +0000
+
+    Telugu translation commited
+
+commit ce8fea4bc0bdf382197e930fc6256653fa3d5959
+Author: ifelix <ifelix>
+Date:   Thu Nov 30 08:28:27 2006 +0000
+
+    Fedora ta translation updated
+
+commit 9590a12203177f9c19a63309fd2615f10265e770
+Author: rbhalera <rbhalera>
+Date:   Wed Nov 29 11:25:19 2006 +0000
+
+    Updated Marathi Translation
+
+commit d830abcd371c212c29a82f1c882714d323761ff2
+Author: apeter <apeter>
+Date:   Wed Nov 29 04:15:53 2006 +0000
+
+    Updated Malaylam file
+
+commit 3df25869537730db2107f14fc4bef2dd22d7ecdf
+Author: eukim <eukim>
+Date:   Wed Nov 29 03:33:44 2006 +0000
+
+    Updated
+
+commit 8861564fdf3c864f6c5c8936d3aa3ab475d513fb
+Author: yulia <yulia>
+Date:   Tue Nov 28 02:18:57 2006 +0000
+
+    rhel5 urgent fix
+
+commit fe148d9131ac1060782e67c7deecd2bf8b02e432
+Author: ccheng <ccheng>
+Date:   Tue Nov 28 00:49:07 2006 +0000
+
+    Routine merge
+
+commit 4beb5a1bcc74ab6a475748d53c1cd967ec26c143
+Author: noriko <noriko>
+Date:   Mon Nov 27 05:28:08 2006 +0000
+
+    update translated
+
+commit 3afabf95cee180a40ce9417fb71741d24b40001c
+Author: ccheng <ccheng>
+Date:   Sat Nov 25 15:11:31 2006 +0000
+
+    Translation done
+
+commit 3afcc6eec2ea66ec4d5b61fed9a1a39620580fad
+Author: amit <amit>
+Date:   Fri Nov 24 06:23:02 2006 +0000
+
+    updated pykickstart assamese translation
+
+commit f47745ca1df5d13bb469b070694cce7311cacf1f
+Author: aalam <aalam>
+Date:   Fri Nov 24 04:18:39 2006 +0000
+
+    update translation for Punjabi (Gurmukhi) by apbrar gmail com
+
+commit cd6783f8509d72b14c628cd4f906b989307d77cd
+Author: fvalen <fvalen>
+Date:   Fri Nov 24 03:17:19 2006 +0000
+
+    Updated
+
+commit 766f91569c07abb4a7e9c97af641c8d0001dd4d6
+Author: rranjan <rranjan>
+Date:   Thu Nov 23 08:18:18 2006 +0000
+
+    hindi fedora update
+
+commit 850fa05c8952f9993434b9b0fbcb7fdd43d8fae6
+Author: beckerde <beckerde>
+Date:   Wed Nov 22 21:39:26 2006 +0000
+
+    listo
+
+commit 7c1ed1347cb32454ace4977ad96e712e53b3858b
+Author: zepires <zepires>
+Date:   Wed Nov 22 10:48:48 2006 +0000
+
+    Finished Fedora translations for today
+
+commit 30ddb861b02625c5169c263b7118288f3b9e0048
+Author: sbehera <sbehera>
+Date:   Wed Nov 22 08:42:24 2006 +0000
+
+    Update Oriya Translation
+
+commit b326178a037050c6e3b3ee9d3c42ed5f567cedbe
+Author: ifelix <ifelix>
+Date:   Wed Nov 22 06:48:03 2006 +0000
+
+    Fedora ta translation updated
+
+commit e9a0bba45036081319091e44877afd281a429fa1
+Author: runab <runab>
+Date:   Wed Nov 22 05:46:07 2006 +0000
+
+    Updated Bengali India Translation:22/11
+
+commit 30933a029119223c8f9bda3c80555e66c7d4a96f
+Author: ankitp <ankitp>
+Date:   Wed Nov 22 05:18:08 2006 +0000
+
+    Updated Gujarati Translations
+
+commit 5d571872bfbb2dc97497dc451d60b3400998d47d
+Author: vferreir <vferreir>
+Date:   Wed Nov 22 05:01:08 2006 +0000
+
+    minor changes
+
+commit 59e92a5eca1b0f767ddc44e0835b5ea51e1cd144
+Author: renato <renato>
+Date:   Wed Nov 22 00:43:00 2006 +0000
+
+    new lines
+
+commit 3851c13a71bb37c78a4cb0274fbb871db9c18e2a
+Author: trinks <trinks>
+Date:   Tue Nov 21 22:36:04 2006 +0000
+
+    total:24 fuzzy:0 untranslated:0
+
+commit d8ab412383336758ba6b345a7507eea30363407b
+Author: raven <raven>
+Date:   Tue Nov 21 19:36:34 2006 +0000
+
+    Updated Polish translation
+
+commit dc7c48af850d08d58ac9cb260f7ffdf64852e9bf
+Author: mrtom <mrtom>
+Date:   Tue Nov 21 17:16:50 2006 +0000
+
+    translation updated
+
+commit 688d14f99ebc1191a0596c5fa291acacf1450713
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Nov 21 16:30:06 2006 +0000
+
+    Updated translation files (#216620).
+
+commit 674862b08a1f4115fb2881bf2f9e067235a0a1d1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Nov 21 16:27:51 2006 +0000
+
+    Update string formats to make translation easier.
+
+commit 04c4b0d44522fc0064be0ee145b641141e504fff
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Nov 14 18:53:01 2006 +0000
+
+    Use required attribute.
+
+commit ba0c8abdf5bd15adcd831508e0140c17770b424e
+Author: arclynx <arclynx>
+Date:   Sun Nov 12 11:12:09 2006 +0000
+
+    Updated Malay translation
+
+commit 768052fd6ad11008a1504e86c7ee98066cb7fab8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 9 21:32:38 2006 +0000
+
+    Add --level.
+
+commit 5f8032a6efec691351dc6d503e6444e000665fa9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 24 17:11:58 2006 +0000
+
+    Fix Makefile so %{?dist} doesn't get included in the tag.
+
+commit 85c25673b126103f91539a6f3a1d3dae37e08415
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 24 17:01:21 2006 +0000
+
+    Correct release number so we can use the same spec file across branches.
+
+commit 5985f103fce55f86575fa8baae6ce4b78317f86a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 24 16:37:43 2006 +0000
+
+    Add writer for --key (#211997).
+
+commit 1e18e0366fc8e5493d871944a229c04c6a616399
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 17 17:27:08 2006 +0000
+
+    Add writer for key command.
+
+commit fee260879a9f03049b8f814b1937ed81e2898aa8
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Tue Oct 17 16:13:35 2006 +0000
+
+    and this one too
+
+commit b1f8613a15cd660daece4ba48f54750c364ea16f
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Tue Oct 17 16:13:08 2006 +0000
+
+    * Tue Oct 17 2006 Jeremy Katz <katzj@redhat.com> - 0.38-1
+    - allow --skip for installation number as well (#207029)
+
+commit 1f78536a1d1453e9dd8c9a339036e536bf0f6cdc
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Mon Oct 16 20:25:00 2006 +0000
+
+    support installation numbers (#207029)
+
+commit 68b85dcad97630109bea5eeaa18f34ec6a282a0f
+Author: Bill Nottingham <notting@redhat.com>
+Date:   Fri Oct 13 21:37:46 2006 +0000
+
+    use valid charsets in po files (#210720)
+
+commit de68af95941759fbab1446556f814538b768cd07
+Author: keldsim <keldsim>
+Date:   Tue Oct 10 19:56:28 2006 +0000
+
+    updates
+    pykickstart/po/da.po
+
+commit 1106922d263a8e97f9271b5751a9f63d5885ad39
+Author: mhideo <mhideo>
+Date:   Tue Oct 10 04:09:40 2006 +0000
+
+    automerge Simplified Chinese
+
+commit 24da82e74389c634342c6332fe216520ef3f4239
+Author: rokaaa <rokaaa>
+Date:   Mon Oct 9 19:43:36 2006 +0000
+
+    translated not tested
+
+commit 46a61a13b3dd97117a4ef9bf2e8a33891b62b796
+Author: arclynx <arclynx>
+Date:   Fri Oct 6 16:11:44 2006 +0000
+
+    Updated Malay translation
+
+commit 1ca2c017f5de0adcb2460b6d6abffc1b1c598921
+Author: sganesh <sganesh>
+Date:   Thu Oct 5 09:37:42 2006 +0000
+
+    Telugu Translation commited
+
+commit 9cd351203552714fe02f60e97d819bf57d8cfe81
+Author: amit <amit>
+Date:   Wed Oct 4 07:36:41 2006 +0000
+
+    updated assamese pykickstart translation
+
+commit 86be7bd102e0c156d05fbd129c0a2d7a727e76e3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 29 20:55:42 2006 +0000
+
+    New version.
+
+commit b64c093f36ab682fd8eafd945d8516423cc857a8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Sep 29 15:20:20 2006 +0000
+
+    Fix traceback and test (#208557).
+
+commit 7d76041af42b592a64a10fa2f39301914aef802e
+Author: amit <amit>
+Date:   Fri Sep 29 07:12:33 2006 +0000
+
+    pykickstart for translation
+
+commit f00386bc440a71cb5c917959a7c31f4311d57d8e
+Author: glezos <glezos>
+Date:   Thu Sep 28 01:00:24 2006 +0000
+
+    format -> diamorfosi (not morfopoiisi)
+
+commit 157e33ba5235fcc65043605c494749a40eed8e49
+Author: ifelix <ifelix>
+Date:   Wed Sep 27 11:05:53 2006 +0000
+
+    Tamil Translation updated
+
+commit 2e286e3d739d8d3a7b024195f2bbe7ed3cf75544
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Sep 25 14:57:50 2006 +0000
+
+    New version.
+
+commit 21e0ce164144433f2174b0701b21c1d84abad413
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Sep 25 14:54:23 2006 +0000
+
+    Update writer for various syntax changes.
+
+commit 03eb2cb497bbe89d8e3f5926b5e49199f7e946e2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Sep 25 14:31:52 2006 +0000
+
+    Add support for --biospart option (#207585).
+
+commit d335b10360611629f5448708b8ad960989a7db86
+Author: apeter <apeter>
+Date:   Mon Sep 25 08:48:49 2006 +0000
+
+    Updated Malayalam ml.po
+
+commit 97e7aa2cdcced65e6265296d779a8851d952bfcb
+Author: arclynx <arclynx>
+Date:   Sun Sep 24 17:54:06 2006 +0000
+
+    Updated Malay translation
+
+commit 7cd87559267018ccf57989e422d579a0b849f581
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Wed Sep 20 22:10:42 2006 +0000
+
+    2006-09-20  Jeremy Katz  <katzj@redhat.com>
+    
+    	* pykickstart.spec, setup.py: Bump version
+    
+    	* pykickstart/parser.py (KickstartHandlers.doIscsi): New and
+    	improved iscsi syntax.  Also, allow multiple zfcp devs
+    	* pykickstart/data.py: Likewise.
+
+commit 01bf3f6468b43a49d57dd4b64302b9c039c554b8
+Author: runab <runab>
+Date:   Wed Sep 20 11:33:04 2006 +0000
+
+    Updated Bengali India Translation
+
+commit e3bc21662564492eecd47262d55690e460783fb0
+Author: renato <renato>
+Date:   Sun Sep 17 15:58:29 2006 +0000
+
+    final proofing
+
+commit b06f3221fe92c7d128486f19afdd25ff45d28310
+Author: Paul Nasrat <pnasrat@redhat.com>
+Date:   Wed Sep 13 12:22:06 2006 +0000
+
+    Fix for LookupError now I'm back in the UK...
+
+commit 19fb86bf167ff9002919390cc50cf838dfb7ca83
+Author: tszanto <tszanto>
+Date:   Mon Sep 11 11:09:36 2006 +0000
+
+    *** empty log message ***
+
+commit 6697864ebf3f2624480d6df0c356cb586b051632
+Author: vferreir <vferreir>
+Date:   Mon Sep 11 01:44:04 2006 +0000
+
+    reviewed
+
+commit 62f59f0a95fdd48ed681dbdff1d79690d2a89bf8
+Author: arclynx <arclynx>
+Date:   Sat Sep 9 04:01:20 2006 +0000
+
+    Updated Malay translation
+
+commit 4fb963769e4f07623bd04ce7bab52f511e6c6055
+Author: arclynx <arclynx>
+Date:   Mon Sep 4 16:18:51 2006 +0000
+
+    Updated Malay translation
+
+commit e285e168b8f0ed61acc3790069ee1bae48185ba2
+Author: zoliq <zoliq>
+Date:   Mon Sep 4 15:46:34 2006 +0000
+
+    po-update
+
+commit f9dc79969f93244028aabce09ca27225521d022c
+Author: noriko <noriko>
+Date:   Mon Sep 4 00:21:12 2006 +0000
+
+    sync with pot
+
+commit d82fce0c081dfca4c9ef32c9809c2ff0cb885a99
+Author: trinks <trinks>
+Date:   Fri Sep 1 02:56:15 2006 +0000
+
+    total:22 fuzzy:0 untranslated:0 proofread for QA and fixed several issues
+
+commit 2d86bb6bb623888f17ab79c73ae23a9c39f4058e
+Author: xconde <xconde>
+Date:   Wed Aug 30 22:57:36 2006 +0000
+
+    Updated by XC
+
+commit d5f1a740985fd5fa674431b0bbcdb35ec9c061fb
+Author: pve-nl <pve-nl>
+Date:   Wed Aug 30 17:30:39 2006 +0000
+
+    Merged nl.po with pykickstart.pot
+
+commit 73bd46bdddf165fe5e190700308abb7c3effecf3
+Author: noriko <noriko>
+Date:   Wed Aug 30 07:13:46 2006 +0000
+
+    midification made from review
+
+commit c56caf69d34d9cee3ccbdc2dc575c5c869615d57
+Author: eukim <eukim>
+Date:   Tue Aug 29 07:34:38 2006 +0000
+
+    Updated translation
+
+commit a0aebe1f8b58a98938b4f9a3d37f9196983a0a61
+Author: xconde <xconde>
+Date:   Sun Aug 27 09:34:03 2006 +0000
+
+    Commited by Xavi Conde
+
+commit a3f3d1eae76d703a4a77e564f847d660cb36d0d3
+Author: ra <ra>
+Date:   Wed Aug 23 04:36:25 2006 +0000
+
+    *** empty log message ***
+
+commit a878e361be381ecb9d47881967728052a4662b29
+Author: kmilos <kmilos>
+Date:   Sun Aug 20 17:41:06 2006 +0000
+
+    *** empty log message ***
+
+commit f6e09fa1a7d4a033b3ea7243fe8d04ac2b0254d5
+Author: ccheng <ccheng>
+Date:   Sat Aug 19 14:57:43 2006 +0000
+
+    Routine merge
+
+commit b8c17a49e99866c784ab8a51b7e1be4c33ff9e81
+Author: imiletic <imiletic>
+Date:   Fri Aug 18 18:43:28 2006 +0000
+
+    Updated translation of pykickstart for Serbian language
+
+commit 9be07390d8edb6c7d52ffc3b6b4f5ff6a56a5210
+Author: asimons <asimons>
+Date:   Fri Aug 18 04:57:44 2006 +0000
+
+    proof-reading updates
+
+commit 802776a4c01a476720fd46ef4f418a9f48f918b6
+Author: tfu <tfu>
+Date:   Fri Aug 18 00:47:06 2006 +0000
+
+    some modification after proofreading
+
+commit fbdb1f4598068771f8b71ef15ce774d7616cd5f2
+Author: maxik <maxik>
+Date:   Mon Aug 14 15:36:21 2006 +0000
+
+    2006-08-14  Maxim Dziumanenko <dziumanenko@gmail.com>
+    
+    	* Update Ukrainian translation.
+
+commit eac57061d3685097ea2ea7f6d6bcde6e89de81e1
+Author: diegobz <diegobz>
+Date:   Fri Aug 11 14:43:26 2006 +0000
+
+    Revie
+
+commit 65eb14091354525dbfaf6b1b7387946d36bc62fb
+Author: ifelix <ifelix>
+Date:   Fri Aug 11 11:31:04 2006 +0000
+
+    Tamil translation updated
+
+commit a396e52c0aaf68a359c386e4b65c398c02aadbac
+Author: niko <niko>
+Date:   Sat Jul 22 13:38:22 2006 +0000
+
+    Finished.
+
+commit b7ce25a7ce8f8424bd5d4797e602a6d588bf51c9
+Author: menthos <menthos>
+Date:   Thu Jul 20 23:06:07 2006 +0000
+
+    Updated Swedish translation.
+
+commit 3e07dca3196482ba1898b1ecd5a731cdded05873
+Author: qbes <qbes>
+Date:   Thu Jul 20 23:01:29 2006 +0000
+
+    pykickstart gl.po actualization
+
+commit 5b75e13510cb651006a07c61f810cfcd9b315c09
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 20 18:45:51 2006 +0000
+
+    Bump version.
+
+commit c8d81df1851dde8ef1e0bf84184d66e79e3b51df
+Author: serhat <serhat>
+Date:   Tue Jul 18 18:16:02 2006 +0000
+
+    Start of translation
+
+commit 6f4bb9a8697731e21bfdab99d7b87475e4db3d9b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jul 13 20:33:19 2006 +0000
+
+    Limit bootproto to options anaconda supports.  Add --noipv4 and --noipv6.
+
+commit cf3c578832d081c18338f35ee8f7058cab094a28
+Author: khashida <khashida>
+Date:   Wed Jul 12 00:55:16 2006 +0000
+
+    finished
+
+commit 86af9d124ea03c5fbe0fd356baae1a7c4ff78ac8
+Author: arclynx <arclynx>
+Date:   Tue Jul 11 09:27:58 2006 +0000
+
+    Updated Malay translation
+
+commit 537a53c7281ebf39c96c36d6f9c396bb36c531ed
+Author: khashida <khashida>
+Date:   Tue Jul 11 06:59:46 2006 +0000
+
+    3 left
+
+commit 9d8a644ba9c9a2233cb10b8902ff243e4bbc6073
+Author: mrtom <mrtom>
+Date:   Sun Jul 9 09:00:42 2006 +0000
+
+    Update to ./pykickstart/
+
+commit 64f1bfa1fae6d81b63cddddeb6f9dfd6f3f4bd85
+Author: simos <simos>
+Date:   Wed Jul 5 14:06:47 2006 +0000
+
+    Updated Greek translation
+
+commit c6b024d00bacecb214aa1b624879d08080250204
+Author: pve-nl <pve-nl>
+Date:   Wed Jun 28 22:27:23 2006 +0000
+
+    Some fixes for pykickstart nl.po
+
+commit f3c71477a478351fa0248e1cfd0223a1686fb2e2
+Author: ccheng <ccheng>
+Date:   Tue Jun 27 03:29:39 2006 +0000
+
+    *** empty log message ***
+
+commit 2c3d02e9835b1269a72aec5cfad799fce08176e7
+Author: eukim <eukim>
+Date:   Mon Jun 26 04:03:10 2006 +0000
+
+    upload files
+
+commit 0de63552840ae5cca7b797f9e82032e26c54aaf9
+Author: runab <runab>
+Date:   Sat Jun 24 12:11:53 2006 +0000
+
+    Updated Bengali India Translation
+
+commit fd47c697acb5ef1290eb82656c9121b2ea4eeef7
+Author: mgcontri <mgcontri>
+Date:   Thu Jun 22 16:39:55 2006 +0000
+
+    *** empty log message ***
+
+commit 5484925477f53b44fa935d1b0173dd04178c5142
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 20 20:38:46 2006 +0000
+
+    Bump version.
+
+commit fb12fc78f500c4423b9ed9184f1d1966fbe39267
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 20 20:33:03 2006 +0000
+
+    Add iscsi writer.
+
+commit 0e7c465f74b196ef19f0c1cb2838367ecc9c62bb
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Tue Jun 20 19:30:28 2006 +0000
+
+    2006-06-20  Jeremy Katz  <katzj@redhat.com>
+    
+    	* pykickstart/parser.py (KickstartHandlers.doIscsi): Initial iscsi
+    	support.  This syntax is likely to change but this makes testing
+    	so much easier.
+    	* pykickstart/data.py (KickstartData.__init__): Add iscsi data.
+
+commit 8fb7945301c37dff1b0e61ce991d4817a9155bd9
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 20 18:26:37 2006 +0000
+
+    Handle a RAID device as an integer instead of a string (#176537).
+
+commit 33ab22c526c971d32cbe6d3f2b050e4b8efbcabb
+Author: mrtom <mrtom>
+Date:   Tue Jun 20 11:26:55 2006 +0000
+
+    rereading done
+
+commit 3c396ebcb0a7dddd135ce32c45f3ee1f21d8caf8
+Author: splinux <splinux>
+Date:   Mon Jun 19 18:04:14 2006 +0000
+
+    French translation
+
+commit 7979ace8144df13dc404f812634f55a0ae8cecdc
+Author: rranjan <rranjan>
+Date:   Mon Jun 19 05:44:44 2006 +0000
+
+    updated hindi translation
+
+commit ade4571f1f764d85b2efa3ff4b0ed6d9ec171cf6
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Fri Jun 16 15:30:01 2006 +0000
+
+    2006-06-16  Jeremy Katz  <katzj@redhat.com>
+    
+    	* pykickstart/parser.py (KickstartHandlers.doMethod): Handle nfs --opts
+
+commit 35b7a8bb825b9aab0e8d57c752d8e338dd8d43b7
+Author: sbehera <sbehera>
+Date:   Wed Jun 14 12:10:50 2006 +0000
+
+    Updated Oriya translation
+
+commit c966a4420224ef7752029231cfec6a86a453f18d
+Author: diegobz <diegobz>
+Date:   Sun Jun 11 16:24:06 2006 +0000
+
+    Update to ./pykickstart/
+
+commit 5e0fbdfb64c6d34891f8014b41b062cef3512149
+Author: arclynx <arclynx>
+Date:   Sun Jun 11 10:44:13 2006 +0000
+
+    Updated Malay translation
+
+commit 551525e8a87d2fe6d46d39eb2f78fac527af5aef
+Author: rolandh <rolandh>
+Date:   Sat Jun 10 15:49:01 2006 +0000
+
+    initial translation
+
+commit 717b43c1c25a0235f34db419f2a50b3a7235bf4c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 6 13:46:35 2006 +0000
+
+    And the ChangeLog too.
+
+commit 180c5941d3c76939305782f1c631b991d51cb59f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jun 6 13:45:12 2006 +0000
+
+    Add BuildRequires to fix building under mock (#194156,  Joost Soeterbroek
+    <fedora AT soeterbroek.com>).
+
+commit bb9412e9e3e9cc56bfc8c1e36b23da5b577b482a
+Author: raven <raven>
+Date:   Sat Jun 3 10:05:33 2006 +0000
+
+    Polish translation
+
+commit b82dd7c0f94d0d8cfe3a87203a91dd0f07b5ccf0
+Author: mospina <mospina>
+Date:   Mon May 29 00:16:43 2006 +0000
+
+    last entries translated
+
+commit ff299cf90de48c4f860926e83e867fb72c71d69a
+Author: chinese <chinese>
+Date:   Sun May 28 14:15:01 2006 +0000
+
+    update 2 records
+
+commit b33472efdcd344b4062706257cfa6fbf05bf9838
+Author: tombo <tombo>
+Date:   Sat May 27 02:28:20 2006 +0000
+
+    Tradotte due voci
+
+commit ef209fc13621915b632f19557ec64e425cf38c99
+Author: andrmart <andrmart>
+Date:   Fri May 26 06:30:30 2006 +0000
+
+    Updated 2 new strings
+
+commit 7ed7c14e392bad7a25ff042be1b7d3bb4816ac40
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu May 25 20:04:42 2006 +0000
+
+    Bump version.
+
+commit 95360be969671eac846cb273a812ffa0347feac3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu May 25 13:55:53 2006 +0000
+
+    Change order of LVM-related functions (#193073).
+
+commit 771f13865a7d8dbe233600674e5367b063e3e87a
+Author: runab <runab>
+Date:   Thu May 25 10:14:21 2006 +0000
+
+    Updated Bengali India Translation
+
+commit b9d4c3900ec83b342179dbe2f9fcd9a3e99d73e3
+Author: ankitp <ankitp>
+Date:   Thu May 25 09:25:09 2006 +0000
+
+    Updated Gujarati Translations
+
+commit 3a793fe635562dc3a546bf9fcc432751ba7ead95
+Author: igor <igor>
+Date:   Thu May 25 04:07:12 2006 +0000
+
+    *** empty log message ***
+
+commit 48996031580c42fc5fe8e543920defd01ebc2e84
+Author: renato <renato>
+Date:   Wed May 24 22:54:50 2006 +0000
+
+    *** empty log message ***
+
+commit 2126254dc6fc7d5e38b454c781393e427a307822
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 24 21:28:18 2006 +0000
+
+    Fix typo.
+
+commit d9b05da849ec0e21a05173c42dbc81f3f629a3c6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 24 21:21:36 2006 +0000
+
+    Commit messages.
+
+commit 8e9b3e8ecf76391f9540651071965d09a3f4f5f6
+Author: zepires <zepires>
+Date:   Wed May 24 19:36:02 2006 +0000
+
+    Update PyKickstart
+
+commit f07ea530fbb9088f6e5abaee39d708c21f23ca53
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 24 17:56:07 2006 +0000
+
+    Update translation files.
+
+commit 7fdbb2f1a38e576a872ca0111ab7a60ba7141ff7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 24 17:53:56 2006 +0000
+
+    Require python-urlgrabber for ksvalidator.
+
+commit 12640db991df35fc5978ca4e4c669e91b2c35ee6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 24 17:53:40 2006 +0000
+
+    Print more useful error messages for unknown commands.
+
+commit 3071c2628e55d98ddacbd3da4e5acace0de5f024
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 24 17:53:29 2006 +0000
+
+    Accept a URL in addition to a filename.
+
+commit a10a913def416c4c020130ee6c9c958aea51c733
+Author: kmaraas <kmaraas>
+Date:   Tue May 23 22:33:05 2006 +0000
+
+    Start this
+
+commit cde3fdf9b94585cdb545b79366229712a7adbb30
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue May 23 20:29:31 2006 +0000
+
+    Don't write out an empty packages section, since we may want this step to be
+    interactive (#192851).
+
+commit 8d540493632cf7112d16085bca2cb6aaa0b864d8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue May 23 15:45:58 2006 +0000
+
+    Bump version.
+
+commit f8d8e1ef7a3a92e1a3fc4079d9b5356a3cc818e7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue May 23 15:42:19 2006 +0000
+
+    Fix pychecker warnings.
+
+commit 4027d49c5715c6c6bceb9a195138da91ad235056
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue May 23 14:42:49 2006 +0000
+
+    Rename --ports to match the parser.
+
+commit ae57c885d6f667962e2c28156a59f95870349512
+Author: aalam <aalam>
+Date:   Mon May 22 07:13:55 2006 +0000
+
+    adding new files for language Telugu/Kannada
+
+commit 42c59b2dbab83b9b53c5bf4f451c00ac2d537167
+Author: Peter Jones <pjones@redhat.com>
+Date:   Wed May 17 18:28:38 2006 +0000
+
+    Leeloo: Leeloo Dallas mul-ti-path.
+    Korben Dallas: Yeah.
+    Leeloo: Mul-ti-path.
+    Korben Dallas: Yeah, multipath, she knows it's a multipath. Leeloo Dallas.
+                   This is my wife.
+    Leeloo: Mul-ti-path.
+    Korben Dallas: We're newlyweds. Just met. You know how it is. We bumped into
+                   each other, sparks happen...
+    Leeloo: Mul-ti-path.
+    Korben Dallas: Yes, she knows it's a multipath. Anyway, we're in love.
+
+commit cdc2cb420859a5fb7a59eb3a8811fedd60571d2d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon May 15 21:21:25 2006 +0000
+
+    Bump version.
+
+commit 16ab52cbd9aeebafe834f36f6554127ae3127576
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon May 15 21:20:46 2006 +0000
+
+    Update translation files.
+
+commit f2e835cd6a61f1e39e0f6f28e8bbb072cdab6af0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon May 15 20:59:50 2006 +0000
+
+    Add MTU parameter for network commands (#191328).
+
+commit 573f83c1f64abb49981e9900d61a8d302141fa45
+Author: chinese <chinese>
+Date:   Sat May 13 00:48:17 2006 +0000
+
+    Finished the zh_CN translation.
+
+commit 0c598c5229e6da2a56cd7d7e09f729ddd22365c8
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed May 10 13:42:53 2006 +0000
+
+    Accept --isUtc for backwards compatibility.
+
+commit 47d4b71d88446ace36392c519f0f9de0c7ef18ca
+Author: dheche <dheche>
+Date:   Tue May 9 17:50:09 2006 +0000
+
+    finished
+
+commit 9c0070ff7b7251d8a99d529030e39b61b231de04
+Author: dheche <dheche>
+Date:   Tue May 9 17:04:23 2006 +0000
+
+    fixing charset
+
+commit 56bd602cc732fd19944ba87cd91fe4310b8b1650
+Author: dheche <dheche>
+Date:   Tue May 9 17:03:43 2006 +0000
+
+    finished
+
+commit 0be958a1cc972d1dd0747ba173cfac114f48dafe
+Author: arclynx <arclynx>
+Date:   Fri May 5 15:32:34 2006 +0000
+
+    Updated Malay translation
+
+commit 1b1c4e3ffaa65892c86b65547717468cebe630fa
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu May 4 20:41:32 2006 +0000
+
+    Bump version.
+
+commit d6ccc142aad8b1e64e0bea55b74a1f9956d3e74c
+Author: rranjan <rranjan>
+Date:   Thu May 4 10:05:04 2006 +0000
+
+    hindi updated
+
+commit ec7204373ccbf1766d31dbd87f5a95032ca658b1
+Author: fvalen <fvalen>
+Date:   Tue May 2 05:43:39 2006 +0000
+
+    Updated
+
+commit 7bec52a2806d174a6c48339b036e9aeedd93d4ed
+Author: ccheng <ccheng>
+Date:   Tue May 2 01:35:03 2006 +0000
+
+    Routinely merge
+
+commit d1ddafa61e2924f6a17e426d11e1b66b4fa082cb
+Author: sandeeps <sandeeps>
+Date:   Mon May 1 10:35:07 2006 +0000
+
+    translated pykickstart for mr_IN
+
+commit 0e51bf2ff013617752b5bd90d115308b5c07b0c4
+Author: apeter <apeter>
+Date:   Thu Apr 27 08:26:44 2006 +0000
+
+    Updated malayalam file
+
+commit 02fb45902d5c377b069247685f037dbe29dabd36
+Author: igor <igor>
+Date:   Wed Apr 26 02:37:34 2006 +0000
+
+    *** empty log message ***
+
+commit 20362f4804c07ff622c5eef7acbdd94853c5234e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Apr 25 21:06:51 2006 +0000
+
+    Add new command handlers for dealing with users and services.
+
+commit b4891c46d8674c9d7c6c59d0528ece3ed81b9ad7
+Author: apeter <apeter>
+Date:   Tue Apr 25 13:09:12 2006 +0000
+
+    Updated malayalam ml.po file
+
+commit d157a5f5ab4010e0bcc522dae9f43abed0c5be65
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Apr 24 16:59:17 2006 +0000
+
+    Yet more output fixes.
+
+commit d2d0685189570bc9d3e9a8751eaff16a6d9764b6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Apr 24 16:00:23 2006 +0000
+
+    More output formatting fixes.
+
+commit 8b53baefdd4503650bc11d4ce771c640e1d2a0b7
+Author: mospina <mospina>
+Date:   Mon Apr 24 00:08:26 2006 +0000
+
+    automerge done
+
+commit 8e78ce3b63ad1e683164908cab8f745570cdb741
+Author: joseppc <joseppc>
+Date:   Sat Apr 22 05:19:00 2006 +0000
+
+    First draft.
+
+commit 8fe099d819b88f936d242f5ca8df05a0fd046005
+Author: andrmart <andrmart>
+Date:   Fri Apr 21 07:05:40 2006 +0000
+
+    Updated 2 new message
+
+commit 1a510116423edba0bd45379d35ff6cc8965ecab3
+Author: sbehera <sbehera>
+Date:   Fri Apr 21 06:34:26 2006 +0000
+
+    Merged Oriya translation with .pot file
+
+commit 306198c9ad1b9e3bf41f26240dbba0b26fd4316c
+Author: ccheng <ccheng>
+Date:   Fri Apr 21 03:39:53 2006 +0000
+
+    *** empty log message ***
+
+commit aa4def5090f28fe0714e4ec79b9c220ce8f8a117
+Author: zepires <zepires>
+Date:   Wed Apr 19 17:27:50 2006 +0000
+
+    An attempt to update Portuguese for pykickstart
+
+commit 9914e562d91d8c863c21e23cef1058c47530fd65
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Apr 19 14:02:27 2006 +0000
+
+    Start CLEARPART_ constants at 0.
+
+commit 89a6a93b7e2a24147c23df5fbb4ac9decd27cd28
+Author: sbehera <sbehera>
+Date:   Wed Apr 19 11:26:50 2006 +0000
+
+    Updated Oriya translation
+
+commit 35e1b0a641d1ab60f6f9df9d5302032ec924d8a3
+Author: runab <runab>
+Date:   Wed Apr 19 11:25:09 2006 +0000
+
+    Updated Bengali INDIA (bn_IN) Translation
+
+commit 789d5b94c98a71f4e75c0c1df2fdea999c9d74fb
+Author: renato <renato>
+Date:   Tue Apr 18 20:45:45 2006 +0000
+
+    *** empty log message ***
+
+commit a661ea5f81c3509c97bf58b5a9da7013f1fd77d9
+Author: rodrigop <rodrigop>
+Date:   Tue Apr 18 17:31:35 2006 +0000
+
+    Traducao
+
+commit dfa1df3fa8cf5b4f581b0b84a3c0a4e2141d31da
+Author: maxik <maxik>
+Date:   Tue Apr 18 14:53:55 2006 +0000
+
+    2006-04-18  Maxim Dziumanenko <mvd@mylinux.ua>
+    
+    	* Add Ukrainian translation.
+
+commit 70924b2e6b9d0649371efcae8ed215af4b4c4eaa
+Author: beckerde <beckerde>
+Date:   Tue Apr 18 13:25:00 2006 +0000
+
+    *** empty log message ***
+
+commit c61841b09d87a9c7a83a7b3771d595e6a3102877
+Author: ankitp <ankitp>
+Date:   Tue Apr 18 09:09:55 2006 +0000
+
+    Merged the strings with .pot files
+
+commit afd1b30dcc89e80a650b0704bee785c3be62310f
+Author: ybae <ybae>
+Date:   Tue Apr 18 03:09:54 2006 +0000
+
+    translation updated
+
+commit 8aac80bcfe0633f752d231fb4ca61cb71d025bd3
+Author: nreissle <nreissle>
+Date:   Mon Apr 17 23:05:15 2006 +0000
+
+    update
+
+commit 0a286eeabde3fb4b62b510b74b8d435a5e9a79d1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Apr 17 19:08:39 2006 +0000
+
+    Modify build process for translations.
+
+commit 2db0fb171439a2f3b78b77a163f0c8e7247f14d1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Apr 17 18:58:43 2006 +0000
+
+    Make sure to include the .po files now that we have some.
+
+commit afdec89c4ebebea3ae3e6849090ba06619a29783
+Author: ankitp <ankitp>
+Date:   Mon Apr 17 05:36:07 2006 +0000
+
+    Updated Gujarati Translations
+
+commit 928d6e0cb4546d6b97bd4ccbc437029e36fd6525
+Author: runab <runab>
+Date:   Mon Apr 17 03:46:00 2006 +0000
+
+    Updated Bengali India Translation
+
+commit 38d0aae864e06d5b82e82a687f4b2ccc2c53915c
+Author: aalam <aalam>
+Date:   Sat Apr 15 03:27:24 2006 +0000
+
+    update translation for Punjabi (Gurmukhi) by apbrar gmail com
+
+commit 40842ed5c7c5eeaaa571e2540f4593cbba5f5abc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 13 21:31:49 2006 +0000
+
+    Bump version.
+
+commit 42bdb90b947054186f9ef2eb69275aa3ac8a1344
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 13 18:28:42 2006 +0000
+
+    Likewise for physvols.
+
+commit c8c6bbb5718655be1ae57a2df1248de4c0ec60d3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 13 17:04:04 2006 +0000
+
+    Initialize members to an empty list instead of an empty string.
+
+commit b17f7cc91c11e466174f64ffa72058e419e40592
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 13 16:02:53 2006 +0000
+
+    Update translation files.
+
+commit fabed1655a9be797a0e0b25de1fbcaf454357b93
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 13 16:00:43 2006 +0000
+
+    Update pot file.
+
+commit 0916d9f246fdf1fe0d6d7beea90977ff920b06f1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 13 15:59:26 2006 +0000
+
+    Reorder package section output.  Write package header options.
+
+commit 625b3ea0b774830d3560f9cf49a3eaab2a3d8860
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Apr 13 15:45:37 2006 +0000
+
+    Add support for options to the repo command.
+
+commit 3b90440d0b868e0578c999267f5087a70a179288
+Author: aalam <aalam>
+Date:   Thu Apr 13 02:07:49 2006 +0000
+
+    update for Punjabi language
+
+commit 13525954865ef99915901a7790a833b44a32840f
+Author: ifelix <ifelix>
+Date:   Wed Apr 12 12:51:18 2006 +0000
+
+    Fedora Translation updated
+
+commit ad23b4e1f6d97145d00ae96509948653142d8fc5
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Apr 11 19:04:55 2006 +0000
+
+    Ignore whitespace before group names (#188095).
+
+commit b61be6b4d771a830fc6db3a92bda57869c69ee6c
+Author: yulia <yulia>
+Date:   Tue Apr 11 00:31:56 2006 +0000
+
+    pt_BR update
+
+commit 5b2ed5f9b00545b7b22b042dffe0e37a3dfd44cc
+Author: yulia <yulia>
+Date:   Thu Apr 6 23:16:49 2006 +0000
+
+    Update
+
+commit 4e5108f820c2abbc627a653f5252c9312c1d7b28
+Author: yulia <yulia>
+Date:   Wed Apr 5 23:41:03 2006 +0000
+
+    Andrew update
+
+commit 9bffe74d8029c75d602815fbb3b9360717933352
+Author: aalam <aalam>
+Date:   Tue Apr 4 22:58:09 2006 +0000
+
+    update for file for jncp@netcabo.pt
+
+commit 56f378b85fd640657523714b869f4bba416114d6
+Author: ccheng <ccheng>
+Date:   Tue Apr 4 00:48:28 2006 +0000
+
+    File created by Chester Cheng (ccheng@redhat.com)
+
+commit 8a492c6466d6fa35682fff03691bcf182040ac53
+Author: ccheng <ccheng>
+Date:   Tue Apr 4 00:36:37 2006 +0000
+
+    File created and translated by Chester Cheng (snowlet)
+
+commit ede8b35d77c5be8b09f344de7b0026f9be27c3b5
+Author: ccheng <ccheng>
+Date:   Mon Apr 3 23:42:32 2006 +0000
+
+    Helping Renato Pavicic (renato) upload this file
+
+commit 050425db9583c76aa97f0549e8ad13f330b5c7e4
+Author: ccheng <ccheng>
+Date:   Mon Apr 3 06:07:06 2006 +0000
+
+    helping Boris Becker (beckerde) to upload
+
+commit 7c741755d284b6a50f2889ec03c89e7398bb343f
+Author: fvalen <fvalen>
+Date:   Mon Apr 3 00:00:06 2006 +0000
+
+    Added it.po
+
+commit e21aaf4255bf6c79ce86e7705468743e189ddb61
+Author: runab <runab>
+Date:   Fri Mar 31 07:40:23 2006 +0000
+
+    Updated Bengali Indian (bn_IN) Translation
+
+commit 92fabb6fdfec48b653f5eaf602415abb61740e9b
+Author: runab <runab>
+Date:   Fri Mar 31 07:17:40 2006 +0000
+
+    Added Bengali Indian File
+
+commit 568a474d17cc642d0eb85e4552ecbd4c0b73696d
+Author: nreissle <nreissle>
+Date:   Fri Mar 31 03:54:14 2006 +0000
+
+    UPDATE
+
+commit 3750e078acde682e33c16d56dc29c257e3d697bc
+Author: nreissle <nreissle>
+Date:   Fri Mar 31 02:16:59 2006 +0000
+
+    Creating de.po
+
+commit 8766b80d6d0c70b23eed118e2e3878972b16977d
+Author: ybae <ybae>
+Date:   Thu Mar 30 03:50:07 2006 +0000
+
+    translation updated
+
+commit 9abf35a0060d656155605082bf8ef18d66101a33
+Author: sbehera <sbehera>
+Date:   Wed Mar 29 06:07:19 2006 +0000
+
+    Updated Oriya translation
+
+commit 8e7195a04118125c585c85866dcbf226689b3657
+Author: jsingh <jsingh>
+Date:   Wed Mar 29 05:14:48 2006 +0000
+
+    Added by Jassy
+
+commit 75eb681471b6d6a99a02305f406993a24d399af7
+Author: noriko <noriko>
+Date:   Tue Mar 28 23:39:01 2006 +0000
+
+    Added ja.po translation
+
+commit ca50b50afaaad3d679a7c5584366cdd597f9a400
+Author: mkim <mkim>
+Date:   Tue Mar 28 22:30:20 2006 +0000
+
+    Added korean file
+
+commit ee9823759e5b3379d8336e3c449765014728a676
+Author: sbehera <sbehera>
+Date:   Tue Mar 28 11:00:50 2006 +0000
+
+    Added Oriya translation
+
+commit b2b175a67476dcbde12b33c890a4d8536ae5d4ba
+Author: rranjan <rranjan>
+Date:   Tue Mar 28 10:49:49 2006 +0000
+
+    hindi added
+
+commit e857b6df56cc2b2c4671b423b746e2bcb6475a8e
+Author: ankitp <ankitp>
+Date:   Tue Mar 28 09:51:08 2006 +0000
+
+    Added Gujarati Translations
+
+commit 82a42048c1bf13f2e6f6a575cf3c3cebee27236e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Mar 27 20:57:41 2006 +0000
+
+    Bump version for adding support for the logging command.
+
+commit 18c8fc5015d39a318d54440bbcb2a097af4e002d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Mar 27 17:11:32 2006 +0000
+
+    Bump version for real.
+
+commit c0a8a9cb9c7f035b51a999652612847000d20cdf
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Mar 27 17:10:54 2006 +0000
+
+    No translations yet, so don't try to package them up.
+
+commit 5232e90a5647b02aa4a5bbad0b008c880a4957c4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Mar 27 17:09:38 2006 +0000
+
+    Bump version.
+
+commit 865a97b74f44f8b11d30a8cc5b76e8aaf29c158d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Mar 27 14:53:39 2006 +0000
+
+    Don't write out a blank xconfig line.
+
+commit 7b2479593182e0b2daefac2e2c7466f7ee196f68
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Mar 13 19:29:52 2006 +0000
+
+    Reorder output handlers.
+
+commit 2970911df1a8c4c1a0b0413488710c16e4a37ab2
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Mar 10 16:23:25 2006 +0000
+
+    Add support for translations.
+
+commit bb39d07f9274c97ec2af2f2215d52f8f959245b0
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Mar 7 22:07:32 2006 +0000
+
+    Backwards compatibility support for options to zerombr.
+
+commit 0ec01e7b3fcdcf884b5c4bc6927bc6c7b8a33fba
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Feb 24 19:54:02 2006 +0000
+
+    Bump version.
+
+commit 85c71f9d9c8782d657a856ae6da09872b0aefe82
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Feb 24 19:32:57 2006 +0000
+
+    Get ksdata from the correct option parser variable (#182934).
+
+commit 1140cd587c92b7c5e5d26c85b7f745e2c856f97a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Feb 17 20:32:19 2006 +0000
+
+    Bump version.
+
+commit 0b0ffc66e629addc29b99f36b19e16d6f5843203
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 16 20:00:35 2006 +0000
+
+    Fix typos.
+
+commit bab8b45feef41760b6316296a47e0dc962351c0a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 16 19:32:59 2006 +0000
+
+    Update documentation.
+
+commit 052540fa4be1141f38204e8b31017bb538107b1b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 16 18:26:12 2006 +0000
+
+    Provide an option to not traceback if an included file is not present
+    (#181760).
+
+commit d77b9fe811904b9f9d2357508bdf82edfaf2f9c1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 13 21:03:39 2006 +0000
+
+    Bump version.
+
+commit b52478def273cf6508006277fdae5a25349739af
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 13 20:49:47 2006 +0000
+
+    Don't trust ensure_value for these partition-related settings.  Perhaps we
+    shouldn't trust it at all.
+
+commit cfe63fcf9e7e6665ea1dc228e1ec592a3d53ccfe
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 13 16:11:24 2006 +0000
+
+    Bump version.
+
+commit 00428e8e7a8c19598782e493e8966198d9cc1d15
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 13 15:32:59 2006 +0000
+
+    --onboot requires a value (#180987).
+
+commit 9b4c72fb5fe912bf239b845ba13019433e5d1f41
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Feb 10 15:48:23 2006 +0000
+
+    Be more strict about commands that don't take any arguments.
+
+commit 5ab57985b0a241b3970de697e24b67d7d88a0d5e
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 9 20:44:25 2006 +0000
+
+    Bump version.
+
+commit 44d9bfd2827c4c7f87be619f49aa980a5fb7e721
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 9 18:45:18 2006 +0000
+
+    Fix pychecker warnings.
+
+commit 381e9e6eef65948aaeb23e7c54b0cf561e71868d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 9 18:21:19 2006 +0000
+
+    Condense Option subclasses.
+
+commit 88ba90f2c0fee651e6fcb993146fdb5e36635024
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Feb 9 16:38:54 2006 +0000
+
+    Allow parser exceptions to be non-fatal so ksvalidator can report multiple
+    errors in a single pass.  This won't catch everything, but it's a good
+    improvement.  Also add ksvalidator help and better deprecated option
+    messages.
+
+commit 31d725bfb6f4eb654cde164979671933f3e44c81
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 8 15:12:58 2006 +0000
+
+    --level is not strictly required since we should be able to infer it from
+    --preexisting.
+
+commit 9ac8ec5764342ea849b3d5d7ab2490b535fab181
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 1 21:49:50 2006 +0000
+
+    Bump version.
+
+commit cc0da045bbe2daeca7b3d24f0bb7e71f32ba3547
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 1 18:13:14 2006 +0000
+
+    Don't set a default VNC port.
+
+commit 24e1cd95b9345bb06e1d9d5ca034e7b4079a66da
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 31 21:31:05 2006 +0000
+
+    Bump version.
+
+commit a064fc5a39dd22f56a5c370c8f3e6384b5779918
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 31 21:30:07 2006 +0000
+
+    Give dmraid string an initial value.  Handle None on partition size.
+
+commit f0c2eab78183a84ce9bbf590f45153310af94b61
+Author: Peter Jones <pjones@redhat.com>
+Date:   Tue Jan 31 16:30:19 2006 +0000
+
+    - update versions/changelog for 0.15
+
+commit dbf10263e2dc48974bd58062afdd8fe4fba927d4
+Author: Peter Jones <pjones@redhat.com>
+Date:   Tue Jan 31 16:27:34 2006 +0000
+
+    - add dmraid support
+
+commit c7e19920834c0a83c6c4f8c2c4097e9708b9b9fd
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 30 20:24:01 2006 +0000
+
+    Bump version.
+
+commit ca5b71f38debec6fcdc0b8a53683eeb7a9daa37b
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 30 16:42:11 2006 +0000
+
+    Fix connecting to a remote viewer.  Deprecate --connect, and add --host and
+    --port as the new preferred way (#179209).
+
+commit 74b1cbd9d7a1f52c76baf56a72a0d44bd7383517
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Jan 19 21:34:18 2006 +0000
+
+    Bump version.
+
+commit f0739f6221a17989dbc9863592749d78c2a45fda
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Jan 13 17:58:04 2006 +0000
+
+    Add support for --eject on reboot/shutdown.
+
+commit fc6624440bac72c2539457bbfa2f04a71f1752d3
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Jan 9 20:37:42 2006 +0000
+
+    Bump version.
+
+commit 85556adbc2498414de8a6ff0da0e18846a59c1f6
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jan 4 18:25:41 2006 +0000
+
+    Clean up output quoting a little bit.
+
+commit 463eb752f4d1d9bc282d47a47541adca03acbebb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 12 21:09:39 2005 +0000
+
+    Bump version.
+
+commit 7959d0f7851967b40475b5227b3928f4f9c76579
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Dec 12 15:46:31 2005 +0000
+
+    Remove duplicate monitor config options from xconfig keyword, add --noprobe
+    option to monitor keyword.
+
+commit d43858605f3930aa25f201b1dffed3842832c630
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Dec 8 19:39:16 2005 +0000
+
+    Support bytesPerInode on RAID (Curtis Doty <Curtis at GreenKey.net> #175288).
+
+commit fae59be39e4a6c6321140119a32515f740c109bc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Dec 1 21:12:39 2005 +0000
+
+    Those variables aren't needed anymore.
+
+commit 703351cf09f99540be646c2e879039bf6c98c294
+Author: Jeremy Katz <katzj@redhat.com>
+Date:   Thu Nov 17 00:52:56 2005 +0000
+
+    2005-11-16  Jeremy Katz  <katzj@redhat.com>
+    
+            * pykickstart.spec:
+            * setup.py:
+            Bump version.
+    
+            * pykickstart/parser.py: Add KSBooleanOption, use it for network
+            --onboot, default onboot to true.
+
+commit b605ec8e126977cdcb5f4f7185c368dc51ff0261
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 3 21:34:59 2005 +0000
+
+    Bump version.
+
+commit 5ba8fbe27eb49d6e2a433cf46bb52dad819fc63d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 3 21:07:54 2005 +0000
+
+    anaconda expects partition sizes to start at None as --size=0 --grow is an
+    acceptable combination (#172378).
+
+commit bbf26addaa63e1fd6f46abeeab68b5daac152fbb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 3 20:03:17 2005 +0000
+
+    Don't call shlex.split on anything inside a script (#172313).
+
+commit c0574c96e0e7ba2f28f67954d5547ea027a7c348
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Nov 3 15:48:11 2005 +0000
+
+    Default to SELINUX_ENFORCING.
+
+commit 15c3a306cc1d15b94e9c2860cca647a9dc775646
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Nov 2 03:24:00 2005 +0000
+
+    Bump version.
+
+commit 93f86d4fa5abff96cd7aba18bdc2a4991986505c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Nov 2 03:21:31 2005 +0000
+
+    Write out --<service> options.
+
+commit 208d9c9b31d3561f19bc86523889e2ecb95345cc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Nov 2 03:21:15 2005 +0000
+
+    --onboot takes no option.
+
+commit 795e949faff5830adeb673d3533a3fa6dd420580
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Nov 1 20:15:29 2005 +0000
+
+    Remove extra spaces.
+
+commit db1d707d0651550f2954789984b49dff2da8d98a
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Nov 1 15:35:57 2005 +0000
+
+    --connect is not required as it may be provided to anaconda on the command line.
+
+commit 819226f6a448b9c2ca351f385ebb1125a32ddabb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 28 20:29:07 2005 +0000
+
+    Fix --all option to clearpart.
+
+commit 52eb0a0f81359ebcf4895ae242e9d730f6816ac4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 28 17:20:54 2005 +0000
+
+    Bump version.
+
+commit 33b86761116a6ba71e11e46cafe2b583284617b4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 28 17:20:23 2005 +0000
+
+    Update documentation for error handling.
+
+commit 45d8bbb3439705a9f0abf1beaaf328ffa0d48a00
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 28 17:01:39 2005 +0000
+
+    Add --resolvedeps and --includedeps as deprecated options to %packages.
+    Pass line number to handlePackageHdr and handleScriptHdr.
+
+commit 74a4dab67397b4de6e08096ff4ad6f25fa07d1b1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 24 21:03:43 2005 +0000
+
+    Bump version.
+
+commit 9d863717657fd98901966722dcefd2d00a303a21
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 24 19:26:48 2005 +0000
+
+    Added a program for validating kickstart files.
+
+commit 7d880092b773ed7b1d925819325a553b13ff5171
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 24 18:52:17 2005 +0000
+
+    Report line numbers on exceptions.
+
+commit b941d64825dad8f42a6e58f1692b754f2189cc20
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 19 18:38:47 2005 +0000
+
+    Add documentation to package.  Bump version.
+
+commit c4ae23f5f77b5e3e81430b4a4dc6c25905ee3838
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 18 16:31:10 2005 +0000
+
+    Document everything else.
+
+commit 4aa89d35a0108035486b7b41e236cc9a5aab8a62
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Oct 18 16:30:25 2005 +0000
+
+    Correct deprecated attribute so warnings are thrown when a deprecated
+    option is seen, not when it's defined.
+
+commit 23ea1beef74250e3c1f548dae875c031838f62ab
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Oct 17 16:54:05 2005 +0000
+
+    Adding documentation, already in progress.
+
+commit b7685ed87de41572956dd50bfa53ef8662263afb
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 13 20:10:27 2005 +0000
+
+    Correct python lib directory on 64-bit archs (#170621).
+
+commit 0cde2eb6b759efcdac49cc45ee8f17356983c2b7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 7 20:04:55 2005 +0000
+
+    Bump version.  I can already tell I'm going to forget to do this a lot.
+    Time to look for a fix.
+
+commit 13e1cbefd07b7a6522b1f3b71bc8fbcb67e7eae7
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 7 20:03:39 2005 +0000
+
+    Bump version.
+
+commit ec610e49b6edb57b6ea25dbe6a83d2bf0e440e5d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 7 20:00:00 2005 +0000
+
+    Fix script printing.
+
+commit 695e5115c09e256fc2c52f4124355dd5d0291768
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 7 19:10:12 2005 +0000
+
+    Collapse scripts into a single list and add a property to Script for
+    differentiating.
+
+commit f6fef35048672b4fd84b36b8988e7d32e3af048f
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Oct 7 15:15:25 2005 +0000
+
+    Rename class to KickstartWriter.
+
+commit e5eb1ef99a269a32cda303747007b6189aa02e14
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Thu Oct 6 17:51:18 2005 +0000
+
+    Add support for marking options and commands as deprecated and make sure
+    to raise a DeprecationWarning when either is seen.
+
+commit d92c526442c95cf1aa31019dc7c4fe2ca9a03a2d
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 5 21:47:23 2005 +0000
+
+    Fix make archive target.
+
+commit 4acd21e306f7a449e686c5b6402c64c6e24b9c65
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 5 21:45:20 2005 +0000
+
+    Bump version.
+
+commit 92493053d63d483d5a16c84a53a436dc79be04a4
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 5 21:20:59 2005 +0000
+
+    Remove compiled python files.
+
+commit cda08cca16e3537ad67b2beab78df0b75105a376
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 5 21:10:39 2005 +0000
+
+    Rename data classes for consistency.  Add default bytesPerInode settings.
+
+commit afa371316f9036f93124e4d6447e583d56341f0c
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Oct 5 19:01:54 2005 +0000
+
+    Initial revision

@@ -1,0 +1,175 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pykickstart\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-10-04 13:22-0400\n"
+"PO-Revision-Date: 2007-10-10 02:38+0100\n"
+"Last-Translator: Jos Nuno Coelho Pires <jncp@netcabo.pt>\n"
+"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: zerombr include kickstart mirrorlist baseurl opt\n"
+"X-POFile-SpellExtra: partition option cmd value device multipathdev\n"
+"X-POFile-SpellExtra: command lineno msg line options biospart pykickstart\n"
+"X-POFile-SpellExtra: removed intro version nodefaults optional ksappend\n"
+"X-POFile-SpellExtra: end\n"
+
+#: ../pykickstart/base.py:147
+#, python-format
+msgid ""
+"Ignoring deprecated command on line %(lineno)s:  The %(cmd)s command has "
+"been deprecated and no longer has any effect.  It may be removed from future "
+"releases, which will result in a fatal error from kickstart.  Please modify "
+"your kickstart file to remove this command."
+msgstr ""
+"A ignorar o comando desactualizado na linha %(lineno)s: O comando %(cmd)s "
+"foi descontinuado e não faz mais efeito. Poderá ser removido nas versões "
+"futuras, o que irá resultar num erro fatal no 'kickstart'. Por favor "
+"modifique o seu ficheiro de 'kickstart' para remover este comando."
+
+#: ../pykickstart/base.py:315
+#, python-format
+msgid "Unknown command: %s"
+msgstr "Comando desconhecido: %s"
+
+#: ../pykickstart/errors.py:48
+#, python-format
+msgid ""
+"The following problem occurred on line %(lineno)s of the kickstart file:\n"
+"\n"
+"%(msg)s\n"
+msgstr ""
+"Ocorreu o seguinte problema na linha %(lineno)s do ficheiro de 'kickstart':\n"
+"\n"
+"%(msg)s\n"
+
+#: ../pykickstart/errors.py:50
+#, python-format
+msgid "There was a problem reading from line %s of the kickstart file"
+msgstr "Ocorreu um problema ao ler da linha %s do ficheiro de 'kickstart'"
+
+#: ../pykickstart/options.py:84
+#, python-format
+msgid "Option %s is required"
+msgstr "A opção %s é obrigatória"
+
+#: ../pykickstart/options.py:87
+#, python-format
+msgid ""
+"The option %(option)s was introduced in version %(intro)s, but you are using "
+"kickstart syntax version %(version)s"
+msgstr ""
+"A opção %(option)s foi introduzida na versão %(intro)s, mas você está a usar "
+"a versão %(version)s da sintaxe"
+
+#: ../pykickstart/options.py:90
+#, python-format
+msgid ""
+"Ignoring deprecated option on line %(lineno)s:  The %(option)s option has "
+"been deprecated and no longer has any effect.  It may be removed from future "
+"releases, which will result in a fatal error from kickstart.  Please modify "
+"your kickstart file to remove this option."
+msgstr ""
+"A ignorar a opção desactualizada na linha %(line)s:  A opção %(option)s foi "
+"descontinuada e não faz mais efeito. Poderá ser removida nas versões "
+"futuras, o que irá resultar num erro fatal no 'kickstart'. Por favor "
+"modifique o seu ficheiro de 'kickstart' para remover esta opção."
+
+#: ../pykickstart/options.py:93
+#, python-format
+msgid ""
+"The option %(option)s was removed in version %(removed)s, but you are using "
+"kickstart syntax version %(version)s"
+msgstr ""
+"A opção %(option)s foi removida na versão %(removed)s, mas você está a usar "
+"a versão %(version)s da sintaxe"
+
+#: ../pykickstart/options.py:147
+msgid "Required flag set for option that doesn't take a value"
+msgstr "Foi definida como obrigatória a opção que não recebe um valor"
+
+#: ../pykickstart/options.py:156
+#, python-format
+msgid "Option %(opt)s: invalid boolean value: %(value)r"
+msgstr "Opção %(opt)s: o valor booleano é inválido: %(value)r"
+
+#: ../pykickstart/options.py:161
+#, python-format
+msgid "Option %(opt)s: invalid string value: %(value)r"
+msgstr "Opção %(opt)s: o valor textual é inválido: %(value)r"
+
+#: ../pykickstart/parser.py:90
+#, python-format
+msgid "Illegal url for %%ksappend: %s"
+msgstr "URL inválido para o %%ksappend: %s"
+
+#: ../pykickstart/parser.py:95
+#, python-format
+msgid "Unable to open %%ksappend file: "
+msgstr "Não é possível aceder ao ficheiro %%ksappend: "
+
+#: ../pykickstart/parser.py:101 ../pykickstart/parser.py:103
+#, python-format
+msgid "Unable to open %%ksappend file"
+msgstr "Não é possível aceder ao ficheiro %%ksappend"
+
+#: ../pykickstart/parser.py:286
+msgid "Group cannot specify both --nodefaults and --optional"
+msgstr "O grupo não poderá definir o --nodefaults e o --optional"
+
+#: ../pykickstart/parser.py:545 ../pykickstart/parser.py:604
+#, python-format
+msgid ""
+"%s does not end with %%end.  This syntax has been deprecated.  It may be "
+"removed from future releases, which will result in a fatal error from "
+"kickstart.  Please modify your kickstart file to use this updated syntax."
+msgstr "O %s não termina com %%end. Esta sintaxe foi descontinuada. Poderá ser removida nas versões futuras, o que irá resultar num erro fatal no 'kickstart'. Por favor modifique o seu ficheiro de 'kickstart' para usar esta sintaxe actualizada."
+
+#: ../pykickstart/parser.py:604
+msgid "Script"
+msgstr "Programa"
+
+#. If nothing else worked, we're out of options.
+#: ../pykickstart/version.py:87 ../pykickstart/version.py:96
+#: ../pykickstart/version.py:99 ../pykickstart/version.py:110
+#: ../pykickstart/version.py:150
+#, python-format
+msgid "Unsupported version specified: %s"
+msgstr "Foi indicada a versão não suportada: %s"
+
+#: ../tools/ksvalidator:52
+msgid "halt after the first error or warning"
+msgstr "parar após o primeiro erro ou aviso"
+
+#: ../tools/ksvalidator:55
+#, python-format
+msgid "parse include files when %include is seen"
+msgstr "processar os ficheiros de inclusão quando aparecer o %include"
+
+#: ../tools/ksvalidator:57
+msgid "version of kickstart syntax to validate against"
+msgstr "a versão da sintaxe do 'kickstart' usada na validação"
+
+#: ../tools/ksvalidator:71
+#, python-format
+msgid "The version %s is not supported by pykickstart"
+msgstr "A versão %s não é suportada pelo 'pykickstart'"
+
+#: ../tools/ksvalidator:87
+#, python-format
+msgid ""
+"File uses a deprecated option or command.\n"
+"%s"
+msgstr ""
+"O ficheiro usa uma opção ou comando desactualizados.\n"
+"%s"
+
+#: ../tools/ksvalidator:93
+msgid "General kickstart error in input file"
+msgstr "Erro geral do 'kickstart' no ficheiro de entrada"
+
+#: ../tools/ksvalidator:96
+#, python-format
+msgid "General error in input file:  %s"
+msgstr "Erro geral no ficheiro de entrada:  %s"
