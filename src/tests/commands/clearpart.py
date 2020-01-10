@@ -34,5 +34,20 @@ class FC3_TestCase(CommandTest):
         # nonsensical parameter test
         self.assert_parse_error("clearpart --cheese")
 
+class RHEL6_TestCase(FC3_TestCase):
+    def runTest(self):
+        FC3_TestCase.runTest(self)
+
+        # pass
+        self.assert_parse("clearpart --all --cdl", "clearpart --all --cdl\n")
+        self.assert_parse("clearpart --all --cdl --drives=dasda,dasdb,dasdc", "clearpart --all  --drives=dasda,dasdb,dasdc --cdl\n")
+
+        # Big Everything Test
+        self.assert_parse("clearpart --drives=sda,sdb --all --linux --cdl --initlabel", "clearpart --linux --initlabel --drives=sda,sdb --cdl\n")
+
+        # fail
+        # cdl should not take a value
+        self.assert_parse_error("clearpart --cdl=foo")
+
 if __name__ == "__main__":
     unittest.main()

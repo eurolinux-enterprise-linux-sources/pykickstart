@@ -3,7 +3,7 @@
 Summary:  A python library for manipulating kickstart files
 Name: pykickstart
 Url: http://fedoraproject.org/wiki/pykickstart
-Version: 1.74.16
+Version: 1.74.20
 Release: 1%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
@@ -45,6 +45,24 @@ rm -rf %{buildroot}
 %{_bindir}/ksverdiff
 
 %changelog
+* Wed Mar 04 2015 Chris Lumens <clumens@redhat.com> - 1.74.20-1
+- Fix a typo in the conflicting command error message. (clumens)
+  Resolves: rhbz#1017061
+
+* Fri Feb 27 2015 Chris Lumens <clumens@redhat.com> - 1.74.19-1
+- Require --percent to be used with --size and --grow (mmatsuya)
+  Resolves: rhbz#995443
+
+* Wed Feb 11 2015 Chris Lumens <clumens@redhat.com> - 1.74.18-1
+- Add support for specifying thin pool profile (vpodzime)
+  Related: rhbz#1083459
+- Add support for custom layouts using lvm thin provisioning. (dlehman)
+  Related: rhbz#1083459
+
+* Mon Feb 02 2015 Chris Lumens <clumens@redhat.com> - 1.74.17-1
+- Fix small issues with output formatting of the new --cdl option. (clumens)
+- Add clearpart --cdl option. (#1182624) (sbueno+anaconda)
+
 * Wed Aug 06 2014 Chris Lumens <clumens@redhat.com> - 1.74.16-1
 - Add an option to disable even installing the core group. (clumens)
 - Add a new bootloader --disabled option. (clumens)

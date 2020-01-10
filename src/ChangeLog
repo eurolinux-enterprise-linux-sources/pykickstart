@@ -1,3 +1,85 @@
+commit 20d44f60e309293f9d091c364eec8ab3dc471640
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Mar 4 08:21:03 2015 -0500
+
+    New version.
+
+commit 9a02a15e1247e1dcfc4ffe45dbb17cb04e00b8e5
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Mar 3 17:23:07 2015 -0500
+
+    Fix a typo in the conflicting command error message.
+    
+    Resolves: rhbz#1017061
+
+commit 821b9a9e32726bad692cafef59193af84ed096bc
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Fri Feb 27 10:32:21 2015 -0500
+
+    New version.
+
+commit 15046aed06ca33556ba8620bc7631ec99ce781a1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Feb 24 11:25:28 2015 -0500
+
+    Require --percent to be used with --size and --grow (mmatsuya@redhat.com).
+    
+    Resolves: rhbz#995443
+
+commit ce765945a87303312d7d6b2c60ef6d2a2f400348
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Feb 11 13:21:02 2015 -0500
+
+    New version.
+
+commit 626ccaf6879124ac515609073e1ae56bfa322c32
+Author: Vratislav Podzimek <vpodzime@redhat.com>
+Date:   Fri Sep 19 15:39:46 2014 +0200
+
+    Add support for specifying thin pool profile
+    
+    (cherry picked from commit c088a5a62c4bf133a5e3b00da3803f2f59974a76)
+    
+    Related: rhbz#1083459
+
+commit 40b975e5dcaacd5d8bcd241e26b3bcbc60215ec5
+Author: David Lehman <dlehman@redhat.com>
+Date:   Tue May 28 11:43:53 2013 -0500
+
+    Add support for custom layouts using lvm thin provisioning.
+    
+    This adds options to the logvol command. Support for thinp autopart
+    is not included.
+    
+    (cherry picked from commit b455a512ccf4bbb84e1ab0ba66c44b59537aa1d3)
+    
+    Related: rhbz#1083459
+
+commit 5a9b4fcfa88c1db4f9a8a46519f310276e3eb9f1
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Mon Feb 2 10:54:06 2015 -0500
+
+    New version.
+
+commit 02a0693fcb87a917284b359ab9c20d64738b1906
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Jan 27 14:54:07 2015 -0500
+
+    Fix small issues with output formatting of the new --cdl option.
+    
+    Related: rhbz#1182624
+
+commit fe9e0021ed359e0dd77cfad7344dc2a778c4f142
+Author: Samantha N. Bueno <sbueno+anaconda@redhat.com>
+Date:   Tue Jan 20 14:51:46 2015 -0500
+
+    Add clearpart --cdl option. (#1182624)
+    
+    Specifying this option in a ks file will ensure that any LDL DASDs
+    will be (re)formatted to CDL format.
+    
+    Resolves: rhbz#1182624
+
 commit dbc07a447cd215536bbc9f9027ccb9b377affb75
 Author: Chris Lumens <clumens@redhat.com>
 Date:   Wed Aug 6 09:55:52 2014 -0400

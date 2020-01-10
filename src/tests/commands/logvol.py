@@ -42,9 +42,10 @@ class FC3_TestCase(CommandTest):
         # --recommended
         self.assert_parse("logvol / --maxsize=2048 --recommended --name=NAME --vgname=VGNAME",
                           "logvol /  --maxsize=2048 --recommended %s--name=NAME --vgname=VGNAME\n" % self.bytesPerInode)
-        # --percent
-        self.assert_parse("logvol / --percent=10 --name=NAME --vgname=VGNAME",
-                          "logvol /  --percent=10 %s--name=NAME --vgname=VGNAME\n" % self.bytesPerInode)
+        # --percent - this behavior changed in RHEL6, see below
+        if not isinstance(self, RHEL6_TestCase):
+            self.assert_parse("logvol / --percent=10 --name=NAME --vgname=VGNAME",
+                              "logvol /  --percent=10 %s--name=NAME --vgname=VGNAME\n" % self.bytesPerInode)
         # --noformat
         # FIXME - should --noformat also be adding --useexisting (seems counter
         # to posted documentation 
@@ -251,6 +252,44 @@ class RHEL6_TestCase(F12_TestCase):
                             "--name=NAME --vgname=VGNAME")
         self.assert_parse("logvol swap --recommended --hibernation "
                             "--name=NAME --vgname=VGNAME")
+
+        # thinp
+        self.assert_parse("logvol none --name=pool1 --vgname=vg --thinpool",
+                          "logvol none  --thinpool --name=pool1 --vgname=vg\n")
+        self.assert_parse("logvol none --name=pool1 --vgname=vg --thinpool "
+                          "--chunksize=512",
+                          "logvol none  --thinpool --chunksize=512 "
+                          "--name=pool1 --vgname=vg\n")
+        self.assert_parse("logvol none --name=pool1 --vgname=vg --thinpool "
+                          "--metadatasize=4 --chunksize=1024",
+                          "logvol none  --thinpool --metadatasize=4 "
+                          "--chunksize=1024 --name=pool1 --vgname=vg\n")
+        self.assert_parse("logvol /home --name=home --vgname=vg "
+                          "--thin --poolname=pool1",
+                          "logvol /home  --thin --poolname=pool1 "
+                          "--name=home --vgname=vg\n")
+
+        # missing --size and --grow
+        self.assert_parse_error("logvol / --percent=10 --name=NAME --vgname=VGNAME", KickstartParseError)
+
+        # missing pool name
+        self.assert_parse_error("logvol /home --name=home --vgname=vg --thin")
+
+        # chunksize is an int
+        self.assert_parse_error("logvol none --name=pool1 --vgname=vg "
+                                "--thinpool --chunksize=foo")
+
+        # both --thin and --thinpool
+        self.assert_parse_error("logvol /home --name=home --thin --thinpool --vgname=vg --size=10000")
+
+        # chunksize and/or metadata size and not thinpool
+        self.assert_parse_error("logvol none --name=pool1 --vgname=vg "
+                                "--chunksize=512")
+
+        # --profile should work for all logvol commands even though it may be
+        # implemented only for some types (thin pool,...)
+        self.assert_parse("logvol none --name=pool1 --vgname=vg --thinpool --profile=performance --size=500")
+        self.assert_parse("logvol /home --name=homelv --vgname=vg --profile=performance --size=500")
 
 if __name__ == "__main__":
     unittest.main()
