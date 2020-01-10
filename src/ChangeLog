@@ -1,3 +1,46 @@
+commit dbc07a447cd215536bbc9f9027ccb9b377affb75
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Aug 6 09:55:52 2014 -0400
+
+    New version.
+
+commit fbdffb1170680c0b743dff6e811bdb8b8a470d67
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Apr 8 16:08:52 2014 -0400
+
+    Add an option to disable even installing the core group.
+    
+    Use this one wisely - it may result in a system that doesn't do anything.
+    
+    Resolves: rhbz#1125410
+
+commit 6994ff0e75d5c665fdd5a4edc936cf0a4f0e0bbd
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Tue Apr 8 15:53:42 2014 -0400
+
+    Add a new bootloader --disabled option.
+    
+    If provided, this takes precedence over all other bootloader options.  In
+    anaconda, it is intended that this option completely skip all bootloader
+    operations - nothing should be installed to disk, and the bootloader package
+    should not even be installed.
+    
+    Related: rhbz#1125410
+
+commit 31a1ed2015d9a0fdbb27890c63d3366cece6c548
+Author: Chris Lumens <clumens@redhat.com>
+Date:   Wed Jun 4 15:45:22 2014 -0400
+
+    New version.
+
+commit 2dbbc01d30eb167b87e421170e78a6d05d19e3a3
+Author: Radek Vykydal <rvykydal@redhat.com>
+Date:   Fri May 2 16:23:42 2014 +0200
+
+    network: add network --domain (ifcfg DOMAIN) option (#1039051)
+    
+    Related: rhbz#1039051
+
 commit 9c8e92a038f97ac4fd2f11af05ee2e1bcfb8fe7c
 Author: Chris Lumens <clumens@redhat.com>
 Date:   Tue Aug 13 15:30:38 2013 -0400
