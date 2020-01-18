@@ -1,7 +1,7 @@
 #
 # Chris Lumens <clumens@redhat.com>
 #
-# Copyright 2005-2007 Red Hat, Inc.
+# Copyright 2005-2017 Red Hat, Inc.
 #
 # This copyrighted material is made available to anyone wishing to use, modify,
 # copy, or redistribute it subject to the terms and conditions of the GNU
@@ -42,10 +42,14 @@ SELINUX_DISABLED = 0
 SELINUX_ENFORCING = 1
 SELINUX_PERMISSIVE = 2
 
+SNAPSHOT_WHEN_POST_INSTALL = 0
+SNAPSHOT_WHEN_PRE_INSTALL = 1
+
 KS_SCRIPT_PRE = 0
 KS_SCRIPT_POST = 1
 KS_SCRIPT_TRACEBACK = 2
 KS_SCRIPT_PREINSTALL = 3
+KS_SCRIPT_ONERROR = 4
 
 KS_WAIT = 0
 KS_REBOOT = 1
