@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-19 15:00-0400\n"
+"POT-Creation-Date: 2019-05-28 10:37-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,21 +46,21 @@ msgstr ""
 msgid "Unable to open %%ksappend file"
 msgstr ""
 
-#: ../pykickstart/parser.py:134 ../pykickstart/parser.py:761
+#: ../pykickstart/parser.py:134 ../pykickstart/parser.py:762
 #, python-format
 msgid "Unable to open input kickstart file: %s"
 msgstr ""
 
-#: ../pykickstart/parser.py:384
+#: ../pykickstart/parser.py:385
 msgid "Group cannot specify both --nodefaults and --optional"
 msgstr ""
 
-#: ../pykickstart/parser.py:565 ../pykickstart/parser.py:606
+#: ../pykickstart/parser.py:566 ../pykickstart/parser.py:607
 #, python-format
 msgid "Section %s does not end with %%end."
 msgstr ""
 
-#: ../pykickstart/parser.py:700
+#: ../pykickstart/parser.py:701
 #, python-format
 msgid "Unknown kickstart section: %s"
 msgstr ""
@@ -69,7 +69,7 @@ msgstr ""
 #. NullSection for the header we just saw.  Then nothing else
 #. needs to change.  You can turn this warning into an error via
 #. ksvalidator, or the warnings module.
-#: ../pykickstart/parser.py:706
+#: ../pykickstart/parser.py:707
 #, python-format
 msgid "Potentially unknown section seen at line %(lineno)s: %(sectionName)s"
 msgstr ""
@@ -177,28 +177,28 @@ msgstr ""
 msgid "Snapshot when param must have one of these values %s!"
 msgstr ""
 
-#: ../pykickstart/commands/repo.py:184 ../pykickstart/commands/firewall.py:118
+#: ../pykickstart/commands/repo.py:206 ../pykickstart/commands/firewall.py:118
 #: ../pykickstart/commands/fcoe.py:116 ../pykickstart/commands/iscsi.py:145
 #: ../pykickstart/commands/xconfig.py:99
 #, python-format
 msgid "Unexpected arguments to %(command)s command: %(options)s"
 msgstr ""
 
-#: ../pykickstart/commands/repo.py:189
+#: ../pykickstart/commands/repo.py:211
 msgid ""
 "Only one of --baseurl and --mirrorlist may be specified for repo command."
 msgstr ""
 
-#: ../pykickstart/commands/repo.py:192
+#: ../pykickstart/commands/repo.py:214
 msgid "One of --baseurl or --mirrorlist must be specified for repo command."
 msgstr ""
 
-#: ../pykickstart/commands/repo.py:200
+#: ../pykickstart/commands/repo.py:222
 #, python-format
 msgid "A repo with the name %s has already been defined."
 msgstr ""
 
-#: ../pykickstart/commands/repo.py:233
+#: ../pykickstart/commands/repo.py:255
 msgid "Method must be a url to be added to the repo list."
 msgstr ""
 
@@ -235,7 +235,7 @@ msgstr ""
 msgid "One of --drives or --only-use must be specified for ignoredisk command."
 msgstr ""
 
-#: ../pykickstart/commands/ignoredisk.py:130
+#: ../pykickstart/commands/ignoredisk.py:139
 msgid ""
 "One of --drives , --only-use , or --interactive must be specified for "
 "ignoredisk command."
@@ -751,7 +751,7 @@ msgstr ""
 msgid "version of kickstart syntax to validate against"
 msgstr ""
 
-#: ../tools/ksshell:162 ../tools/ksverdiff:67 ../tools/ksvalidator:81
+#: ../tools/ksshell:162 ../tools/ksverdiff:67 ../tools/ksvalidator:85
 #, python-format
 msgid "The version %s is not supported by pykickstart"
 msgstr ""
@@ -851,25 +851,25 @@ msgstr ""
 msgid "parse include files when %%include is seen"
 msgstr ""
 
-#: ../tools/ksvalidator:75
+#: ../tools/ksvalidator:79
 #, python-format
 msgid ""
 "Error reading %s:\n"
 "%s"
 msgstr ""
 
-#: ../tools/ksvalidator:97
+#: ../tools/ksvalidator:101
 #, python-format
 msgid ""
 "File uses a deprecated option or command.\n"
 "%s"
 msgstr ""
 
-#: ../tools/ksvalidator:103
+#: ../tools/ksvalidator:107
 msgid "General kickstart error in input file"
 msgstr ""
 
-#: ../tools/ksvalidator:106
+#: ../tools/ksvalidator:110
 #, python-format
 msgid "General error in input file:  %s"
 msgstr ""

@@ -2,15 +2,11 @@
 
 Summary:  A python library for manipulating kickstart files
 Name: pykickstart
-Url: http://fedoraproject.org/wiki/pykickstart
-Version: 1.99.66.19
-Release: 2%{?dist}
-# This is a Red Hat maintained package which is specific to
-# our distribution.  Thus the source is only available from
-# within this srpm.
-Source0: %{name}-%{version}.tar.gz
-Source1: ja.po
-Patch0: 0001-Make-sure-the-script-test-references-parser.patch
+Url: https://github.com/dcantrell/pykickstart
+Version: 1.99.66.21
+Release: 1%{?dist}
+Source0: https://github.com/dcantrell/pykickstart/releases/download/r%{version}-%{release}/%{name}-%{version}.tar.gz
+Source1: https://github.com/dcantrell/pykickstart/releases/download/r%{version}-%{release}/%{name}-%{version}.tar.gz.asc
 
 License: GPLv2
 Group: System Environment/Libraries
@@ -26,8 +22,6 @@ files.
 
 %prep
 %setup -q
-%patch0 -p1
-install -D -m 0644 %SOURCE1 po/ja.po
 
 %build
 make
@@ -56,6 +50,22 @@ make test
 %{_mandir}/man1/*
 
 %changelog
+* Tue May 28 2019 David Cantrell <dcantrell@redhat.com> - 1.99.66.21-1
+- Update translations
+  Resolves: rhbz#1688255
+
+* Fri Apr 26 2019 David Cantrell <dcantrell@redhat.com> - 1.99.66.20-1
+- Add 'repo' and 'url' command SSL options
+  Resolves: rhbz#1701035
+
+* Tue Jan 15 2019 David Cantrell <dcantrell@redhat.com> - 1.99.66.19-4
+- Fix test suite execution in the spec file
+  Resolves: rhbz#1495787
+
+* Wed Jan 02 2019 David Cantrell <dcantrell@redhat.com> - 1.99.66.19-3
+- ksvalidator - don't require KS file with -l option
+  Resolves: rhbz#1653778
+
 * Wed Aug 15 2018 David Cantrell <dcantrell@redhat.com> - 1.99.66.19-2
 - Updated Japanese translations
   Resolves: rhbz#1569454
