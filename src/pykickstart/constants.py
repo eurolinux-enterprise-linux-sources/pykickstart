@@ -1,7 +1,7 @@
 #
 # Chris Lumens <clumens@redhat.com>
 #
-# Copyright 2005-2007 Red Hat, Inc.
+# Copyright 2005-2017 Red Hat, Inc.
 #
 # This copyrighted material is made available to anyone wishing to use, modify,
 # copy, or redistribute it subject to the terms and conditions of the GNU
@@ -15,7 +15,7 @@
 # Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.  Any Red Hat
 # trademarks that are incorporated in the source code or documentation are not
 # subject to the GNU General Public License and may only be used or replicated
-# with the express permission of Red Hat, Inc. 
+# with the express permission of Red Hat, Inc.
 #
 CLEARPART_TYPE_LINUX = 0
 CLEARPART_TYPE_ALL = 1
@@ -42,10 +42,14 @@ SELINUX_DISABLED = 0
 SELINUX_ENFORCING = 1
 SELINUX_PERMISSIVE = 2
 
+SNAPSHOT_WHEN_POST_INSTALL = 0
+SNAPSHOT_WHEN_PRE_INSTALL = 1
+
 KS_SCRIPT_PRE = 0
 KS_SCRIPT_POST = 1
 KS_SCRIPT_TRACEBACK = 2
 KS_SCRIPT_PREINSTALL = 3
+KS_SCRIPT_ONERROR = 4
 
 KS_WAIT = 0
 KS_REBOOT = 1
@@ -62,3 +66,5 @@ BOOTPROTO_IBFT = "ibft"
 GROUP_REQUIRED = 0
 GROUP_DEFAULT = 1
 GROUP_ALL = 2
+
+BIND_TO_MAC = "mac"

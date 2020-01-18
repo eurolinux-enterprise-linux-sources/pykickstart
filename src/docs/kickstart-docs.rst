@@ -71,12 +71,12 @@ kickstart file:
    #. Command section -- Refer to Chapter 2 for a list of kickstart
       options. You must include the required options.
    #. The %packages section -- Refer to Chapter 3 for details.
-   #. The %pre, %pre-install, %post, and %traceback sections -- These
-      sections can be in any order and are not required. Refer to Chapter
-      4 and Chapter 5 for details.
+   #. The %pre, %pre-install, %post, %onerror, and %traceback sections --
+      These sections can be in any order and are not required. Refer to
+      Chapter 4, Chapter 5, and Chapter 6  for details.
 
--  The %packages, %pre, %pre-install, %post and %traceback sections are all
-   required to be closed with %end
+-  The %packages, %pre, %pre-install, %post, %onerror, and %traceback sections
+   are all required to be closed with %end
 -  Items that are not required can be omitted.
 -  Omitting any required item will result in the installation program
    prompting the user for an answer to the related item, just as the
@@ -227,6 +227,9 @@ large enough drives, this will also create a /home partition.
     scheme and a filesystem. eg. --fstype=ext4. Added in
     anaconda-21.46-1
 
+``--nohome``
+
+    Do not create a /home partition.
 
 autostep
 --------
@@ -699,6 +702,14 @@ harddrive
         ``harddrive --partition=hdb2 --dir=/tmp/install-tree ``
 
 
+hmc
+~~~~~
+
+``hmc``
+
+    Install from an installation medium via SE/HMC on z Systems.
+
+
 liveimg
 ~~~~~~~
 
@@ -1147,6 +1158,53 @@ manually configuring your monitor.
 ``--vsync=``
 
     Specifies the vertical sync frequency of the monitor.
+
+
+mount
+-----
+
+Assigns a mount point to a block device and optionally reformats it to a given
+format. It at least requires a device and a mount point where the mount point
+can be ``none`` in case the format on the device is not mountable or in case the
+device should just be reformatted.
+
+The difference between this command and the other commands for storage
+configuration (``part``, ``logvol``,...) is that it doesn't require the whole
+storage stack to be described in the kickstart file. The user just needs to make
+sure that the specified block device exists in the system. The installer doesn't
+necessarily have to know all the details about of the given device. If, on the
+other hand, the installer is supposed to **create** the storage stack with all
+the devices mounted at various places, the ``part``, ``logvol``, ``raid``,
+etc. commands have to be used.
+
+``--reformat=``
+
+  Specifies the new format (e.g. a file system) for the device.
+
+
+``--mkfsoptions=``
+
+  Specifies additional parameters to be passed to the program that makes a
+  filesystem on this partition. No processing is done on the list of arguments,
+  so they must be supplied in a format that can be passed directly to the mkfs
+  program.  This means multiple options should be comma-separated or surrounded
+  by double quotes, depending on the filesystem.
+
+``--mountoptions=``
+
+    Specifies a free form string of options to be used when mounting the
+    filesystem. This string will be copied into the /etc/fstab file of
+    the installed system and should be enclosed in quotes.
+
+Examples
+++++++++
+
+::
+   mount /dev/vda1 /boot --reformat=xfs
+   mount /dev/vda2 /     --reformat=xfs  # / must be reformatted!
+   mount /dev/disk/by-path/pci-0000:00:1f.2-ata-1-part3 /home
+   mount /dev/vda5 none  --reformat=swap # swap must be reformatted
+   mount /dev/vda6 /mnt/backup --mountoptions="noauto,discard"
 
 
 multipath
@@ -1603,6 +1661,10 @@ Assembles a software RAID device. This command is of the form:
     ``/root``. If more than one LUKS volume uses ``--backuppassphrase``,
     the same passphrase will be used for all such volumes.
 
+``--chunksize=<size>``
+
+    Specify the chunk size (in KiB) for this RAID array.
+
 The following example shows how to create a RAID level 1 partition for
 /, and a RAID level 5 for /usr, assuming there are three disks on the
 system. It also creates three swap partitions, one on each drive.
@@ -1871,6 +1933,26 @@ shutdown
 At the end of installation, shut down the machine. This is the same as
 the poweroff command. Normally, kickstart displays a message and waits
 for the user to press a key before rebooting.
+
+
+snapshot
+--------
+
+Create an LVM snapshot for devices on an LVM thin pool.
+
+``snapshot <vg/lv> --name=<snapshot_name> --when=<pre-install | post-install>``
+
+``--name=``
+
+    Name of the newly created snapshot.
+
+``--when=``
+
+    You can specify two possible values: ``pre-install`` and ``post-install``.
+    When the ``pre-install`` value is used the snapshot is created before
+    the installation but after the ``%pre`` section is run.
+    When the ``post-install`` value is used the snapshot is created after
+    the installation is done and after the ``%post`` section is run.
 
 
 sshkey
@@ -2345,6 +2427,16 @@ header:
         Enable yum's "all" multilib\_policy as opposed to the default of
         "best".
 
+    ``--timeout=``
+
+        Set up yum's timeout. It is a number of seconds to wait for a
+        connection before timing out.
+
+    ``--retries=``
+
+        Set up yum's retries. It is a number of times any attempt to
+        retrieve a file should retry before returning an error.
+
     ``--nocore``
 
         Do not install the @core group (installed by default,
@@ -2550,7 +2642,67 @@ installed:
 replace /mnt/sysimage above with $INSTALL_ROOT.**
 
 
-Chapter 6. Making the Kickstart File Available
+Chapter 6. Error Scripts
+========================
+
+You can additionally specify two kinds of scripts that can run when an error
+occurs in the installation process.  These scripts could potentially run at
+any stage in installation - early on, between making filesystems and installing
+packages, before the bootloader is installed, when attempting to reboot, and
+so on.  For this reason, these scripts cannot be run in the chroot environment
+and you should not trust anything in the installed system.  These scripts are
+primarily for testing and error reporting purposes.
+
+You may have more than one error script.  These scripts are required to be
+closed with %end.
+
+Note that the pre-install script is not run in the chroot environment.
+
+All kinds of error scripts take the same arguments:
+
+``--interpreter /usr/bin/python``
+
+    Allows you to specify a different scripting language, such as
+    Python. Replace /usr/bin/python with the scripting language of
+    your choice.
+
+``--erroronfail``
+
+    If the pre-installation script fails, this option will cause an
+    error dialog to be displayed and will halt installation. The
+    error message will direct you to where the cause of the failure
+    is logged.
+
+``--log=``
+
+    Log all messages from the script to the given log file.
+
+%traceback script
+-----------------
+
+These scripts run when the installer hits an internal error (a traceback, as
+they are called in Python) and cannot continue.  When this situation happens,
+the installer will display an error dialog to the screen that prompts the user
+to file a bug or reboot.  At the same time, it will run all %traceback scripts
+in the order they are provided in the kickstart file.
+
+%onerror script
+---------------
+
+These scripts run when the installer hits a fatal error, but not necessarily
+a bug in the installer.  Some examples of these situations include errors in
+packages that have been requested to be installed, failures when starting VNC
+when requested, and error when scanning storage.  When these situations happen,
+installaton cannot continue.  The installer will run all %onerror scripts in
+the order they are provided in the kickstart file.
+
+In addition, %onerror scripts will be run on a traceback as well.  To be exact,
+all %onerror scripts will be run and then all %traceback scripts will be run
+afterwards.
+
+
+
+Chapter 7. Making the Kickstart File Available
 ==============================================
 
 A kickstart file must be placed in one of the following locations:
@@ -2677,7 +2829,7 @@ and
 `kssendsn <http://fedoraproject.org/wiki/Anaconda/Options#kssendsn>`__
 
 
-Chapter 7. Making the Installation Tree Available
+Chapter 8. Making the Installation Tree Available
 =================================================
 
 The kickstart installation needs to access an installation tree. An
@@ -2698,7 +2850,7 @@ the Preparing for a Network Installation section of the Red Hat
 Enterprise Linux Installation Guide for details.
 
 
-Chapter 8. Starting a Kickstart Installation
+Chapter 9. Starting a Kickstart Installation
 ============================================
 
 To begin a kickstart installation, you must boot the system from a

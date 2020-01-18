@@ -43,7 +43,9 @@ import warnings
 from pykickstart import constants, version
 from pykickstart.errors import KickstartError, KickstartParseError, KickstartValueError, formatErrorMsg
 from pykickstart.ko import KickstartObject
-from pykickstart.sections import PackageSection, PreScriptSection, PreInstallScriptSection, PostScriptSection, TracebackScriptSection, NullSection
+from pykickstart.sections import PackageSection, PreScriptSection, PreInstallScriptSection, \
+                                 PostScriptSection, TracebackScriptSection, OnErrorScriptSection, \
+                                 NullSection
 
 import gettext
 _ = lambda x: gettext.ldgettext("pykickstart", x)
@@ -202,13 +204,15 @@ class Script(KickstartObject):
             retval += '\n%traceback'
         elif self.type == constants.KS_SCRIPT_PREINSTALL:
             retval += '\n%pre-install'
+        elif self.type == constants.KS_SCRIPT_ONERROR:
+            retval += '\n%onerror'
 
         if self.interp != "/bin/sh" and self.interp != "":
             retval += " --interpreter=%s" % self.interp
         if self.type == constants.KS_SCRIPT_POST and not self.inChroot:
             retval += " --nochroot"
         if self.logfile != None:
-            retval += " --logfile %s" % self.logfile
+            retval += " --logfile=%s" % self.logfile
         if self.errorOnFail:
             retval += " --erroronfail"
 
@@ -286,6 +290,10 @@ class Packages(KickstartObject):
                             %packages section.
            instLangs     -- A list of languages to install.
            multiLib      -- Whether to use yum's "all" multilib policy.
+           timeout       -- Number of seconds to wait for a connection before
+                            yum's timing out or None.
+           retries       -- Number of times yum's attempt to retrieve a file
+                            should retry before returning an error.
            seen          -- If %packages was ever used in the kickstart file,
                             this attribute will be set to True.
 
@@ -304,6 +312,8 @@ class Packages(KickstartObject):
         self.packageList = []
         self.instLangs = None
         self.multiLib = False
+        self.timeout = None
+        self.retries = None
         self.seen = False
 
     def __str__(self):
@@ -353,6 +363,10 @@ class Packages(KickstartObject):
             retval += " --instLangs=%s" % self.instLangs
         if self.multiLib:
             retval += " --multilib"
+        if self.timeout is not None:
+            retval += " --timeout=%d" % self.timeout
+        if self.retries is not None:
+            retval += " --retries=%d" % self.retries
 
         if ver >= version.F8:
             return retval + "\n" + pkgs + "\n%end\n"
@@ -759,6 +773,7 @@ class KickstartParser:
         self.registerSection(PreScriptSection(self.handler, dataObj=Script))
         self.registerSection(PreInstallScriptSection(self.handler, dataObj=Script))
         self.registerSection(PostScriptSection(self.handler, dataObj=Script))
+        self.registerSection(OnErrorScriptSection(self.handler, dataObj=Script))
         self.registerSection(TracebackScriptSection(self.handler, dataObj=Script))
         self.registerSection(PackageSection(self.handler))
 

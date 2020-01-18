@@ -3,7 +3,7 @@
 Summary:  A python library for manipulating kickstart files
 Name: pykickstart
 Url: http://fedoraproject.org/wiki/pykickstart
-Version: 1.99.66.10
+Version: 1.99.66.18
 Release: 1%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
@@ -52,6 +52,62 @@ make test
 %{_mandir}/man1/*
 
 %changelog
+* Thu Jan 04 2018 Chris Lumens <clumens@redhat.com> - 1.99.66.18-1
+- Add tests for the new firewall option. (clumens)
+  Related: rhbz#1526486
+- Use RHEL7_Firewall instead of F28_Firewall. (clumens)
+  Related: rhbz#1526486
+- Port the F20 firewall test from master. (clumens)
+  Related: rhbz#1526486
+- firewall: add --use-system-defaults arg to command (dusty)
+  Resolves: rhbz#1526486
+
+* Tue Dec 19 2017 Chris Lumens <clumens@redhat.com> - 1.99.66.17-1
+- More updated translations.
+  Related: rhbz#1481222
+
+* Tue Dec 12 2017 Chris Lumens <clumens@redhat.com> - 1.99.66.16-1
+- Pull in updated translations.
+  Resolves: rhbz#1481222
+
+* Fri Nov 10 2017 Chris Lumens <clumens@redhat.com> - 1.99.66.15-1
+- Fix import in the mount command (vponcova)
+  Related: rhbz#1450922
+- Add a new 'mount' command (vpodzime)
+  Related: rhbz#1450922
+
+* Mon Oct 16 2017 Chris Lumens <clumens@redhat.com> - 1.99.66.14-1
+- Add timeout and retries options to %packages section (#1482912) (vponcova)
+- Add command hmc to support SE/HMC file access (#1498829) (vponcova)
+- Add tests for method command (vponcova)
+- Rewrite the method command. (vponcova)
+
+* Tue Sep 05 2017 Chris Lumens <clumens@redhat.com> - 1.99.66.13-1
+- network: add network --bindto option (rvykydal)
+  Resolves: rhbz#1483981
+
+* Wed Apr 05 2017 Chris Lumens <clumens@redhat.com> - 1.99.66.12-1
+- Add documentation for the snapshot feature (jkonecny)
+  Related: rhbz#1113207
+- Add tests for a new snapshot command (jkonecny)
+  Related: rhbz#1113207
+- Add support of --when param to snapshot command (jkonecny)
+  Related: rhbz#1113207
+- Add new snapshot KS command (jkonecny)
+  Related: rhbz#1113207
+
+* Wed Mar 01 2017 Chris Lumens <clumens@redhat.com> - 1.99.66.11-1
+- Document %%traceback and %%onerror. (clumens)
+  Related: rhbz#1412538
+- Add an %%onerror script section. (clumens)
+  Related: rhbz#1412538
+- Add more test coverage around Group and Script objects. (clumens)
+  Related: rhbz#1412538
+- Add --nohome option to autopart command. (#141) (vponcova)
+  Related: rhbz#663099
+- Add --chunksize option to raid command. (#140) (vponcova)
+  Related: rhbz#1332316
+
 * Thu Aug 18 2016 Chris Lumens <clumens@redhat.com> - 1.99.66.10-1
 - Support file URLs for ostree. (clumens)
   Resolves: rhbz#1367933

@@ -3,7 +3,7 @@ import unittest
 from tests.baseclass import *
 
 from pykickstart.errors import *
-from pykickstart.parser import Packages
+from pykickstart.parser import Group, Packages
 from pykickstart.version import DEVEL, returnClassForVersion
 
 class DevelPackagesBase(CommandTest):
@@ -170,6 +170,48 @@ class MultiLib_TestCase(DevelPackagesBase):
         self.assertEqual("""%packages --default --multilib
 
 %end""", str(pkgs).strip())
+
+class GroupObj_TestCase(DevelPackagesBase):
+    def runTest(self):
+        self.assertLess(Group("A"), Group("B"))
+        self.assertLessEqual(Group("A"), Group("B"))
+        self.assertLessEqual(Group("A"), Group("A"))
+        self.assertEqual(Group("A"), Group("A"))
+        self.assertNotEqual(Group("A"), Group("B"))
+        self.assertGreater(Group("B"), Group("A"))
+        self.assertGreaterEqual(Group("B"), Group("A"))
+        self.assertGreaterEqual(Group("B"), Group("B"))
+
+class Timeout_TestCase(DevelPackagesBase):
+    def runTest(self):
+        pkgs = Packages()
+        pkgs.add(["test"])
+        pkgs.timeout = 60
+        self.assertEqual("""%packages --timeout=60
+test
+
+%end""", str(pkgs).strip())
+        pkgs.timeout = None
+        self.assertEqual("""%packages
+test
+
+%end""", str(pkgs).strip())
+
+class Retries_TestCase(DevelPackagesBase):
+    def runTest(self):
+        pkgs = Packages()
+        pkgs.add(["test"])
+        pkgs.retries = 10
+        self.assertEqual("""%packages --retries=10
+test
+
+%end""", str(pkgs).strip())
+        pkgs.retries = None
+        self.assertEqual("""%packages
+test
+
+%end""", str(pkgs).strip())
+
 
 if __name__ == "__main__":
     unittest.main()

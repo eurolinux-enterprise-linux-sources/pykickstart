@@ -15,7 +15,7 @@
 # Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.  Any Red Hat
 # trademarks that are incorporated in the source code or documentation are not
 # subject to the GNU General Public License and may only be used or replicated
-# with the express permission of Red Hat, Inc. 
+# with the express permission of Red Hat, Inc.
 #
 from pykickstart.base import BaseData, KickstartCommand
 from pykickstart.errors import KickstartParseError, KickstartValueError, formatErrorMsg
@@ -241,12 +241,15 @@ class RHEL7_RaidData(F18_RaidData):
     def __init__(self, *args, **kwargs):
         F18_RaidData.__init__(self, *args, **kwargs)
         self.mkfsopts = kwargs.get("mkfsoptions", "")
+        self.chunk_size = kwargs.get("chunk_size", None)
 
     def _getArgsAsStr(self):
         retval = F18_RaidData._getArgsAsStr(self)
 
         if self.mkfsopts:
             retval += " --mkfsoptions=\"%s\"" % self.mkfsopts
+        if self.chunk_size:
+            retval += " --chunksize=%d" % self.chunk_size
 
         return retval
 
@@ -485,6 +488,10 @@ class F20_Raid(F19_Raid):
         if self.handler.autopart.seen:
             errorMsg = _("The raid and autopart commands can't be used at the same time")
             raise KickstartParseError(formatErrorMsg(self.lineno, msg=errorMsg))
+        # the same applies to the 'mount' command
+        if hasattr(self.handler, "mount") and self.handler.mount.seen:
+            errorMsg = _("The raid and mount commands can't be used at the same time")
+            raise KickstartParseError(formatErrorMsg(self.lineno, msg=errorMsg))
         return retval
 
 class RHEL7_Raid(F20_Raid):
@@ -494,6 +501,7 @@ class RHEL7_Raid(F20_Raid):
     def _getParser(self):
         op = F20_Raid._getParser(self)
         op.add_option("--mkfsoptions", dest="mkfsopts")
+        op.add_option("--chunksize", type=int, dest="chunk_size")
         return op
 
     def parse(self, args):
