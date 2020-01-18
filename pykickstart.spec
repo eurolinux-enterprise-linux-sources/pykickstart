@@ -3,12 +3,14 @@
 Summary:  A python library for manipulating kickstart files
 Name: pykickstart
 Url: http://fedoraproject.org/wiki/pykickstart
-Version: 1.99.66.18
-Release: 1%{?dist}
+Version: 1.99.66.19
+Release: 2%{?dist}
 # This is a Red Hat maintained package which is specific to
 # our distribution.  Thus the source is only available from
 # within this srpm.
 Source0: %{name}-%{version}.tar.gz
+Source1: ja.po
+Patch0: 0001-Make-sure-the-script-test-references-parser.patch
 
 License: GPLv2
 Group: System Environment/Libraries
@@ -24,6 +26,8 @@ files.
 
 %prep
 %setup -q
+%patch0 -p1
+install -D -m 0644 %SOURCE1 po/ja.po
 
 %build
 make
@@ -52,6 +56,16 @@ make test
 %{_mandir}/man1/*
 
 %changelog
+* Wed Aug 15 2018 David Cantrell <dcantrell@redhat.com> - 1.99.66.19-2
+- Updated Japanese translations
+  Resolves: rhbz#1569454
+
+* Tue Jun 19 2018 David Cantrell <dcantrell@redhat.com> - 1.99.66.19-1
+- Add use action to nvdimm command. (rvykydal)
+  Resolves: rhbz#1590319
+- Add nvdimm command (rvykydal)
+  Resolves: rhbz#1590319
+
 * Thu Jan 04 2018 Chris Lumens <clumens@redhat.com> - 1.99.66.18-1
 - Add tests for the new firewall option. (clumens)
   Related: rhbz#1526486
